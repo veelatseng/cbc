@@ -1,0 +1,180 @@
+footer {
+    @include box-sizing(border-box);
+    @include clearfix;
+    text-align: left;
+    font-size: 0.938em;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    position: relative;
+    @include screen('tablet') {
+        background: #4a7aad;
+    }
+    &:before{
+        content: "";
+        position: absolute;
+        left: 200px;
+        display: block;
+        width: 1200px;
+        height: 100%;
+        -webkit-transform: skewX(114deg);
+        transform: skewX(114deg);
+        background: #4a7aad;
+        top: 0;
+        @include screen('tablet') {
+            display: none;
+        }
+    }
+    .container {
+        @include gutter;    
+        >div {
+            padding-bottom: 1em;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $primaryColor;
+        &:hover,
+        &:focus {
+            color: darken($primaryColor, 10);
+        }
+    }
+    .leftblock{
+        @include make-xs-column(12);
+        @include make-sm-column(4);
+        @include make-md-column(4);
+        @include make-lg-column(4);
+        @include gutter(0);
+    }
+    .rightblock{
+        @include make-xs-column(12);
+        @include make-sm-column(8);
+        @include make-md-column(8);
+        @include make-lg-column(8);
+        @include gutter();
+        @include screen('mobile') {
+            padding: 0;
+        }
+    }
+    .footer_logo {
+        margin-bottom: 10px;
+        img{
+            @include screen('mobile') {
+                margin: 0 auto;
+            }
+        }
+    }
+    .footer_icon {
+        @include screen('mobile') {
+            text-align: center;
+        }
+        a {
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 18px;
+        }
+        img {
+            max-width: 120px;
+        }
+    }
+    // 版權連結
+    .footer_link {
+        @include li-reset();
+        @include clearfix();
+        margin-left: -.7em;
+        @include screen('tablet') {
+            margin-left: 0;
+        }
+        @include screen('mobile') {
+            text-align: center;
+        }
+        li {
+            float: left;
+            display: block;
+            @include screen('tablet') {
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+            @include screen('mobile') {
+                float: none;
+                display: inline-block;
+            }
+            &:after{
+                content: "|";
+                display: inline-block;
+                color: #fff;
+                @include screen('tablet') {
+                    display: none;
+                }
+            }
+            &:last-child:after{
+                display: none;
+            }
+            a {
+                display: inline-block;
+                padding: .5em .7em;
+                color: #FFF;
+                @include transition(all, .3s, ease-out);
+                @include screen('tablet') {
+                    padding: .3em .7em;
+                    background: darken($primaryColor, 10);
+                    border-radius: 3px;
+                }
+                &:hover,
+                &:focus {
+                    color: rgba(255,255,255,.6);
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .footer_info {
+
+    }
+    p {
+        line-height: 1.65em;
+        margin: .5em 0;
+        color: #b5cae5;
+        font-size: 0.938em;
+        width: 60%;
+        float: left;
+        @include screen('tablet') {
+            width: 100%;
+            float: none;
+        }
+        a{
+            color: #fff;
+            text-decoration: underline;
+            &:hover{
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+    .update,
+    .counter {
+        display: block;
+        color: rgba(255,255,255,.6);
+        font-size: 0.938em;
+        width: 30%;
+        float: right;
+        @include screen('tablet') {
+            width: 100%;
+            float: none;
+        }
+        @include screen('mobile') {
+            width: 50%;
+            float: right;
+        }
+        em {
+            font-style: normal;
+            color: #fff;
+            padding: 0 .5em;
+        }
+    }
+    .update{
+        margin-top: .5em;
+        @include screen('mobile') {
+            margin-top: 0;
+        }
+    }
+}

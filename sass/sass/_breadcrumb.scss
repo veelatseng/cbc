@@ -1,0 +1,21 @@
+.breadcrumb {
+    padding: .1em 0em .1em;
+    font-size: .938em;
+    margin: 0px auto 5px;
+    ul {
+        @include li-reset;
+        li {
+            display: inline-block;
+            margin: 0px .1em .1em 0px;
+            &:before {
+                @extend %arrow2;
+            }
+            &:first-child:before {
+                display: none;
+            }
+        }
+    }
+    a {
+        @include aSetting_nocolor;
+    }
+}

@@ -1,0 +1,56 @@
+// 自動產生編號：https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+.np {
+    ul,ol {
+        overflow:hidden;
+        padding:1em 0;
+        margin: 0;
+        overflow:hidden;
+    }
+    li {
+        display: block;
+        width: 49%;
+        margin: 0 1% 10px 0;
+        float: left;
+        @include box-sizing(border-box);
+        &:nth-child(even) {
+        	width: 50%;
+            margin-right: 0px;
+        }
+        @include screen('mobile') {
+            float:none;
+            width: 96%;
+            margin:0px auto 10px;
+            &:nth-child(even){
+                width: 96%;
+                margin-right: auto;
+            }
+        }
+        a {
+            border-radius:4px;
+            background: $secondaryColor url(../images/arrow1.png) no-repeat 1em center;
+            border: 2px solid $secondaryColor;
+            padding: 1em 1em 1em 4em;
+            display: block;
+            vertical-align: top;
+            @include text-overflow;
+            position:relative;
+            @include aSetting_nocolor;
+            .num{
+                position: absolute;
+                width:1em;
+                top: 1em;
+                left: 2.5em;
+                text-align: right;
+                &:after{
+                    content:".";
+                    display:inline-block;
+                }
+            }
+            &:hover,
+            &:focus {
+                color: $primaryColor;
+                border: 2px solid $primaryColor;
+            }
+        }
+    }
+}
