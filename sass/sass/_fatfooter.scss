@@ -1,7 +1,6 @@
 .fatfooter {
     @include make-fatfooter($fatfooter-length, 100%);
     @extend %clearfix;
-    padding-bottom: 1em;
     margin: 0 auto;
     position: relative;
     // -webkit-box-shadow: 0px -2px 5px RGBA(0, 0, 0, 0.3);
@@ -91,7 +90,7 @@
         overflow: hidden;
         display: block;
         position: relative;
-        padding: 3em 0 0 2em;
+        padding: 3em 0 3em 2em;
         @include box-sizing;
         @include screen('mobile') {
             padding: 1em 0;

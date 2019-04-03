@@ -113,7 +113,7 @@
                 color: #FFF;
                 font-weight: bold;
                 &:hover, &:focus {
-                    background: $primaryColor;
+                    background: rgba($primaryColor,.8);
                 }
             }
         }

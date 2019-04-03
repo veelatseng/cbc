@@ -24,10 +24,10 @@ $(function() {
     //////////// nav如果有兩個選單///////////
     /*-----------------------------------*/
     var _navLength = $('.navigation ul').length;
-    // if (_navLength > 1) {
-    //     $('.navigation ul:nth-child(1)').addClass('left_nav');
-    // }
-    // $('.navigation').has('.language').addClass('have_language');
+    if (_navLength > 1) {
+        $('.navigation ul:nth-child(1)').addClass('left_nav');
+    }
+    $('.navigation').has('.language').addClass('have_language');
     /*-----------------------------------*/
     /////// header選單 tab及 fix設定////////
     /*-----------------------------------*/
@@ -215,11 +215,12 @@ $(function() {
         search_mode = false;
     });
     // 固定版頭
-    var stickyMenuTop = $('.header .menu').offset().top;
+    var hh = $('.header').outerHeight(true),
+    menuH = _menu.outerHeight(true);
     $(window).bind("load scroll resize", function(e) {
         ww = _window.outerWidth();
-        if (ww >= wwSmall && $(this).scrollTop() > stickyMenuTop) {
-            hh = Math.floor($('.header').outerHeight(true));
+        if (ww >= wwSmall && $(this).scrollTop() > hh - menuH) {
+            hh = $('.header').outerHeight(true);
             menuH = Math.floor(_menu.outerHeight(true));
             $('.header').addClass('fixed');
             $('.header').css('margin-top', menuH - hh);
@@ -267,7 +268,6 @@ $(function() {
                 $('.btn-fatfooter').html("展開<br />OPEN");
                 $('.btn-fatfooter').attr('name', '展開選單/OPEN');
             }
-            e.preventDefault();
         });
         $(this).stop(true, true).toggleClass('close');
     });
@@ -452,7 +452,61 @@ $(function() {
                 _tabContent.css('top', tabItemHeight);
                 _tab.height(tabContentHeight + tabItemHeight);
                 tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
+                // console.log(tabItemWidth);
                 _tabItem.width(tabItemWidth).css('margin-left', tiGap);
+                _tabItem.first().css('margin-left', 0);
+                _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 0 }).width(tabItemWidth);
+            } else {
+                _tab.css('height', 'auto');
+                _tabItem.width(tabwidth);
+                _tabItem.css('margin-left', 0).last().css('position', 'relative');
+            }
+            _tabItemA.focus(tabs);
+            _tabItemA.click(tabs);
+
+            function tabs(e) {
+                var _tabItemNow = $(this).parent(),
+                tvp = _tab.offset().top,
+                tabIndex = _tabItemNow.index() / 2,
+                scollDistance = tvp + tabItemHeight * tabIndex - hh;
+                _tabItem.removeClass('active');
+                _tabItemNow.addClass('active');
+                if (ww <= wwSmall) {
+                    _tabItem.not('.active').next().slideUp();
+                    _tabItemNow.next().slideDown();
+                    $("html,body").stop(true, false).animate({ scrollTop: scollDistance });
+                } else {
+                    _tabItem.not('.active').next().hide();
+                    _tabItemNow.next().show();
+                    tabContentHeight = _tabItemNow.next().innerHeight();
+                    _tab.height(tabContentHeight + tabItemHeight);
+                }
+                e.preventDefault();
+            }
+        });
+    }
+    function tabSet() {
+        $('.news_block .tabs').each(function() {
+            var _tab = $(this),
+            _tabItem = _tab.find('.tabItem'),
+            _tabItemA = _tabItem.children('a'),
+            _tabContent = _tab.find('.tabContent'),
+            tabwidth = _tab.width(),
+            tabItemHeight = _tabItem.outerHeight(),
+            tabContentHeight = _tab.find('.active').next().innerHeight(),
+            tiGap = 0,
+            tabItemLength = _tabItem.length,
+            tabItemWidth;
+            _tab.find('.active').next('.tabContent').show();
+            if (ww >= wwSmall) {
+                _tabContent.css('top', tabItemHeight);
+                _tab.height(tabContentHeight + tabItemHeight);
+                tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
+                console.log(tabItemWidth);
+                _tabItem.width(tabItemWidth).css('margin-left', tiGap);
+                $( ".tabItem a:contains('新聞稿')" ).parent('.tabItem').css( "width", tabItemWidth*0.8 );
+                $( ".tabItem a:contains('即時新聞澄清')" ).parent('.tabItem').css( "width", tabItemWidth*1.1 );
+                $( ".tabItem a:contains('本行發行存單')" ).parent('.tabItem').css( "width", tabItemWidth*1.1 );
                 _tabItem.first().css('margin-left', 0);
                 _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 0 }).width(tabItemWidth);
             } else {
@@ -559,8 +613,8 @@ $(function() {
     /*------------------------------------*/
     //////////分享按鈕 share dropdwon////////
     /*------------------------------------*/
-    $('.funtion_panel .share').children('ul').hide();
-    $('.funtion_panel .share').prepend('<a href="#" class="shareButton"><img src="images/basic/icon_share.png" alt="share分享按鈕"></a>');
+    $('.function_panel .share').children('ul').hide();
+    $('.function_panel .share').prepend('<a href="#" class="shareButton"><img src="images/basic/icon_share.png" alt="share分享按鈕"></a>');
     var _shareButton = $('.shareButton');
     _shareButton.off().click(function(e) {
         $(this).siblings('ul').stop(true, true).slideToggle();
@@ -569,12 +623,12 @@ $(function() {
     _shareButton.keyup(function(event) {
         $(this).siblings('ul').stop(true, true).slideDown();
     });
-    $('.funtion_panel .share').find('li:last>a').focusout(function(event) {
+    $('.function_panel .share').find('li:last>a').focusout(function(event) {
         $(this).parent().parent('ul').hide();
     });
     // 點外面關閉share
     $(document).on('touchend click', function(e) {
-        var container = $(".funtion_panel .share");
+        var container = $(".function_panel .share");
         if (!container.is(e.target) && container.has(e.target).length === 0) {
             $('.share ul').hide();
         }
@@ -585,19 +639,19 @@ $(function() {
     $('.font_size').find('.medium').addClass('active');
     $('.font_size').find('.small').click(function(e) {
         $(this).parent('li').siblings('li').find('a').removeClass('active');
-        $('.innerpage').removeClass('large_size').addClass('small_size');
+        $('.cp').removeClass('large_size').addClass('small_size');
         $(this).addClass('active');
         e.preventDefault();
     });
     $('.font_size').find('.medium').click(function(e) {
         $(this).parent('li').siblings('li').find('a').removeClass('active');
-        $('.innerpage').removeClass('large_size small_size');
+        $('.cp').removeClass('large_size small_size');
         $(this).addClass('active');
         e.preventDefault();
     });
     $('.font_size').find('.large').click(function(e) {
         $(this).parent('li').siblings('li').find('a').removeClass('active');
-        $('.innerpage').removeClass('small_size').addClass('large_size');
+        $('.cp').removeClass('small_size').addClass('large_size');
         $(this).addClass('active');
         e.preventDefault();
     });

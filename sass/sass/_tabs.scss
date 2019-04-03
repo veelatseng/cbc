@@ -1,6 +1,6 @@
 .tabSet {
     max-width: 100%;
-    margin: 1em auto;
+    margin: 0 auto 30px auto;
     overflow: hidden;
     @extend %clearfix;
     @include screen('mobile') {
@@ -11,37 +11,93 @@
 .tabs {
     position: relative;
     &>.tabItem {
-        &.active>a {
-            background-color: $primaryColor;
-            color: #FFF;
-        }
+        border-top: 10px solid #f2f2f2;
+        border-bottom: 10px solid #f2f2f2;
         float: left;
         margin: 0;
         padding: 0;
         font-size:1em;
         line-height: 1;
+        -webkit-transition:0.5s all ease;
+        transition:0.5s all ease;
         @include screen('mobile') {
-            float: none;
-            &>a {
-                width: 100% !important;
-                border-bottom: 1px solid #888;
-            }
-            &.active>a {
-                border-color: #bbb;
-            }
+            border-top: 1px solid #000;
+            border-bottom:0 solid #000;
         }
         &>a {
             display: block;
-            padding: 16px 0 14px;
+            padding: 16px 0;
             text-align: center;
-            background-color: #aaa;
-            color: #fff;
+            color: #000;
+            border-top: 2px solid #000;
+            border-bottom: 2px solid #000;
             font-weight: bold;
             text-decoration: none;
+            // outline: 1px solid red;
             @include text-overflow;
             @include box-sizing;
+            @include screen('mobile') {
+                width: 100% !important;
+                border-top: 1px solid #f2f2f2;
+                border-bottom:0 solid #000;
+                background: #f2f2f2;
+                padding: 20px 50px;
+                text-align: left;
+                position: relative;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    right: 56px;
+                    top: 25px;
+                    width: 6px;
+                    height: 6px;
+                    border-right: 1px solid #fff;
+                    border-bottom: 1px solid #fff;
+                    transform: rotate(45deg);
+                    z-index: 13;
+                }
+                &:after{
+                    content: "";
+                    position: absolute;
+                    right: 50px;
+                    top: 20px;
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    border-radius: 50%;
+                    background: #222;
+                    z-index: 12;
+                }
+            }
             &:hover {
+                color: $primaryColor;
+            }
+        }
+        &.active{
+            border-top: 10px solid $primaryColor;
+            border-bottom: 10px solid $primaryColor;
+            @include screen('mobile') {
+                border-top: 1px solid #000;
+                border-bottom: 0 solid $primaryColor;
+            }
+            &>a {
+                color: #fff;
                 background: $primaryColor;
+                border-top: 2px solid $primaryColor;
+                border-bottom: 2px solid $primaryColor;
+                @include screen('mobile') {
+                    border-top: 1px solid #f2f2f2;
+                    border-bottom:0 solid #000;
+                    &:before{
+                        content: "";
+                        border-right: 1px solid $primaryColor;
+                        border-bottom: 1px solid $primaryColor;
+                    }
+                    &:after{
+                        content: "";
+                        background: #fff;
+                    }
+                }
             }
         }
     }
@@ -65,7 +121,7 @@
     left: 0;
     right: 0;
     clear: both;
-    padding: 30px 20px;
+    padding: 30px 0;
     display: none;
     @include screen('mobile') {
         position: static;
@@ -77,18 +133,11 @@
         margin: 0 0 1.3em 0;
         padding: 0;
         line-height: 1.6;
-        border-bottom: 1px #CCC dashed;
         @include screen('mobile') {
             @include text-overflow();
         }
         a {
             @include aSetting_nocolor;
-        }
-        time {
-            display: inline-block;
-            margin: 0 0 0 1em;
-            font-size: .813em;
-            color: #666;
         }
     }
 }

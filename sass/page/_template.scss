@@ -112,6 +112,7 @@ body {
     }
 }
 .suggestions{
+    //流程
     .flow{
         margin: 50px auto;
         overflow: hidden;
@@ -193,38 +194,13 @@ body {
             margin-bottom: .5em;
         }
     }
+    //流程圖
     .flowchart{
         text-align: center;
         img{
             @include screen('mobile') {
                 width: 100%;
                 height: auto;
-            }
-        }
-    }
-    .suggestions_result{
-        border-top: 1px solid #787878;
-        margin: 10px 0;
-        table{
-            border: 0px;
-            tr{
-                border-bottom: 1px solid #DDD;
-                &:last-child{
-                    th,td{
-                        color: $primaryColor;
-                    }
-                }
-            }
-            th{
-                text-align: left;
-                width: 15%;
-            }
-            th,td{
-                background: transparent;
-                color: #444;
-                border: 0;
-                padding-left: 30px;
-                padding-right: 30px;
             }
         }
     }
@@ -250,9 +226,39 @@ body {
             }
         }
     }
+    //意見信箱：案件查詢結果
+    .text_block.suggestions_result{
+        border-top: 1px solid #787878;
+        margin: 10px 0;
+        table{
+            border: 0px;
+            tr{
+                border-bottom: 1px solid #DDD;
+                &:last-child{
+                    th,td{
+                        color: $primaryColor;
+                    }
+                }
+            }
+            th{
+                text-align: left;
+                width: 15%;
+            }
+            th,td{
+                background: transparent;
+                color: #444;
+                border: 0;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    }
+    //意見信箱：確認信提醒
+    .text_block.suggestions_confirm{
+    }
 }
-.suggestions_confirm{
-}
+
+//「五大銀行平均存款利率」與「五大銀行平均基準利率」
 .rate_table{
     margin: 10px 0;
     .rate_info{
@@ -321,6 +327,7 @@ body {
         }
     }
 }
+//內容頁SP：組織與職掌
 .organization{
     width: 100%;
     >ul{

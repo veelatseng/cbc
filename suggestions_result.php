@@ -37,7 +37,7 @@
                 <?php require_once('include/funtion_panel.html'); ?>
                 <!-- suggestions Start -->
                 <section class="suggestions">
-                    <div class="suggestions_result text_block">
+                    <div class="text_block suggestions_result">
                         <table summary="">
                             <tbody>
                                 <tr>

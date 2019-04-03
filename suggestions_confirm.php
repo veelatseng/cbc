@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <h3>確認信提醒</h3>
-                    <div class="suggestions_confirm text_block">
+                    <div class="text_block suggestions_confirm">
                         <p>您的電子信箱為<em>ooooo@gmail.com</em>，請確認是否正確。</p>
                         <p>確認無誤後，系統將隨即自動發送確認信函至此信箱，請您打開確認信函點選確認，系統及受理此意見內容。</p>
                         <p>請注意，若您在14天內未打開確認信函點選確認，本行將視為無效案件，請重新制本行意見信箱再次填寫，謝謝您的配合。</p> 

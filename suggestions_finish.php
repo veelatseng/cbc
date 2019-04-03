@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <h3>案件送出成功</h3>
-                    <div class="suggestions_confirm text_block">
+                    <div class="text_block">
                         <p>謝謝您的來信，此封信件的信件編號為<em>OOOOOOOO</em>，您日後可以依信件編號查詢信件的處理狀態及答覆內容。</p>
                         <p>本行將依您的來信內容，交由業務權責單位處理，並儘快於7日內答覆。</p>     
                     </div>
