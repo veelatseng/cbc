@@ -485,7 +485,9 @@ $(function() {
             }
         });
     }
-    function tabSet() {
+    $('.tabs>.tabItem:first-child>a').trigger('click');
+    tabSet();
+    function newsTabSet() {
         $('.news_block .tabs').each(function() {
             var _tab = $(this),
             _tabItem = _tab.find('.tabItem'),
@@ -538,8 +540,8 @@ $(function() {
             }
         });
     }
-    $('.tabs>.tabItem:first-child>a').trigger('click');
-    tabSet();
+    $('.news_block .tabs>.tabItem:first-child>a').trigger('click');
+    newsTabSet();
     /*-----------------------------------*/
     ///////////////置頂go to top////////////
     /*-----------------------------------*/

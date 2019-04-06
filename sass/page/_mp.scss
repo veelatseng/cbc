@@ -3,7 +3,7 @@
   text-align: right;
   margin-bottom: 20px;
   position: relative;
-
+  clear: both;
   a {
     text-decoration: none;
     display: inline-block;
@@ -76,7 +76,7 @@
     right: 30px;
   }
 }
-
+// 首頁輪播
 .vertical_slider {
   width: 69%;
   height: auto;
@@ -182,7 +182,7 @@
       display: block;
       color: #fff;
       background: rgba(0, 0, 0, 0.8);
-      z-index: 9999;
+      z-index: 99;
       text-align: center;
 
       &:hover,
@@ -201,7 +201,7 @@
       display: block;
       color: #fff;
       background: rgba(0, 0, 0, 0.8);
-      z-index: 9999;
+      z-index: 99;
       text-align: center;
 
       &:hover,
@@ -210,13 +210,13 @@
       }
     }
   }
-
 /* right */
 .vslider_menu {
-  width: auto;
-  overflow: hidden;
+  width: 31%;
+  // overflow: hidden;
   position: relative;
-  z-index: 999;
+  z-index: 100;
+  display: inline-block;
 
   @media screen and(max-width: 991px) {
     display: none;
@@ -233,8 +233,21 @@
       font-size: 1em;
       background: #eaeaea;
       margin-bottom: 1px;
+      position: relative;
+      z-index: 100;
 
       &.active {
+        &:before{
+          content: "";
+          width: 9px;
+          height: 100%;
+          display: block;
+          position: absolute;
+          left: -7px;
+          top: 0;
+          background: $linkColor;
+          z-index: 101;
+        }
         a {
           color: #fff;
           background: $linkColor;
@@ -257,8 +270,20 @@
 
         &:hover,
         &:focus {
+          &:before{
+            content: "";
+            width: 9px;
+            height: 100%;
+            display: block;
+            position: absolute;
+            left: -7px;
+            top: 0;
+            background: $linkColor;
+            z-index: 101;
+          }
           color: #fff;
           background: $linkColor;
+          outline-color: $linkColor;
         }
       }
     }
@@ -318,7 +343,18 @@
     margin: 38px auto 20px auto;
     position: relative;
     z-index: 11;
-
+    .tabs {
+      &>.tabItem {
+        border-top: 10px solid #f2f2f2;
+        border-bottom: 10px solid #f2f2f2;
+        &>a {
+          @include screen('mobile') {
+            border-top: 1px solid #f2f2f2;
+            background: #f2f2f2;
+          }
+        }
+      }
+    }
     .more {
       @include screen('mobile') {
         text-align: center;
@@ -473,12 +509,10 @@
     margin-bottom: 30px;
   }
 }
-
-.slider_block,
 .key_indicators_block,
 .service_block,
 .policy_block,
-.slider_block2,
+.issue_block,
 .link_block,
 .adSlider {
   @include make-xs-column(12);
@@ -486,81 +520,72 @@
   @include make-md-column(12);
   @include make-lg-column(12);
   @include box-sizing();
-
+  margin-bottom: 10px;
   h2 {
     text-align: center;
+    color: #343434;
+  }
+  .inner{
+    background: #fff;
+    padding:20px 30px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
   }
 }
 
-.key_indicators_block {}
+.key_indicators_block {
 
-// 首頁輪播
-.slider_block {
-  width: 100%;
-  padding-bottom: 3em;
-  @include gutter(0);
+}
 
-  .img-container {
-    height: 400px;
-    width: 100%;
-    position: relative;
-
-    img {
-      width: 100% !important;
-      height: 100%;
-    }
-
-    @include screen('mobile') {
-      height: 280px;
-      width: 100%;
-    }
+.link_block{
+  margin-bottom: 68px;
+  .inner{
+    background: #fff;
+    padding:20px 30px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
   }
-
-  a {
-    display: block;
-    height: 100%;
-    width: 100%;
-    position: relative;
-
-    .caption {
-      position: absolute;
-      width: 100%;
-      height: 3em;
-      background: rgba(0, 0, 0, .45);
-      padding: 1em .5em .5em;
-      font-size: 1.125em;
-      color: #FFF;
-      margin: 0;
-      text-align: center;
-      bottom: 0;
-      @include text-overflow;
-      @include box-sizing;
-
-      @include screen('mobile') {
-        height: 2em;
-        width: 100%;
-        left: 0;
-        padding: .5em;
-      }
+  h2{
+    margin-bottom: 1em;
+  }
+  .tabSet{
+    margin-bottom: 0;
+  }
+  .tabItem{
+    letter-spacing: 1px;
+  }
+  .tabContent{
+    padding:30px 50px;
+    ul{
     }
-
-    &:focus {
-      &:before {
+    li{
+      position: relative;
+      margin-bottom: 20px;
+      font-size: 1em;
+      font-weight: bold;
+      @include make-xs-column(12);
+      @include make-sm-column(6);
+      @include make-md-column(4);
+      @include make-lg-column(4);
+      @include box-sizing();
+      &:before{
         content: "";
+        width: 4px;
+        height: 4px;
+        display: block;
         position: absolute;
-        z-index: 9;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        box-shadow: 0 0px 0px 3px $primaryColor inset;
+        left: 30px;
+        top: 12px;
+        background: #111;
+      }
+      a{
+        margin-left: 13px;
       }
     }
   }
+  .more{
+    margin-bottom: 0;
+    margin-right: -30px;
+  }
 }
-
 // 廣告輪播
 .adSlider_block {
   @include gutter(70px);

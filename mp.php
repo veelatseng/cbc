@@ -43,10 +43,10 @@
                                     <a href="http://design.hyweb.com.tw/hyui"><img src="https://www.cbc.gov.tw/public/Data/931416205471.jpg" alt="本行進用退役運動選手緣由及現況"></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="https://assets.imgix.net/unsplash/paperlamp.jpg?usm=20&auto=format%2Cenhance&fit=crop&h=310&w=740" alt="對美中貿易失衡的觀點"></a>
+                                    <a href="#"><img src="https://www.cbc.gov.tw/public/Data/9171810371.jpg" alt="對美中貿易失衡的觀點"></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="https://assets.imgix.net/examples/womanlandscape.jpg?usm=20&auto=format%2Cenhance&fit=crop&h=310&w=740" alt="總裁應The Banker雜誌邀稿專文"></a>
+                                    <a href="#"><img src="https://www.cbc.gov.tw/public/Data/91915105271.jpg" alt="總裁應The Banker雜誌邀稿專文"></a>
                                 </li>
                             </ul>
                         </div>
@@ -365,19 +365,19 @@
                     </ul>
                     <div class="more"><a href="#">更多重大政策</a></div>
                 </section>
-                <section class="slider_block2">
-                    <div class="mpSlider2">
-                        <div class="issue_block">
+                <section class="issue_block">
+                    <div class="inner">
+                        <div class="issue">
                             <h2>焦點金融議題</h2>
                             <img src="..." alt="" class="cover">
                             <div class="more"><a href="#">更多焦點金融議題</a></div>
                         </div>
-                        <div class="issue_block">
+                        <div class="issue">
                             <h2>焦點金融議題</h2>
                             <img src="..." alt="" class="cover">
                             <div class="more"><a href="#">更多焦點金融議題</a></div>
                         </div>
-                        <div class="issue_block">
+                        <div class="issue">
                             <h2>焦點金融議題</h2>
                             <img src="..." alt="" class="cover">
                             <div class="more"><a href="#">更多焦點金融議題</a></div>
@@ -385,77 +385,94 @@
                     </div>
                 </section>
                 <section class="link_block">
-                    <h2>相關連結</h2>
-                    <div class="tabSet">
-                        <section class="tabs">
-                            <h3 class="tabItem active"><a href="#">主題網站</a></h3>
-                            <div class="tabContent">
-                                <ul>
-                                    <li><a href="#">中央印製廠</a></li>
-                                    <li><a href="#">統計資訊網</a></li>
-                                    <li><a href="#">中央造幣廠</a></li>
-                                    <li><a href="#">中央銀行整合服務網</a></li>
-                                    <li><a href="#">券幣數位博物館</a></li>
-                                    <li><a href="#">發行貨幣專區</a></li>
-                                </ul>
-                                <div class="more"><a href="#">更多主題網站</a></div>
-                            </div>
-                            <h3 class="tabItem"><a href="#">相關政府及金融機構</a></h3>
-                            <div class="tabContent">
-                                <ul>
-                                    <li><a href="#">中央印製廠</a></li>
-                                    <li><a href="#">統計資訊網</a></li>
-                                    <li><a href="#">中央造幣廠</a></li>
-                                    <li><a href="#">中央銀行整合服務網</a></li>
-                                    <li><a href="#">券幣數位博物館</a></li>
-                                    <li><a href="#">發行貨幣專區</a></li>
-                                </ul>
-                                <div class="more"><a href="#">更多相關政府及金融機構</a></div>
-                            </div>
-                            <h3 class="tabItem"><a href="#">國際組織</a></h3>
-                            <div class="tabContent">
-                                <ul>
-                                    <li><a href="#">中央印製廠</a></li>
-                                    <li><a href="#">統計資訊網</a></li>
-                                    <li><a href="#">中央造幣廠</a></li>
-                                    <li><a href="#">中央銀行整合服務網</a></li>
-                                    <li><a href="#">券幣數位博物館</a></li>
-                                    <li><a href="#">發行貨幣專區</a></li>
-                                </ul>
-                                <div class="more"><a href="#">更多國際組織</a></div>
-                            </div>
-                            <h3 class="tabItem"><a href="#">我國之支付系統運作機構</a></h3>
-                            <div class="tabContent">
-                                <ul>
-                                    <li><a href="#">中央印製廠</a></li>
-                                    <li><a href="#">統計資訊網</a></li>
-                                    <li><a href="#">中央造幣廠</a></li>
-                                    <li><a href="#">中央銀行整合服務網</a></li>
-                                    <li><a href="#">券幣數位博物館</a></li>
-                                    <li><a href="#">發行貨幣專區</a></li>
-                                </ul>
-                                <div class="more"><a href="#">更多我國之支付系統運作機構</a></div>
-                            </div>
-                        </section>
+                    <div class="inner">
+                        <h2>相關連結</h2>
+                        <div class="tabSet">
+                            <section class="tabs">
+                                <h3 class="tabItem active"><a href="#">主題網站</a></h3>
+                                <div class="tabContent">
+                                    <ul>
+                                        <li><a href="#">1中央印製廠</a></li>
+                                        <li><a href="#">統計資訊網</a></li>
+                                        <li><a href="#">中央造幣廠</a></li>
+                                        <li><a href="#">中央銀行整合服務網</a></li>
+                                        <li><a href="#">券幣數位博物館</a></li>
+                                        <li><a href="#">發行貨幣專區</a></li>
+                                    </ul>
+                                    <div class="more"><a href="#">更多主題網站</a></div>
+                                </div>
+                                <h3 class="tabItem"><a href="#">相關政府及金融機構</a></h3>
+                                <div class="tabContent">
+                                    <ul>
+                                        <li><a href="#">2中央印製廠</a></li>
+                                        <li><a href="#">統計資訊網</a></li>
+                                        <li><a href="#">中央造幣廠</a></li>
+                                        <li><a href="#">中央銀行整合服務網</a></li>
+                                        <li><a href="#">券幣數位博物館</a></li>
+                                        <li><a href="#">發行貨幣專區</a></li>
+                                    </ul>
+                                    <div class="more"><a href="#">更多相關政府及金融機構</a></div>
+                                </div>
+                                <h3 class="tabItem"><a href="#">國際組織</a></h3>
+                                <div class="tabContent">
+                                    <ul>
+                                        <li><a href="#">3中央印製廠</a></li>
+                                        <li><a href="#">統計資訊網</a></li>
+                                        <li><a href="#">中央造幣廠</a></li>
+                                        <li><a href="#">中央銀行整合服務網</a></li>
+                                        <li><a href="#">券幣數位博物館</a></li>
+                                        <li><a href="#">發行貨幣專區</a></li>
+                                    </ul>
+                                    <div class="more"><a href="#">更多國際組織</a></div>
+                                </div>
+                                <h3 class="tabItem"><a href="#">我國之支付系統運作機構</a></h3>
+                                <div class="tabContent">
+                                    <ul>
+                                        <li><a href="#">4中央印製廠</a></li>
+                                        <li><a href="#">統計資訊網</a></li>
+                                        <li><a href="#">中央造幣廠</a></li>
+                                        <li><a href="#">中央銀行整合服務網</a></li>
+                                        <li><a href="#">券幣數位博物館</a></li>
+                                        <li><a href="#">發行貨幣專區</a></li>
+                                    </ul>
+                                    <div class="more"><a href="#">更多我國之支付系統運作機構</a></div>
+                                </div>
+                            </section>
+                        </div>
                     </div>
                 </section>
-                <!-- <section class="adSlider_block">
+                <section class="adSlider">
                     <div class="img-container">
                         <a href="#" title="">
-                            <img src="..." alt="" class="cover">
+                            <img src="https://www.cbc.gov.tw/public/Data/6121310265553.jpg" alt="" class="cover">
                         </a>
                     </div>
                     <div class="img-container">
                         <a href="#" title="">
-                            <img src="..." alt="" class="cover">
+                            <img src="https://www.cbc.gov.tw/public/Data/772415294571.gif" alt="" class="cover">
                         </a>
                     </div>
                     <div class="img-container">
                         <a href="#" title="">
-                            <img src="..." alt="" class="cover">
+                            <img src="https://www.cbc.gov.tw/public/Data/782410462971.jpg" alt="" class="cover">
                         </a>
                     </div>
-                </section> -->
+                    <div class="img-container">
+                        <a href="#" title="">
+                            <img src="https://www.cbc.gov.tw/public/Data/782410462971.jpg" alt="" class="cover">
+                        </a>
+                    </div>
+                    <div class="img-container">
+                        <a href="#" title="">
+                            <img src="https://www.cbc.gov.tw/public/Data/782410462971.jpg" alt="" class="cover">
+                        </a>
+                    </div>
+                    <div class="img-container">
+                        <a href="#" title="">
+                            <img src="https://www.cbc.gov.tw/public/Data/782410462971.jpg" alt="" class="cover">
+                        </a>
+                    </div>
+                </section>
             </div>
 
         </div>
