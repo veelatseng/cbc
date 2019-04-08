@@ -20,7 +20,7 @@ $(function() {
         dots: false,
         infinite: true,
         speed: 300,
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         arrow: true,
@@ -50,7 +50,7 @@ $(function() {
         }]
     });
 	 //燈箱slick+lightBox組合
-     $('.cp_slider').slick({
+    $('.cp_slider').slick({
         dots: true,
         infinite: true,
         speed: 500,
@@ -87,15 +87,15 @@ $(function() {
             }
         }]
     });
-     $('.cp_slider').slickLightbox({
+    $('.cp_slider').slickLightbox({
         caption: 'caption',
         useHistoryApi: 'true',
         lazy: true
     });
 
 
-     $('.advanced_search').hide();
-     $('.btn_advanced_search').off().click(function(event) {
+    $('.advanced_search').hide();
+    $('.btn_advanced_search').off().click(function(event) {
         $('.advanced_search').stop().slideToggle();
     });
     // category

@@ -359,9 +359,9 @@
                 <section class="policy_block">
                     <h2>重大政策</h2>
                     <ul>
-                        <li><a href="">108年3月21日中央銀行理監事聯席會議決議新聞稿</a></li>
-                        <li><a href="">108年3月21日央行理監事會後記者會參考資料</a></li>
-                        <li><a href="">108年3月21日央行理監事會後記者會簡報 </a></li>
+                        <li class="press"><a href=""><span>108年3月21日中央銀行理監事聯席會議決議新聞稿</span></a></li>
+                        <li class="reference"><a href=""><span>108年3月21日央行理監事會後記者會參考資料</span></a></li>
+                        <li class="slides"><a href=""><span>108年3月21日央行理監事會後記者會簡報</span></a></li>
                     </ul>
                     <div class="more"><a href="#">更多重大政策</a></div>
                 </section>
@@ -369,21 +369,22 @@
                     <div class="inner">
                         <div class="issue">
                             <h2>焦點金融議題</h2>
-                            <img src="..." alt="" class="cover">
+                            <img src="images/issue.jpg" alt="">
                             <div class="more"><a href="#">更多焦點金融議題</a></div>
                         </div>
                         <div class="issue">
                             <h2>焦點金融議題</h2>
-                            <img src="..." alt="" class="cover">
+                            <img src="images/issue.jpg" alt="">
                             <div class="more"><a href="#">更多焦點金融議題</a></div>
                         </div>
                         <div class="issue">
                             <h2>焦點金融議題</h2>
-                            <img src="..." alt="" class="cover">
+                            <img src="images/issue.jpg" alt="">
                             <div class="more"><a href="#">更多焦點金融議題</a></div>
                         </div>
                     </div>
                 </section>
+                <!-- 相關連結 -->
                 <section class="link_block">
                     <div class="inner">
                         <h2>相關連結</h2>
