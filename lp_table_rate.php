@@ -34,13 +34,9 @@
                 <!-- h2節點 -->
                 <h2 class="title">列表頁SP：新台幣／美元（中文）</h2>
                 <!-- function功能區塊 -->
-                <?php require_once('include/funtion_panel.html'); ?>
+                <?php require_once('include/function_panel.html'); ?>
                 <!-- LP Start -->
                 <section class="lp">
-                    <!-- advanced_search -->
-                    <?php require_once('include/advanced_search.html'); ?>
-                    <!-- category -->
-                    <?php require_once('include/category.html'); ?>
                     <h3 class="table_title">新臺幣對美元銀行間成交之收盤匯率 </h3>
                     <div>
                         <table summary="">

@@ -16,7 +16,7 @@ select::-ms-expand {
     display: none;
 }
 .form_grid {
-    margin: .5em;
+    // margin: .5em;
     .form_grp {
         border-bottom: 1px solid #DDD;
         overflow: hidden;
@@ -29,6 +29,9 @@ select::-ms-expand {
         @include make-lg-column(3);
         @include gutter();
         padding-top: 5px;
+        @include screen('mobile') {
+            padding-left: 0;
+        }
     }
     .form_content {
         @include make-xs-column(12);
@@ -36,6 +39,9 @@ select::-ms-expand {
         @include make-md-column(9);
         @include make-lg-column(9);
         @include gutter();
+        @include screen('mobile') {
+            @include gutter(0);
+        }
     }
 }
 //---------------------------------------------form setting--------//
@@ -201,10 +207,11 @@ input[type="text"]:focus,
 input[type="reset"]:focus,
 input[type="file"]:focus,
 input[type="password"]:focus,
+input[type="button"]:focus,
 textarea:focus,
 select:focus {
-    border: 1px solid lighten($form-focus, 20);
-    @include box-shadow(0px 0px 0px 2px lighten($form-focus, 20));
+    border: 1px solid $form-focus;
+    @include box-shadow(0px 0px 0px 2px $form-focus);
     outline: none;
 }
 //
@@ -247,8 +254,8 @@ input[type="radio"] {
 }
 input[type="checkbox"]:checked,
 input[type="radio"]:checked {
-    border-color: $form-focus;
-    background-color: $form-focus;
+    border-color: $primaryColor;
+    background-color: $primaryColor;
     outline: none;
 }
 input[type="checkbox"]:checked {
@@ -322,6 +329,13 @@ img.captcha {
         display: inline-block;
         width: auto;
         vertical-align: middle;
+        @include screen('mobile') {
+            width: 100%;
+            &~button{
+                width: 100%;
+                margin-bottom: .5em;
+            }
+        }
     }
     ~img {
         display: inline-block;

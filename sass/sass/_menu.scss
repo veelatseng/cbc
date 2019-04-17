@@ -41,6 +41,22 @@
                     z-index:-2;
                     border-top: 3px solid $primaryColor;
                 }
+                &:focus{
+                    color: #fff;
+                    outline:#fff solid thin;
+                    &:after {
+                        border: 2px solid #fff;
+                        border-bottom: none;
+                        border-left: none;
+                    }
+                    &:before {
+                        -webkit-transition:0.5s all ease;
+                        transition:0.5s all ease;
+                        left:0;
+                        right:0;
+                        opacity:1;
+                    }
+                }
             }
             &.hasChild {
                 >a {
@@ -59,44 +75,42 @@
                     }
                 }
             }
-            &:hover {
-                >a {
-                    color: #fff;
-                    &:after {
-                        border: 2px solid #fff;
-                        border-bottom: none;
-                        border-left: none;
-                    }
-                    &:before {
-                      -webkit-transition:0.5s all ease;
-                      transition:0.5s all ease;
-                      left:0;
-                      right:0;
-                      opacity:1;
-                  }
-              }
-          }
-      }
-      ul {
-        display: none;
-        overflow: visible;
-        width: 200px;
-        background: rgba(0, 0, 0, .8);
-        padding: 0;
-        z-index: 999999;
-        position: absolute;
-        top: auto;
-        left: 0;
-        list-style: none;
-        text-align: left;
-        animation: showMenu .3s ease-out;
+            &:hover a{
+                color: #fff;
+                &:after {
+                    border: 2px solid #fff;
+                    border-bottom: none;
+                    border-left: none;
+                }
+                &:before {
+                    -webkit-transition:0.5s all ease;
+                    transition:0.5s all ease;
+                    left:0;
+                    right:0;
+                    opacity:1;
+                }
+            }
+        }
         ul {
-            top: 0;
-            left: 170px;
-            animation: none;
+            display: none;
+            overflow: visible;
+            width: 200px;
+            background: rgba(0, 0, 0, .8);
+            padding: 0;
+            z-index: 999999;
+            position: absolute;
+            top: auto;
+            left: 0;
+            list-style: none;
+            text-align: left;
+            animation: showMenu .3s ease-out;
+            ul {
+                top: 0;
+                left: 170px;
+                animation: none;
+            }
         }
     }
-}
     // 預設選單 li
     li {
         position: relative;

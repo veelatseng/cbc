@@ -23,23 +23,23 @@
     }
 }
 // 放進cp_panel樣式
-.funtion_panel {
+.function_panel {
     .share {
         @include box-sizing();
         text-align: center;
-        height: 40px;
-        margin: 0;
+        height: 30px;
+        margin: 5px 0 0 0;
         position:relative;
         ul {
             display: none;
             position: absolute;
-            top: 3em;
-            left: -8px;
-            width: 40px;
+            top: 2.5em;
+            left: -11px;
+            width: 30px;
             padding: 10px;
-            background: #eeeded;
-            box-shadow: 2px 2px 5px RGBA(0, 0, 0, .2);
-            border-radius: 8px;
+            background: #333;
+            box-shadow: 2px 2px 5px RGBA(0, 0, 0, 0.2);
+            border-radius: 3px;
             z-index: 999;
             height: auto;
             li {
@@ -72,8 +72,8 @@
             display: block;
             background: #6096bc;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             text-align: center;
             &:hover, &:focus {
                 background: $aHover;

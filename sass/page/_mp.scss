@@ -1,9 +1,12 @@
 // 首頁區塊設定
-.more {
+div.more {
   text-align: right;
   margin-bottom: 20px;
   position: relative;
   clear: both;
+  @include screen('mobile') {
+    text-align: center;   
+  }
   a {
     text-decoration: none;
     display: inline-block;
@@ -76,6 +79,9 @@
     right: 30px;
   }
 }
+.main .container{
+  background: #f7f7f7;
+}
 // 首頁輪播
 .vertical_slider {
   width: 69%;
@@ -87,11 +93,16 @@
   background: #ddd;
   display: block;
   float: left;
-  @media screen and(max-width: 991px) {
+  @include screen('tablet') {
     float: none;
     width: 100%;
-    margin: 0 auto 1.5em;
+    margin: 0 auto 0;
     overflow: hidden;
+    background: transparent;
+    min-height: 170px;
+  }
+  @media screen and (max-width: 340px) {
+    min-height: 130px;
   }
   span {
     top: 90%;
@@ -102,6 +113,13 @@
     width: 100%;
     height: 100%;
     padding: 0;
+    @include screen('tablet') {
+      min-height: 170px;
+      margin: 0;
+    }
+    @media screen and (max-width: 340px) {
+      min-height: 130px;
+    }
     li {
       position: absolute;
       display: block;
@@ -109,12 +127,24 @@
       width: 100%;
       height: 100%;
       box-sizing: border-box;
+      @include screen('tablet') {
+        min-height: 170px;
+      }
+      @media screen and (max-width: 340px) {
+        min-height: 130px;
+      }
       a {
         position: relative;
         display: block;
         width: 100%;
         height: 100%;
         box-sizing: border-box;
+        @include screen('tablet') {
+          min-height: 170px;
+        }
+        @media screen and (max-width: 340px) {
+          min-height: 130px;
+        }
         h3 {
           background: rgba(0, 0, 0, 0.7);
           width: 100%;
@@ -130,18 +160,29 @@
           padding: 0 10em 0 1em;
           display: none;
           overflow: hidden;
-          @media screen and(max-width: 991px) {
+          @include screen('tablet') {
             display: block;
+            padding: 0 1em;
+          }
+          @media screen and (max-width: 340px) {
+            height: 2.5em;
+            line-height: 2.5em;
+            font-size: 1em;
           }
         }
         img {
           width: 100%;
           height: 100%;
-          @media screen and(max-width: 991px) {
+          @include screen('tablet') {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            object-fit: contain;
           }
+          // @media screen and(max-width: 991px) {
+          //   width: 100%;
+          //   height: 100%;
+          //   object-fit: cover;
+          // }
         }
         &:focus {
           &:before {
@@ -163,15 +204,40 @@
   .prev {
     position: absolute;
     top: 50%;
-    left: 10px;
-    width: 80px;
-    height: 30px;
-    line-height: 30px;
+    left: 0;
+    width: 45px;
+    height: 72px;
     display: block;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99;
-    text-align: center;
+    background: rgba(0,0,0,0.3);
+    z-index: 89;
+    text-indent: -9999px;
+    color: transparent;
+    margin-top: -36px;
+    @media screen and (max-width: 340px) {
+      height: 2.5em;
+      line-height: 2.5em;
+      font-size: 1em;
+      width: 36px;
+      height: 50px;
+      margin-top: -25px;
+    }
+    &:before{
+      content: "";
+      width: 30px;
+      height: 30px;
+      display: block;
+      border-top: 2px solid #fff;
+      border-left: 2px solid #fff;
+      transform: rotate(-45deg);
+      margin-left: 15px;
+      margin-top: 20px;
+      @media screen and (max-width: 340px) {
+        height: 20px;
+        width: 20px;
+        margin-left: 12px;
+        margin-top: 15px;
+      }
+    }
     &:hover,
     &:focus {
       background: $primaryColor;
@@ -180,16 +246,40 @@
   .next {
     position: absolute;
     top: 50%;
-    right: 10px;
-    width: 80px;
-    height: 30px;
-    line-height: 30px;
+    right: 0;
+    width: 45px;
+    height: 72px;
     display: block;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99;
-    text-align: center;
-
+    background: rgba(0,0,0,0.3);
+    z-index: 89;
+    text-indent: -9999px;
+    color: transparent;
+    margin-top: -36px;
+    @media screen and (max-width: 340px) {
+      height: 2.5em;
+      line-height: 2.5em;
+      font-size: 1em;
+      width: 36px;
+      height: 50px;
+      margin-top: -25px;
+    }
+    &:before{
+      content: "";
+      width: 30px;
+      height: 30px;
+      display: block;
+      border-top: 2px solid #fff;
+      border-right: 2px solid #fff;
+      transform: rotate(45deg);
+      margin-right: 15px;
+      margin-top: 20px;
+      @media screen and (max-width: 340px) {
+        height: 20px;
+        width: 20px;
+        margin-right: 12px;
+        margin-top: 15px;
+      }
+    }
     &:hover,
     &:focus {
       background: $primaryColor;
@@ -202,6 +292,7 @@
   position: relative;
   z-index: 90;
   display: inline-block;
+  float: right;
   @media screen and(max-width: 991px) {
     display: none;
   }
@@ -228,6 +319,7 @@
           top: 0;
           background: $linkColor;
           z-index: 91;
+          border-bottom: 1px solid #fff;
         }
         a {
           color: #fff;
@@ -259,6 +351,7 @@
             top: 0;
             background: $linkColor;
             z-index: 91;
+            border-bottom: 1px solid #fff;
           }
           color: #fff;
           background: $linkColor;
@@ -284,7 +377,11 @@
     display: block;
   }
 }
-
+.bottom_block{
+  overflow: hidden;
+  padding-top: 15px;
+  background:url(../images/bg1.jpg) left top no-repeat,url(../images/bg2.jpg) left bottom no-repeat;
+}
 .news_block {
   @include make-xs-column(12);
   @include make-sm-column(12);
@@ -293,12 +390,10 @@
   @include box-sizing();
   @include gutter(100px);
   position: relative;
-
   @include screen('mobile') {
     padding-left: 30px;
     padding-right: 30px;
   }
-
   &:after {
     content: "";
     width: 94%;
@@ -308,41 +403,50 @@
     left: 25px;
     top: -12px;
     background: #f2f2f2;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
     z-index: 10;
-
     @include screen('tablet') {
       display: none;
     }
   }
-
   .tabSet {
     margin: 38px auto 20px auto;
     position: relative;
     z-index: 11;
+    @media screen and (max-width: 340px) {
+      margin-top: 20px;
+    }
     .tabs {
       &>.tabItem {
         border-top: 10px solid #f2f2f2;
         border-bottom: 10px solid #f2f2f2;
-        &.active{
-          border-top: 10px solid #4979AB;
-          border-bottom: 10px solid #4979AB;
+        @include screen('mobile') {
+          border-top: 1px solid #000;
+          border-bottom: 0px solid #f2f2f2;
         }
         &>a {
           @include screen('mobile') {
-            border-top: 1px solid #f2f2f2;
+            border-top: 0px solid #f2f2f2;
             background: #f2f2f2;
+          }
+        }
+        &.active{
+          border-top: 10px solid $primaryColor;
+          border-bottom: 10px solid $primaryColor;
+          @include screen('mobile') {
+            border-top: 1px solid #000;
+            border-bottom: 0px solid #f2f2f2;
+          }
+          a{     
+            background: $primaryColor;
+            @include screen('mobile') {
+              border-top: 1px solid #f2f2f2;
+            }
           }
         }
       }
     }
-    .more {
-      @include screen('mobile') {
-        text-align: center;
-      }
-    }
   }
-
   .tabContent {
     padding: 30px 0 0 0;
 
@@ -489,6 +593,7 @@
   h2 {
     text-align: center;
     color: #343434;
+    letter-spacing: 2px;
   }
   .inner{
     background: #fefcfc;
@@ -498,33 +603,318 @@
 }
 
 .key_indicators_block { 
+  .tabSet{
+    max-width: 100%;
+    overflow: inherit;
+    clear: both;
+    position: relative;
+    &:after{
+      content: "";
+      clear: both;
+      display: block;
+    }
+  }
+  .tabs{
+    position: relative;
+    .tabItem{
+      width: 49%;
+      position: relative;
+      z-index: 9;
+      display: block;
+      margin: 0 0 10px 0;
+      padding: 0;
+      clear: both;
+      background: #fff;
+      border: 0;
+      box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+      float: none;
+      letter-spacing: .02em;
+      &:before{
+        content: "";
+        width: 10px;
+        height: 100%;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: $primaryColor;
+        z-index: 10;
+        transition: all .3s linear;
+      }
+      a{
+        border: 0;
+        padding: 20px 20px 20px 30px;
+        text-align: right; 
+        cursor: pointer;
+        &:before,&:after{
+          display: none;
+        }
+      }
+      h3{
+        font-size: 1.25em;
+        font-weight: normal;  
+        margin: 0;
+        float: left;
+        position: relative;
+        z-index: 11;
+        transition: all .3s linear;
+        width: 65%;
+        white-space: normal;
+        text-align: left;
+      }
+      span.date{
+        display: inline-block;
+        color: #777;
+        font-size: 0.938em;
+        margin-top: 6px;
+        float: left;
+        clear: left;
+        position: relative;
+        z-index: 11;
+        transition: all .3s linear;
+      }
+      span.info{
+        font-family: "Century Gothic";
+        color: #333;
+        position: relative;
+        z-index: 11;
+        transition: all .3s linear;
+        em{
+          font-size: 2.25em;
+          font-style: normal;
+        }
+      }
+      &:hover{
+        border:0;
+        &:before{
+          content: "";
+          width: 100%;
+          height: 100%;
+        }
+        a{
+          h3,span.date,span.info{
+            color: #fff;
+          }
+        }
+      }
+      &.active{
+        border:0;
+        a{
+          h3,span.date,span.info{
+            color: #fff;
+          }
+        }
+      }
+    }
+    .tabContent {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: auto;
+      clear: both;
+      padding: 0;
+      display: none;
+      height: 535px;
+      width: 49%;
+      text-align: left;
+      z-index: 11;
+      box-sizing: border-box;
+      @include screen('mobile') {
+        width: 100%;
+        position: relative;
+        margin-bottom: 20px;
+        height: auto;
+      }
+      .key_chart{
+        width: 100%;
+        height: 354px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+        background: #fff;
+        @include screen('mobile') {
+          height: auto;
+        }
+      }
+      h3{
+        background: #333;
+        color: #fff;
+        padding: 4px 10px;
+        display: inline-block;
+        border-radius: 3px;
+        margin:10px 0 10px 0;
+      }
+      p{
+        margin-top: 0;
+        line-height: 1.8em;
+        height: 5.4em;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        color: #333;
+        font-weight: bold;
+      }
+    }
+  }
 }
+// 服務專區
 .service_block{
+  margin-bottom: 40px;
+  table{
+    background: #fdfbfb;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+    overflow: hidden;
+  }
   th{
-    font-size: 3em;
+    font-size: 1.5em;
+    padding: .5em;
+    width: 140px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border: 1px solid #e2e1e1;
+    @include screen('mobile') {
+      width: 70px;
+      line-height: 120%;
+      white-space: normal;
+    }
+  }
+  td{
+    border: 1px solid #e2e1e1;
+    position: relative;
+    padding: 25px 20px 10px 20px;
+    box-shadow: 0 -2px 2px rgba(0,0,0,.05);
+    @include screen('mobile') {
+      padding: 25px 15px 10px 15px;
+    }
   }
   ul{
     list-style: none;
+    display: block;
+    overflow: hidden;
+    padding-left: 0;
+    width: 90%;
+    margin: 0;
+    @include screen('mobile') {
+      width: 85%;
+    }
     li{
+      position: relative;
+      padding-left: 12px;
+      float: left;
+      width: 33%;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+      @include screen('mobile') {
+        width: 100%;
+      }
+      a{
+        color: #111;
+      }
       &:before{
         content: "";
         width: 4px;
         height: 4px;
         display: block;
         position: absolute;
-        left: 30px;
-        top: 12px;
+        left: 0;
+        top: 10px;
         background: #111;
       }
     }
   }
+  ul~ul{
+    display: none;
+  }
+  .more{
+    position: absolute;
+    right: 0;
+    top: 16px;
+    a{
+      color: #333;
+      position: relative;
+      padding-right: 55px;
+      @include screen('mobile') {
+        padding-right: 0;
+        text-indent: -9999px;
+      }
+      &:before{
+        content: "";
+        position: absolute;
+        right: 28px;
+        top: 12px;
+        width: 10px;
+        height: 10px;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        border-top:0px; 
+        border-left:0px; 
+        transform: rotate(45deg);
+        z-index: 13;
+        border-radius: 0;
+      }
+      &:after{
+        content: "";
+        position: absolute;
+        right: 20px;
+        top: 6px;
+        width: 28px;
+        height: 28px;
+        display: block;
+        border-radius: 50%;
+        background: $primaryColor;
+        z-index: 12;
+        border: 0;
+      }
+      &:hover,&.active{
+        &:before{
+          content: "";
+          position: absolute;
+          right: 28px;
+          top: 12px;
+          width: 10px;
+          height: 10px;
+          border-right: 1px solid #fff;
+          border-bottom: 1px solid #fff;
+          border-top:0px; 
+          border-left:0px; 
+          transform: rotate(45deg);
+          z-index: 13;
+          border-radius: 0;
+        }
+        &:after{
+          content: "";
+          position: absolute;
+          right: 20px;
+          top: 6px;
+          width: 28px;
+          height: 28px;
+          display: block;
+          border-radius: 50%;
+          background: #333;
+          z-index: 12;
+          border: 0;
+          animation: servicemore .5s linear 0s infinite alternate;
+        }
+      }
+    }
+  }
+}
+@keyframes servicemore {
+  0% {
+  }
+  100% {
+  }
 }
 // 重大政策
 .policy_block{
+  .slick-list{
+    padding-bottom: 10px;
+  }
   ul{
     list-style: none;
     padding: 5px 0;
-    margin: 0 0 25px 0;
+    margin: 0 0 15px 0;
+    @include make-row(20px);
     &:after{
       content: "";
       clear: both;
@@ -532,13 +922,16 @@
     }
   } 
   li{
-    width: 32.5%;
+    // width: 32.5%;
     float: left;
-    margin-right: 1.25%;
+    padding:0 10px;
     vertical-align: top;
-    background: #fff;
     position: relative;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+    
+    @include screen('mobile') {
+      width: 100%;
+      margin-right: 0;
+    }
     &:last-child{
       margin-right: 0;
     }
@@ -547,6 +940,11 @@
       padding: 60px 50px;
       @include box-sizing();
       display: block;
+      background: #fff;
+      box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+      @include screen('tablet') {
+        padding: 30px 20px;
+      }
       span{
         height: 2.9em;
         overflow: hidden;
@@ -554,6 +952,9 @@
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
+        @include screen('mobile') {
+          text-align: center;
+        }
       }
       &:before{
         content: "";
@@ -594,10 +995,40 @@
 }
 // 焦點金融議題
 .issue_block{
+  margin-bottom: 40px;
   .issue{
+    .issue_pic{
+      width: 100%;
+      height: 385px;
+      text-align: center;
+      position:relative;
+      overflow:hidden;
+      @include screen('mobile') {
+        height: auto;
+      }
+      &:after{
+        content: "";
+        padding-top: 41%;/*設定寬比高的比例，X=(H/W)*100*/
+        content:"";
+        display: block;
+      }
+      img{
+        position:absolute;
+        top:0;
+        bottom:0;
+        right:0;
+        left:0;
+        margin:auto;
+        max-width: 100%;
+        max-height: 385px;
+        height: auto;
+        // object-fit: contain;
+      }
+    }
+
   }
   .slick-prev {
-    left: 0;
+    left: 0; 
   }
   .slick-next {
     right: 0;
@@ -606,10 +1037,18 @@
 // 相關連結
 .link_block{
   margin-bottom: 68px;
+  @include screen('mobile') {
+    margin-bottom: 30px;
+  }
   .inner{
     background: #fefcfc;
     padding:20px 30px;
     box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+    @include screen('mobile') {
+      background: transparent;
+      padding:0;
+      box-shadow: 0 0 0 rgba(0, 0, 0, .1);
+    }
   }
   h2{
     margin-bottom: 1em;
@@ -619,9 +1058,18 @@
   }
   .tabItem{
     letter-spacing: 1px;
+    >a{
+      @include screen('mobile') {
+        background: #f3f3f3;
+      }   
+    }
   }
   .tabContent{
-    padding:30px 50px;
+    padding:30px;
+    @include screen('mobile') {
+      padding: 20px 0;
+      background: #fff;
+    }
     ul{
     }
     li{
@@ -652,6 +1100,9 @@
   .more{
     margin-bottom: 0;
     margin-right: -30px;
+    @include screen('mobile') {
+      margin-right: 0;
+    }
   }
 }
 // 廣告輪播
@@ -662,7 +1113,10 @@
   margin-right: 30px;
   width: 93.5%;
   @include screen('mobile') {
-    @include gutter();
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    margin-bottom: 30px;
   }
   .slick-prev {
     background: url(../vendor/slick/icon_arrow_left_inverse.png) no-repeat center center;
@@ -678,6 +1132,10 @@
     width: 165px;
     height: 80px;
     margin: 0px 15px;
+    @include screen('mobile') {
+      height: auto;
+      margin: 0px 10px;
+    }
     a {
       display: block;
       text-align: center;

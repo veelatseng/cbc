@@ -1,0 +1,241 @@
+.suggestions{
+    //流程
+    .flow{
+        margin: 50px auto;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        &:after{
+            @include screen('xs_mobile')  {
+                content: "";
+                position: absolute;
+                width: 100%;
+                z-index: 98;
+                height: 2px;
+                display: block;
+                background: #ccc;
+                top: 46px;
+            }
+            @media screen and (max-width: 514px) {
+                top: 30px;
+            }
+            @media screen and (max-width: 320px) {
+                top: 25px;
+            }
+        }
+        .step{
+            width: 100px;
+            padding-right: 4%;
+            margin-left: 4%;
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;
+            color: #444;
+            position: relative;
+            font-weight: bold;
+            z-index: 99;
+            @include screen('tablet') {
+                padding-right: 2%;
+                margin-left: 2%;
+            } 
+            @include screen('xs_mobile') {
+                padding-right: 1%;
+                margin-left: 1%;
+                text-indent: -9999px;
+            } 
+            @media screen and (max-width: 514px) {
+                width: 20%;
+            }
+            &:after{
+                content: '';
+                width: 18px;
+                height: 18px;
+                display: block;
+                vertical-align: middle;
+                border: 2px solid #dfe4e9;
+                transform: rotate(45deg);
+                border-bottom: none;
+                border-left: none;
+                position: absolute;
+                right: -5px;
+                top: 40px;
+                @include screen('xs_mobile') {
+                    display: none;
+                } 
+            }
+            &:last-of-type:after{
+                display: none;
+            }
+            .no{
+                width: 94px;
+                height: 94px;
+                border-radius: 50%;
+                display: block;
+                background: #dfe4e9;
+                margin-right: auto;
+                margin-left: auto;
+                margin-bottom: 12px;
+                position: relative;
+                font-family: "Century Gothic";
+                @include screen('xs_mobile') {
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    top: 38px;
+                    left: 50%;
+                    margin-left: -10px;
+                } 
+                @media screen and (max-width: 514px) {
+                    top: 22px;
+                }
+                @media screen and (max-width: 320px) {
+                    top: 17px;
+                }
+                span{
+                    position: absolute;
+                    color: #444;
+                    left: 36px;
+                    top: 24px;
+                    font-size: 2.25em;
+                    @media screen and (max-width: 514px) {
+                        left: 20px;
+                        top: 18px;
+                    }
+                    @media screen and (max-width: 320px) {
+                        left: 15px;
+                        top: 14px;
+                    }
+                }
+                &:after{
+                    content: "step";
+                    position: absolute;
+                    color: #5b6065;
+                    left: 30px;
+                    bottom: 15px;
+                    font-size: 1.125em;
+                    @media screen and (max-width: 514px)  {
+                        display: none;
+                    } 
+                    // @media screen and (max-width: 514px) {
+                    //     display: none;
+                    // }
+                }
+            }
+            &.active{
+                color: #4a7aad;
+                text-indent: 0;
+                .no{
+                    @include gradient(#d0e2f5, #b3cce6, vertical);
+                    @include screen('xs_mobile') {
+                        width: 94px;
+                        height: 94px;
+                        border-radius: 50%;
+                        display: block;
+                        @include gradient(#d0e2f5, #b3cce6, vertical);
+                        margin-right: auto;
+                        margin-left: auto;
+                        margin-bottom: 12px;
+                        position: relative;
+                        font-family: "Century Gothic";
+                        top:auto;
+                        left: auto;
+                    } 
+                    @media screen and (max-width: 514px) {
+                        width: 60px;
+                        height: 60px;
+                    }
+                    @media screen and (max-width: 320px) {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+                &:after{
+                    border: 2px solid #d0e2f5;
+                    border-bottom: none;
+                    border-left: none;
+
+                }
+            }
+        }
+    }
+    h3{
+        padding-bottom: 16px;
+        border-bottom: 1px solid #787878;
+        text-align: center;
+    }
+    .agreement{
+        ol li{
+            margin-bottom: .5em;
+        }
+    }
+    //流程圖
+    .flowchart{
+        text-align: center;
+        img{
+            @include screen('mobile') {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .text_block{
+        font-size: 0.938em;
+        ul{
+            margin-bottom: 1.5em;
+        }
+        em{
+            color: #ff8e06;
+            font-weight: bold;
+            font-style: normal;
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+        .form_grid{
+            border-top: 1px solid #787878;
+            margin: 10px 0;
+            padding-top: 10px;
+            .btn_grp input{
+                padding-left: 2em;
+                padding-right: 2em;
+            }
+        }
+    }
+    //意見信箱：案件查詢結果
+    .text_block.suggestions_result{
+        border-top: 1px solid #787878;
+        margin: 10px 0;
+        table{
+            border: 0px;
+            tr{
+                border-bottom: 1px solid #DDD;
+                &:last-child{
+                    th,td{
+                        color: $primaryColor;
+                    }
+                }
+            }
+            th{
+                text-align: left;
+                width: 15%;
+                @include screen('mobile') {
+                    width: 20%;
+                    white-space: normal;
+                }
+            }
+            th,td{
+                background: transparent;
+                color: #444;
+                border: 0;
+                padding-left: 30px;
+                padding-right: 30px;
+                @include screen('mobile') {
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+    //意見信箱：確認信提醒
+    .text_block.suggestions_confirm{
+    }
+}

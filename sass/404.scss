@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+// 共通
+@import "_variable";					//變數
+@import "sass/_normalize";				//reset
+@import "sass/_mixin";					//客製MIXIN
+
+// 以下為404設定
+.wrapper{
+	max-width: 850px;
+	margin: 0px auto;
+    @include screen('mobile') {
+        max-width: 100%;
+        width: 100%;
+        .container{
+            width: 100%;
+        }
+    }
+}
+h1{
+    width: 317px;
+    height: 53px;
+    margin: 85px 0 30px 15px;
+    padding: 0;
+    @include screen('mobile') {
+        margin: 30px auto;
+    }
+    img{
+        display: block;
+        max-width: 317px;
+        max-height: 53px;
+    }
+}
+.error {
+    border-top: 2px solid #f4f4f4;
+    border-bottom: 2px solid #f4f4f4;
+    background: url(../images/error.png) no-repeat 5px center ;
+    padding:28px 0 28px 142px;
+    margin-bottom: 16px;
+    @include screen('mobile') {
+    	background: url(../images/error.png) no-repeat center 25px ;
+        padding:155px 0 28px 0;
+        text-align: center;
+    }
+    h3 {
+        font-size: 1.125em;
+        line-height: 1.65em;
+        margin: .5em 0;
+        color:#333;
+        letter-spacing: .03em;
+        small {
+            display: block;
+            line-height:1.45em;
+            font-family: "Century Gothic";
+            font-weight: normal;
+        }
+        a{
+            color: #4a7aad;
+        }
+    }
+}
+footer{
+    padding-left: 18px;
+    color: #5e6063;
+    font-size: 0.938em;
+    line-height: 1.6em;
+    @include screen('mobile') {
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+

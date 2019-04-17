@@ -49,7 +49,7 @@ table {
 }
 
 .table_list {
-    @include screen('xs_mobile') {
+    @include screen('mobile') {
         background-color: transparent !important; //Force table to not be like tables anymore
         thead,
         tbody,
@@ -72,7 +72,7 @@ table {
             border: none !important;
             border-bottom: 1px solid #eee !important;
             position: relative;
-            padding-left: 40% !important;
+            // padding-left: 45% !important;
             white-space: normal;
             text-align: left;
             &:before {
@@ -87,6 +87,11 @@ table {
                 font-weight: bold;
                 color: #000;
             }
+        }
+    }
+    @media screen and (max-width: 340px) {
+        td{
+            // padding-left: 62% !important;
         }
     }
 }

@@ -34,7 +34,7 @@
                 <!-- 這裡需要套h1文章標題 -->
                 <h1 class="title">組織與職掌</h1>
                 <!-- function功能區塊 -->
-                <?php require_once('include/funtion_panel.html'); ?>
+                <?php require_once('include/function_panel.html'); ?>
                 <!-- CP Start -->
                 <section class="organization">
                     <h3>中央銀行之組織</h3>

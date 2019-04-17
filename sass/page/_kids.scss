@@ -1,0 +1,211 @@
+.kids{
+	&:before{
+		content: "";
+		width: 100%;
+		height:302px;
+		display: block;
+		background:url(../images/kids_header.png) left top no-repeat;
+		background-size:contain;
+	}
+	.kids_title{
+		color: #fff;
+		padding: .5em 1em .5em 5.5em;
+		border-radius: 5px;
+		font-size: 1.25em;
+		line-height: 1.6em;
+		margin: 1.5em 0 1em 0;
+		background: #DA3945 ;
+		position: relative;
+		letter-spacing: 1px;
+		&:before{
+			content: "";
+			background: url(../images/kid.png) left bottom no-repeat;
+			width: 105px;
+			height: 114px;
+			display: block;
+			position: absolute;
+			left: 8px;
+			bottom: 0;
+		}
+	}
+	.cp_pic{
+		background: #bad7f1;
+		border-radius: 5px;
+		padding: 12px;
+		.caption{
+			background: none;
+			padding: 0;
+		}
+	}
+	h3{
+		color: #DA3945;
+	}
+	.intro{
+		h3{
+			background: #bad7f1;
+			color: #222;
+			padding: .5em 1em;
+			border-radius: 8px;
+			font-size: 1.25em;
+			line-height: 1.6em;
+			margin-bottom: .5em;
+			box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+		}
+		ol{
+			padding: 1em 1.4em;
+			background: #fff;
+			font-size: 1em;
+			line-height: 2em;
+			border-radius: 8px;
+			box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+			&.cjk{
+				list-style-type: cjk-ideographic;
+				list-style-position: inside;
+			}
+			>li{
+				margin-bottom: 1em;
+			}
+		}
+		ul{
+			list-style: none;
+			padding-left: 29px;
+			li{
+				position: relative;
+				padding-left: 12px;
+				&:before{
+					content: "";
+					width: 4px;
+					height: 4px;
+					display: block;
+					position: absolute;
+					left: 0;
+					top: 15px;
+					background: #f85006;
+				}
+			}
+		}
+		a{
+			color: #f85006;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+	.btn_grp{
+		text-align: center;
+		margin: 20px 0;
+		input[type="submit"],.btn_enter{
+			background: #DA3945;
+			color: #fff!important;
+			padding: 1em 3em;
+			border-radius: 3em!important;
+			font-size: 1.125em;
+			letter-spacing: 1px;
+			border-radius: 1em;
+			font-weight: bold;
+			border: 0;
+			margin: 0 .1em;
+			&:hover{
+				text-decoration: none;
+				background: lighten(#DA3945,10)
+			}
+		}
+		input[type="reset"],.btn_back {
+			background: #999;
+			padding: 1em 3em;
+			border-radius: 3em!important;
+			font-size: 1.125em;
+			letter-spacing: 1px;
+			border-radius: 1em;
+			font-weight: bold;
+			border: 0;
+			color: #fff;
+			margin: 0 .1em;
+			vertical-align: middle;
+		}
+	}
+	ul.kids_test{
+		list-style: none;padding-left: 0;
+		.question{
+			background: #bad7f1;
+			color: #222;
+			padding: .5em 1em .5em 3.5em;
+			border-radius: 8px;
+			font-size: 1.25em;
+			line-height: 1.6em;
+			margin-bottom: .5em;
+			box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+			position: relative;
+			span.answer{
+				background: #fff;
+				border-radius: 30px;
+				font-size: .8em;
+				padding: .1em 1em;
+				vertical-align: middle;
+				display: block;
+				display: inline-block;
+			}
+			&:before{
+				content: "Q";
+				font-size: 2em;
+				color: #fff;
+				font-weight: bold;
+				font-family: "Century Gothic";
+				vertical-align: middle;
+				width: 40px;
+				height: 40px;
+				border-radius: 20px;
+				background: #2a6096;
+				display: inline-block;
+				line-height: 50%;
+				position: absolute;
+				left: 15px;
+			}
+		}
+		form,div.answer{
+			padding: 1em 1.4em 1em 4em;
+			background: #fff;
+			border-radius: 8px;
+			box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+			margin-bottom: 20px;
+		}
+		label{
+			font-size: 1.25em;
+		}
+		input[type="radio"] {
+			font-size: 1.25em;
+			margin: 4px .3em .2em 0;
+			width: 1em;
+			height: 1em;
+			background: #fff;
+			border: 4px solid #CCC;
+			&:checked{
+				background: #DA3945;
+				border: 4px solid #DA3945;
+				outline: #DA3945
+			}
+		}
+		div.answer{
+			position: relative;
+			min-height: 36px;
+			padding-left: 4.3em;
+			.right,.wrong{
+				width: 42px;
+				height: 42px;
+				display: inline-block;
+				vertical-align: middle;
+				position: absolute;
+				left: 15px;
+				top: 12px;
+			}
+			.right{
+				background:url(../images/right.png) left top no-repeat;
+				background-size: 100%;
+			}
+			.wrong{
+				background:url(../images/wrong.png) left top no-repeat;
+				background-size: 100%;
+			}
+		}
+	}
+}

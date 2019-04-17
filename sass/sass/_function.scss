@@ -61,14 +61,14 @@ div.function {
         }
     }
 }
-.funtion_panel {
+.function_panel {
     .function {
-        height: 40px;
-        margin: 0;
+        height: 30px;
+        margin: 5px 0 0 0;
         ul {
             li {
-                width: 40px;
-                height: 40px;
+                width: 30px;
+                height: 30px;
                 font-size: 1em;
                 float: left;
                 display: block;
@@ -76,10 +76,10 @@ div.function {
                 a {
                     display: block;
                     @include box-sizing;
-                    width: 40px;
-                    height: 40px;
+                    width: 30px;
+                    height: 30px;
                     text-align: center;
-                    line-height: 40px;
+                    line-height: 30px;
                     border-radius: 50%;
                     background: $function_color;
                     text-indent: -9999px;
@@ -125,120 +125,156 @@ div.function {
             }
         }
     }
+    .function_btn{
+        float: right;
+        .btn{
+            margin-top: 0;
+        }
+        @include screen('mobile') {
+            float: none;
+        }
+    }
 }
-.btn_download{
+%fun_btn{
     vertical-align: top;
-    margin: 0;
-    float: left;
+    margin: 0 0 10px 10px;
+    padding: 0.5em 1em !important;
+    @include screen('mobile') {
+        display: block;
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
     &:before{
         content: "";
         width: 20px;
         height: 20px;
         display: inline-block;
-        background:  url(../images/icon_download.png) no-repeat 0 0;
-        background-size: cover;
         vertical-align: middle;
         margin-right: 8px;
         opacity: .7;
+    }
+}
+%fun_btn2{
+    vertical-align: top;
+    margin: 0;
+    &:before{
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 8px;
+        opacity: .7;
+    }
+}
+.btn_download{
+    @extend %fun_btn;
+    &:before{
+        background:  url(../images/icon_download.png) no-repeat 0 0;
+        background-size: cover;
     }
 }
 .btn_opml{
-    vertical-align: top;
-    margin: 0;
-    float: left;
-    padding: 0.5em 1em !important;
+    @extend %fun_btn;
     &:before{
-        content: "";
-        width: 20px;
-        height: 20px;
-        display: inline-block;
         background:  url(../images/icon_opml.png) no-repeat 0 0;
         background-size: cover;
-        vertical-align: middle;
-        margin-right: 8px;
-        opacity: .7;
     }
 }
 .btn_casesearch{
-    vertical-align: top;
-    margin: 0;
-    float: left;
-    padding: 0.5em 1em !important;
+    @extend %fun_btn;
     &:before{
-        content: "";
-        width: 20px;
-        height: 20px;
-        display: inline-block;
         background:  url(../images/icon_casesearch.png) no-repeat 0 0;
         background-size: cover;
-        vertical-align: middle;
-        margin-right: 8px;
-        opacity: .7;
     }
 }
 .btn_faq{
-    vertical-align: top;
-    margin: 0;
-    float: left;
-    padding: 0.5em 1em !important;
+    @extend %fun_btn;
     &:before{
-        content: "";
-        width: 20px;
-        height: 20px;
-        display: inline-block;
         background:  url(../images/icon_faq.png) no-repeat 0 0;
         background-size: cover;
-        vertical-align: middle;
-        margin-right: 8px;
-        opacity: .7;
     }
 }
 .btn_sound{
-    vertical-align: top;
-    margin: 0;
-    padding: 0.5em 1em !important;
+    @extend %fun_btn2;
+    @include screen('mobile') {
+
+    }
     &:before{
         content: "";
-        width: 20px;
-        height: 20px;
-        display: inline-block;
         background:  url(../images/icon_sound.png) no-repeat 0 0;
         background-size: cover;
-        vertical-align: middle;
-        margin-right: 8px;
-        opacity: .7;
     }
 }
 .btn_reload{
-    vertical-align: top;
-    margin: 0;
-    padding: 0.5em 1em !important;
+    @extend %fun_btn2;
+    @include screen('mobile') {
+
+    }
     &:before{
-        content: "";
-        width: 20px;
-        height: 20px;
-        display: inline-block;
         background:  url(../images/icon_reload.png) no-repeat 0 0;
         background-size: cover;
-        vertical-align: middle;
-        margin-right: 8px;
-        opacity: .7;
     }
 }
 .btn_fill{
-    vertical-align: top;
-    margin: 0;
-    padding: 0.5em 1em !important;
-    float: left;
+    @extend %fun_btn;
+    &:before{
+        background:  url(../images/icon_fill.png) no-repeat 0 0;
+        background-size: cover;
+    }
+}
+.btn_advanced_search {
+    text-align: center;
+    // padding: .8em!important;
+    letter-spacing: 1px;
+    // font-size: 1em;
+    @extend %fun_btn;
+    color: #fff;
+    background: darken($primaryColor, 20);
+    border: 1px solid darken($primaryColor, 20); 
     &:before{
         content: "";
         width: 20px;
         height: 20px;
         display: inline-block;
-        background:  url(../images/icon_fill.png) no-repeat 0 0;
+        background:  url(../images/basic/icon_search.png) no-repeat 0 0;
         background-size: cover;
         vertical-align: middle;
         margin-right: 8px;
-        opacity: .7;
+    }
+    &:hover,&:focus{
+        background: $primaryColor;
+        color: #fff;
+        border: 1px solid darken($primaryColor, 20);
+        &:before{
+            filter: invert(100%);
+        }
+    }
+}
+.btn_subscribe {
+    text-align: center;
+    // padding: .8em!important;
+    letter-spacing: 1px;
+    // font-size: 1em;
+    @extend %fun_btn;
+    color: #fff;
+    background: darken($primaryColor, 20);
+    border: 1px solid darken($primaryColor, 20); 
+    &:before{
+        display: none;
+    }
+    &:hover,&:focus{
+        background: $primaryColor;
+        color: #fff;
+        border: 1px solid darken($primaryColor, 20);
+        &:before{
+            filter: invert(100%);
+        }
+    }
+}
+.btn_subscribe_modify{
+    @extend %fun_btn;
+    &:before{
+        display: none;
     }
 }

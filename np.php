@@ -34,7 +34,7 @@
                 <!-- h2節點 -->
                 <h2 class="title">節點標題</h2>
                 <!-- function功能區塊 -->
-                <?php require_once('include/funtion_panel.html'); ?>
+                <?php require_once('include/function_panel.html'); ?>
                 <!-- NP Start -->
                 <section class="np">
                     <ul>

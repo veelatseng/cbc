@@ -1,0 +1,37 @@
+.epaper{
+	form{
+		.table_list{
+			margin-top: 20px;
+			label{
+			}
+			td{
+				width: 50%;
+				vertical-align: top;
+				padding: 1.5em;
+				@include screen('mobile') {
+					width: 100%;
+					box-sizing: border-box;
+					&:before {
+						content: attr(data-title);
+						position: relative;
+						top: auto;
+						left: auto;
+						width: 100%;
+						padding-right: 0;
+						color: #000;
+						font-size: 1.125em;
+						margin-bottom: 10px;
+						padding-bottom: 10px;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	h2{
+		color: #444;
+	}
+	caption{
+		text-align: left;
+	}
+}

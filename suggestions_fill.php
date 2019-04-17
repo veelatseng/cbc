@@ -34,11 +34,10 @@
                 <!-- h2節點 -->
                 <h2 class="title">意見填寫</h2>
                 <!-- function功能區塊 -->
-                <div class="funtion_panel">
-                    <button type="button" class="btn btn-sm btn_faq">意見信箱FAQ</button>
+                <div class="function_panel">
                     <!-- 文字大小 -->
                     <div class="font_size">
-                        <span>字型大小：</span>
+                        <!-- <span>字型大小：</span> -->
                         <!-- 英文用<span>font-size：</span> -->
                         <ul>
                             <li><a href="#" class="small">小</a></li>
@@ -51,7 +50,7 @@
                         <ul>
                             <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
                             <li class="print"><a href="#">友善列印</a></li>
-                            <li class="forward"><a href="#">轉寄友人</a></li>
+                            <!-- <li class="forward"><a href="#">轉寄友人</a></li> -->
                         </ul>
                     </div>
                     <!-- 社群分享 -->
@@ -63,6 +62,9 @@
                             <li><a href="#"><img src="images/basic/icon_twitter.png" alt="twitter"></a></li>
                         </ul>
                     </div>
+                    <div class="function_btn">
+                        <button type="button" class="btn btn-sm btn_faq">意見信箱FAQ</button>
+                    </div>  
                 </div>
                 <!-- suggestions Start -->
                 <section class="suggestions">
@@ -109,6 +111,8 @@
                                 <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>E-mail帳號：</label>
                                 <div class="form_content">
                                     <input name="" id="" type="text" placeholder="請輸入您的e-mail">
+                                    <div class="notice_warning">這似乎不是一個正常的格式 <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form_grp">
@@ -127,12 +131,16 @@
                                 <label for="password" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>意見標題：</label>
                                 <div class="form_content">
                                     <input name="" id="" type="text" placeholder="請輸入您的意見標題">
+                                    <div class="notice_warning">這似乎不是一個正常的格式 <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form_grp">
                                 <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>意見內容：</label>
                                 <div class="form_content">
                                     <textarea name="" id="" cols="30" rows="70" placeholder="請輸入意見內容(限2000字內)"></textarea>
+                                    <div class="notice_warning">這似乎不是一個正常的格式 <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form_grp">
@@ -141,11 +149,13 @@
                                     <img src="images/basic/captcha.gif" alt="" class="captcha">
                                     <input type="text" id="" value="">
                                     <button type="button" class="btn btn-sm btn_sound">語音播放</button>
-                                    <button type="button" class="btn btn-sm btn_reload">語音播放</button>
+                                    <button type="button" class="btn btn-sm btn_reload">重新產生</button>
+                                    <div class="notice_error">您輸入的驗證碼錯誤 <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="btn_grp">
-                                <input name="" type="reset" value="清除" class="sound">
+                                <input name="" type="reset" value="清除">
                                 <input name="Search" type="submit" value="送出">
                             </div>
                         </form>

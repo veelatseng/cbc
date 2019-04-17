@@ -24,10 +24,10 @@ $(function() {
     //////////// nav如果有兩個選單///////////
     /*-----------------------------------*/
     var _navLength = $('.navigation ul').length;
-    if (_navLength > 1) {
-        $('.navigation ul:nth-child(1)').addClass('left_nav');
-    }
-    $('.navigation').has('.language').addClass('have_language');
+    // if (_navLength > 1) {
+    //     $('.navigation ul:nth-child(1)').addClass('left_nav');
+    // }
+    // $('.navigation').has('.language').addClass('have_language');
     /*-----------------------------------*/
     /////// header選單 tab及 fix設定////////
     /*-----------------------------------*/
@@ -220,7 +220,7 @@ $(function() {
     $(window).bind("load scroll resize", function(e) {
         ww = _window.outerWidth();
         if (ww >= wwSmall && $(this).scrollTop() > hh - menuH) {
-            hh = $('.header').outerHeight(true);
+            hh = Math.floor($('.header').outerHeight(true));
             menuH = Math.floor(_menu.outerHeight(true));
             $('.header').addClass('fixed');
             $('.header').css('margin-top', menuH - hh);
@@ -432,22 +432,26 @@ $(function() {
         resizeTimer1 = setTimeout(function() {
             ww = _window.outerWidth();
             tabSet();
+            newsTabSet();
+            keyTabSet();
         }, 50);
     });
 
     function tabSet() {
-        $('.tabs').each(function() {
+        $('.link_block .tabs').each(function() {
             var _tab = $(this),
             _tabItem = _tab.find('.tabItem'),
             _tabItemA = _tabItem.children('a'),
             _tabContent = _tab.find('.tabContent'),
             tabwidth = _tab.width(),
+            _tabItem_W= _tabItem.width(),
             tabItemHeight = _tabItem.outerHeight(),
             tabContentHeight = _tab.find('.active').next().innerHeight(),
             tiGap = 0,
             tabItemLength = _tabItem.length,
             tabItemWidth;
             _tab.find('.active').next('.tabContent').show();
+            console.log('original'+_tabItem_W);
             if (ww >= wwSmall) {
                 _tabContent.css('top', tabItemHeight);
                 _tab.height(tabContentHeight + tabItemHeight);
@@ -485,12 +489,14 @@ $(function() {
             }
         });
     }
-    $('.tabs>.tabItem:first-child>a').trigger('click');
+    $('.link_block .tabs>.tabItem:first-child>a').trigger('click');
     tabSet();
+
     function newsTabSet() {
         $('.news_block .tabs').each(function() {
             var _tab = $(this),
             _tabItem = _tab.find('.tabItem'),
+            _tabItem_W= _tabItem.width(),
             _tabItemA = _tabItem.children('a'),
             _tabContent = _tab.find('.tabContent'),
             tabwidth = _tab.width(),
@@ -500,11 +506,12 @@ $(function() {
             tabItemLength = _tabItem.length,
             tabItemWidth;
             _tab.find('.active').next('.tabContent').show();
+            console.log('news'+_tabItem_W);
             if (ww >= wwSmall) {
                 _tabContent.css('top', tabItemHeight);
                 _tab.height(tabContentHeight + tabItemHeight);
                 tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
-                console.log(tabItemWidth);
+                // console.log(tabItemWidth);
                 _tabItem.width(tabItemWidth).css('margin-left', tiGap);
                 $( ".tabItem a:contains('新聞稿')" ).parent('.tabItem').css( "width", tabItemWidth*0.8 );
                 $( ".tabItem a:contains('即時新聞澄清')" ).parent('.tabItem').css( "width", tabItemWidth*1.1 );
@@ -542,6 +549,64 @@ $(function() {
     }
     $('.news_block .tabs>.tabItem:first-child>a').trigger('click');
     newsTabSet();
+
+    function keyTabSet() {
+        $('.key_indicators_block .tabs').each(function() {
+            var _tab = $(this),
+            _tabItem = _tab.find('.tabItem'),
+            // _tabItem_W= _tabItem.width(),
+            _tabItemA = _tabItem.children('a'),
+            _tabContent = _tab.find('.tabContent'),
+            tabwidth = _tab.width(),
+            tabItemHeight = _tabItem.outerHeight(),
+            tabContentHeight = _tab.find('.active').next().innerHeight(),
+            tiGap = 0,
+            tabItemLength = _tabItem.length,
+            tabItemWidth;
+            // console.log('key'+_tabItem_W);
+            _tab.find('.active').next('.tabContent').show();
+            if (ww >= wwSmall) {
+                // _tabContent.css('top', tabItemHeight);
+                // _tab.height(tabContentHeight + tabItemHeight);
+                // tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
+                // _tabItem.width().css('margin-left', tiGap);
+                // _tabItem.first().css('margin-left', 0);
+                // _tabItem.css({
+                //     width: '100%',
+                //     height: '100px'
+                // });
+                // _tabItem.last().css({ 'position': 'relative', 'top': 'auto', 'right': 'auto','width':'100%' });
+            } else {
+                _tab.css('height', 'auto');
+                _tabItem.width(tabwidth);
+                _tabItem.css('margin-left', 0).last().css('position', 'relative');
+            }
+            _tabItemA.focus(tabs);
+            _tabItemA.click(tabs);
+
+            function tabs(e) {
+                var _tabItemNow = $(this).parent(),
+                tvp = _tab.offset().top,
+                tabIndex = _tabItemNow.index() / 2,
+                scollDistance = tvp + tabItemHeight * tabIndex - hh;
+                _tabItem.removeClass('active');
+                _tabItemNow.addClass('active');
+                if (ww <= wwSmall) {
+                    _tabItem.not('.active').next().slideUp();
+                    _tabItemNow.next().slideDown();
+                    $("html,body").stop(true, false).animate({ scrollTop: scollDistance });
+                } else {
+                    _tabItem.not('.active').next().hide();
+                    _tabItemNow.next().show();
+                    tabContentHeight = _tabItemNow.next().innerHeight();
+                    // _tab.height(tabContentHeight + tabItemHeight);
+                }
+                e.preventDefault();
+            }
+        });
+    }
+    $('.key_indicators_block .tabs>.tabItem:first-child>a').trigger('click');
+    keyTabSet();
     /*-----------------------------------*/
     ///////////////置頂go to top////////////
     /*-----------------------------------*/

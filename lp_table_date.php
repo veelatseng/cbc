@@ -34,14 +34,10 @@
                 <!-- h2節點 -->
                 <h2 class="title">列表頁SP：中文日期條列</h2>
                 <!-- function功能區塊 -->
-                <?php require_once('include/funtion_panel.html'); ?>
+                <?php require_once('include/function_panel.html'); ?>
                 <!-- LP Start -->
                 <section class="lp">
-                    <!-- advanced_search -->
-                    <?php require_once('include/advanced_search.html'); ?>
-                    <!-- category -->
-                    <?php require_once('include/category.html'); ?>
-                    <div>
+                    <div class="datelist">
                         <table summary="">
                             <caption></caption>
                             <thead>

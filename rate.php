@@ -34,11 +34,10 @@
                 <!-- h2節點 -->
                 <h2 class="title">「五大銀行平均存款利率」與「五大銀行平均基準利率」</h2>
                 <!-- function功能區塊 -->
-                <?php require_once('include/funtion_panel.html'); ?>
+                <?php require_once('include/function_panel.html'); ?>
                 <!-- suggestions Start -->
                 <section class="rate_table">
-
-                    <table>
+                    <table summary="">
                         <caption>
                             <div class="rate_info">
                                 <div class="time">

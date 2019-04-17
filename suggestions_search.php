@@ -34,11 +34,10 @@
                 <!-- h2節點 -->
                 <h2 class="title">案件查詢</h2>
                 <!-- function功能區塊 -->
-                <div class="funtion_panel">
-                    <button type="button" class="btn btn-sm btn_fill">意見填寫</button>
+                <div class="function_panel">
                     <!-- 文字大小 -->
                     <div class="font_size">
-                        <span>字型大小：</span>
+                        <!-- <span>字型大小：</span> -->
                         <!-- 英文用<span>font-size：</span> -->
                         <ul>
                             <li><a href="#" class="small">小</a></li>
@@ -51,7 +50,7 @@
                         <ul>
                             <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
                             <li class="print"><a href="#">友善列印</a></li>
-                            <li class="forward"><a href="#">轉寄友人</a></li>
+                            <!-- <li class="forward"><a href="#">轉寄友人</a></li> -->
                         </ul>
                     </div>
                     <!-- 社群分享 -->
@@ -63,6 +62,9 @@
                             <li><a href="#"><img src="images/basic/icon_twitter.png" alt="twitter"></a></li>
                         </ul>
                     </div>
+                    <div class="function_btn">
+                        <button type="button" class="btn btn-sm btn_fill">意見填寫</button>
+                    </div>            
                 </div>
                 <!-- suggestions Start -->
                 <section class="suggestions">

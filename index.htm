@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="zh-Hant" class="no-js">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,28 +10,29 @@
     <script src="js/respond.min.js"></script>
 <![endif]-->
 <!-- hyUI -->
-<link rel="stylesheet" href="css/hyui.css">
+<link rel="stylesheet" href="css/cbc.css">
 <style>
-.demo_wrap{max-width:1000px;margin:0em auto 1em;padding:15px 15px 3em;clear:both;background:#FFF}
-.demo_wrap h1{display:block;margin:0px auto;max-width:300px;float:left;margin-right:1em}
-@media screen and (max-width:545px){.
-    demo_wrap h1{max-width:100%;float:none;text-align:center}
-}
-.demo_wrap h1 img{width:300px}
-.num{width:12%}
-body{counter-reset:num}
-table{margin-bottom:1em}
-table caption{text-align:left;font-weight:bold;font-size:1.25em;padding:.5em 0;color:#ff5050}
-tbody tr.un{background: #F3F3F3;}
-tbody tr.un a{color: #ccc;}
-tbody tr.un a[href]{content: ""}
-tbody tr.un a:before{content: "未完成－－－"}
-tbody tr td:first-child:before{counter-increment:num;display:block;text-align:center;content:counters(num,".") " "}
-tbody tr td:nth-child(2){width:35%}
-.btn_grp{
-    padding: 0;float: right;margin-bottom: 20px;
-}
+    .demo_wrap{max-width:1000px;margin:0em auto 1em;padding:15px 15px 3em;clear:both;background:#FFF}
+    .demo_wrap h1{display:block;margin:0px auto;max-width:300px;float:left;margin-right:1em}
+    @media screen and (max-width:545px){.
+        demo_wrap h1{max-width:100%;float:none;text-align:center}
+    }
+    .demo_wrap h1 img{width:300px}
+    .num{width:12%}
+    body{counter-reset:num}
+    table{margin-bottom:1em;}
+    table caption{text-align:left;font-weight:bold;font-size:1.25em;padding:.5em 0;color:#ff5050}
+    tbody tr.un{background: #F3F3F3;}
+    tbody tr.un a{color: #ccc;}
+    tbody tr.un a[href]{content: ""}
+    tbody tr.un a::before{content: "未完成－－－"}
+    tbody tr td:first-child::before{counter-increment:num;display:block;text-align:center;content:counters(num,".") " "}
+    tbody tr td:nth-child(2){width:35%}
+    .btn_grp{
+        padding: 0;float: right;margin-bottom: 20px;
+    }
 </style>
+
 </head>
 <body>
     <div class="demo_wrap">
@@ -51,7 +51,7 @@ tbody tr td:nth-child(2){width:35%}
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="un">
+                    <tr>
                         <td></td>
                         <td>首頁</td>
                         <!-- 連結放到a裡面就好 -->
@@ -102,15 +102,15 @@ tbody tr td:nth-child(2){width:35%}
                         <td>列表頁SP：新台幣／美元（中文）</td>
                         <td><a href="lp_table_rate.php" target="blank"></a></td>
                     </tr>
-                    <tr class="un">
+                    <tr>
                         <td></td>
                         <td>列表頁SP：首長</td>
-                        <td><a href="lp_officer.php" target="blank"></a></td>
+                        <td><a href="lp_governors.php" target="blank"></a></td>
                     </tr>
-                    <tr class="un">
+                    <tr>
                         <td></td>
                         <td>列表頁SP：歷任首長</td>
-                        <td><a href="lp_exofficer.php" target="blank"></a></td>
+                        <td><a href="lp_exgovernors.php" target="blank"></a></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -122,10 +122,10 @@ tbody tr td:nth-child(2){width:35%}
                         <td>內容頁：欄位內容頁</td>
                         <td><a href="cp_table.php" target="blank"></a></td>
                     </tr>
-                    <tr class="un">
+                    <tr>
                         <td></td>
                         <td>內容頁SP：首長內頁</td>
-                        <td><a href="cp_officer.php" target="blank"></a></td>
+                        <td><a href="cp_governors.php" target="blank"></a></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -152,10 +152,15 @@ tbody tr td:nth-child(2){width:35%}
                         <td>全文檢索</td>
                         <td><a href="ftsearch.php" target="blank"></a></td>
                     </tr>
-                    <tr class="un">
+                    <tr>
                         <td></td>
                         <td>404頁面</td>
-                        <td><a href="404.php" target="blank"></a></td>
+                        <td><a href="404.htm" target="blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>全國金融機構查詢系統</td>
+                        <td><a href="inslist.php" target="blank"></a></td>
                     </tr>
                 </tbody>
             </table>
@@ -169,22 +174,22 @@ tbody tr td:nth-child(2){width:35%}
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="un">
+                    <tr>
                         <td></td>
                         <td>兒童版內頁</td>
                         <td><a href="kids.php" target="blank"></a></td>
                     </tr>
-                    <tr class="un">
+                    <tr>
                         <td></td>
                         <td>兒童版內頁：內容頁</td>
                         <td><a href="kids_cp.php" target="blank"></a></td>
                     </tr>
-                    <tr class="un">
+                    <tr>
                         <td></td>
                         <td>兒童版內頁：測驗題</td>
                         <td><a href="kids_test.php" target="blank"></a></td>
                     </tr>
-                    <tr class="un">
+                    <tr>
                         <td></td>
                         <td>兒童版內頁：測驗題結果</td>
                         <td><a href="kids_test_result.php" target="blank"></a></td>
@@ -243,20 +248,107 @@ tbody tr td:nth-child(2){width:35%}
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="un">
+                    <tr>
                         <td></td>
                         <td>電子報：訂閱電子報</td>
                         <td><a href="epaper.php" target="blank"></a></td>
                     </tr>
-                    <tr class="un">
+                    <tr>
                         <td></td>
                         <td>電子報：變更/取消訂閱電子報</td>
-                        <td><a href="epaper.php" target="blank"></a></td>
+                        <td><a href="epaper_modify1.php" target="blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>電子報：變更/取消訂閱電子報內容</td>
+                        <td><a href="epaper_modify2.php" target="blank"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 英文版 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="un">
+                        <td></td>
+                        <td>英文版：首頁</td>
+                        <td><a href="en_mp.php" target="blank"></a></td>
                     </tr>
                     <tr class="un">
                         <td></td>
-                        <td>電子報：變更/取消訂閱電子報內容</td>
-                        <td><a href="cp.php" target="blank"></a></td>
+                        <td>英文版：英文日期條例</td>
+                        <td><a href="en_lp_table_date.php" target="blank"></a></td>
+                    </tr>
+                    <tr class="un">
+                        <td></td>
+                        <td>英文版：新臺幣/美元</td>
+                        <td><a href="en_lp_table_rate.php" target="blank"></a></td>
+                    </tr>
+                    <tr class="un">
+                        <td></td>
+                        <td>英文版：英文雙語辭彙</td>
+                        <td><a href="en_lp_table_vocabulary.php" target="blank"></a></td>
+                    </tr>
+                    <tr class="un">
+                        <td></td>
+                        <td>英文版：列表頁SP：首長</td>
+                        <td><a href="en_lp_governors.php" target="blank"></a></td>
+                    </tr>
+                    <tr class="un">
+                        <td></td>
+                        <td>英文版：內容頁SP：組織與職掌</td>
+                        <td><a href="cp_organization.php" target="blank"></a></td>
+                    </tr>
+                    <tr class="un">
+                        <td></td>
+                        <td>英文版：意見信箱：意見信箱</td>
+                        <td><a href="en_suggestions.php" target="blank"></a></td>
+                    </tr>
+                    <tr class="un">
+                        <td></td>
+                        <td>英文版：意見信箱：意見內容填寫</td>
+                        <td><a href="en_suggestions_fill.php" target="blank"></a></td>
+                    </tr>
+                    <tr class="un">
+                        <td></td>
+                        <td>英文版：意見信箱：確認信提醒</td>
+                        <td><a href="en_suggestions_confirm.php" target="blank"></a></td>
+                    </tr>
+                    <tr class="un">
+                        <td></td>
+                        <td>英文版：意見信箱：案件成立</td>
+                        <td><a href="en_suggestions_finish.php" target="blank"></a></td>
+                    </tr>
+                    <tr class="un">
+                        <td></td>
+                        <td>英文版：意見信箱：案件查詢</td>
+                        <td><a href="en_suggestions_search.php" target="blank"></a></td>
+                    </tr>
+                    <tr class="un">
+                        <td></td>
+                        <td>英文版：意見信箱：案件查詢結果</td>
+                        <td><a href="en_suggestions_result.php" target="blank"></a></td>
+                    </tr>
+                    <tr class="un">
+                        <td></td>
+                        <td>英文版：電子報：訂閱電子報</td>
+                        <td><a href="en_epaper.php" target="blank"></a></td>
+                    </tr>
+                    <tr class="un">
+                        <td></td>
+                        <td>英文版：電子報：變更/取消訂閱電子報</td>
+                        <td><a href="en_epaper.php" target="blank"></a></td>
+                    </tr>
+                    <tr class="un">
+                        <td></td>
+                        <td>英文版：電子報：變更/取消訂閱電子報內容</td>
+                        <td><a href="en_cp.php" target="blank"></a></td>
                     </tr>
                 </tbody>
             </table>

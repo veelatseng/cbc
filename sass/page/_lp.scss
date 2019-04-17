@@ -189,6 +189,7 @@
         width: 6%;
         text-align: center;
         color: #666;
+        white-space: nowrap;
         @include screen('mobile') {
             text-align: left;
         }
@@ -198,6 +199,9 @@
     }
     .file{
         text-align: center;
+        @include screen('mobile') {
+            text-align: left;
+        }
         a{
             margin: 0 .3em;
             text-indent: -99999px;
@@ -205,51 +209,8 @@
     }   
 }
 .advanced_search_block{
-    .btn_advanced_search {
-        margin-left: 0px;
-        margin-right: 0;
-        background: darken($primaryColor, 20);
-        border: 1px solid darken($primaryColor, 20);    
-        color: #fff;
-        padding: .5em;
-        @include border-radius(0);
-        clear: both;
-        text-align: center;
-        width: 100%;
-        padding: .8em!important;
-        letter-spacing: 1px;
-        font-size: 1em;
-        &:before{
-            content: "";
-            width: 20px;
-            height: 20px;
-            display: inline-block;
-            background:  url(../images/basic/icon_search.png) no-repeat 0 0;
-            background-size: cover;
-            filter: invert(100%);
-            vertical-align: middle;
-            margin-right: 8px;
-        }
-        // &:after{
-        //     content: '';
-        //     width: 4px;
-        //     height: 4px;
-        //     display: inline-block;
-        //     margin-left: .5em;
-        //     vertical-align: middle;
-        //     border: 2px solid rgba(255,255,255,0.6);
-        //     transform: rotate(135deg);
-        //     border-bottom: none;
-        //     border-left: none;
-        //     margin-bottom: .2em;
-        // }
-        &:hover,&:focus{
-            background: #4a7aad;
-            color: #fff;
-            border: 1px solid darken($primaryColor, 20);
-        }
-    }
     .advanced_search{
+        border-top: 5px solid $primaryColor;
         clear: both;
         @include border-radius(0);
         background: #f2f2f2;
@@ -257,6 +218,7 @@
         margin-bottom: 1em;
         padding: .6em 1em 0em 1em;
         display: none;
+        box-shadow: 0 0 3px rgba(0, 0, 0, .3);
         label{
             background: url(../images/arrow1.png) no-repeat 1em 9px;
             padding-left: 2.5em!important;

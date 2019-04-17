@@ -34,13 +34,10 @@
                 <!-- 這裡需要套h1文章標題 -->
                 <h1 class="title">內容頁：欄位內容頁</h1>
                 <!-- function功能區塊 -->
-                <div class="funtion_panel">
-                    <div class="publish_time">
-                        <span>發布日期：</span><time>2019-01-01</time>
-                    </div>
+                <div class="function_panel">
                     <!-- 文字大小 -->
                     <div class="font_size">
-                        <span>字型大小：</span>
+                        <!-- <span>字型大小：</span> -->
                         <!-- 英文用<span>font-size：</span> -->
                         <ul>
                             <li><a href="#" class="small">小</a></li>
@@ -53,21 +50,20 @@
                         <ul>
                             <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
                             <li class="print"><a href="#">友善列印</a></li>
-                            <li class="forward"><a href="#">轉寄友人</a></li>
+                            <!-- <li class="forward"><a href="#">轉寄友人</a></li> -->
                         </ul>
                     </div>
                     <!-- 社群分享 -->
                     <div class="share">
                         <ul>
                             <li><a href="#"><img src="images/basic/icon_facebook.png" alt="facebook"></a></li>
-                            <li><a href="#"><img src="images/basic/icon_twitter.png" alt="twitter"></a></li>
-                            <li><a href="#"><img src="images/basic/icon_line.png" alt="line"></a></li>
-                            <li><a href="#"><img src="images/basic/icon_youtube.png" alt="youtube"></a></li>
                             <li><a href="#"><img src="images/basic/icon_googleplus.png" alt="google plus"></a></li>
-                            <li><a href="#"><img src="images/basic/icon_instagram.png" alt="instagram"></a></li>
-                            <li><a href="#"><img src="images/basic/icon_linkedin.png" alt="LinkedIn"></a></li>
-                            <li><a href="#"><img src="images/basic/icon_rss.png" alt="RSS"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_line.png" alt="line"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_twitter.png" alt="twitter"></a></li>
                         </ul>
+                    </div>
+                    <div class="publish_time">
+                        <span>發布日期：</span><time>2019-01-01</time>
                     </div>
                 </div>
                 <!-- CP Start -->

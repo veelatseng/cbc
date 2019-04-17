@@ -34,7 +34,36 @@
                 <!-- h2節點 -->
                 <h2 class="title">列表頁SP：顯示日期條列</h2>
                 <!-- function功能區塊 -->
-                <?php require_once('include/funtion_panel.html'); ?>
+                <div class="function_panel">
+                    <!-- 文字大小 -->
+                    <div class="font_size">
+                        <ul>
+                            <li><a href="#" class="small">小</a></li>
+                            <li><a href="#" class="medium">中</a></li>
+                            <li><a href="#" class="large">大</a></li>
+                        </ul>
+                    </div>
+                    <!-- function功能區塊 -->
+                    <div class="function">
+                        <ul>
+                            <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
+                            <li class="print"><a href="#">友善列印</a></li>
+                            <!-- <li class="forward"><a href="#">轉寄友人</a></li> -->
+                        </ul>
+                    </div>
+                    <!-- 社群分享 -->
+                    <div class="share">
+                        <ul>
+                            <li><a href="#"><img src="images/basic/icon_facebook.png" alt="facebook"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_googleplus.png" alt="google plus"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_line.png" alt="line"></a></li>
+                            <li><a href="#"><img src="images/basic/icon_twitter.png" alt="twitter"></a></li>
+                        </ul>
+                    </div>
+                    <div class="function_btn">
+                        <button type="button" class="btn btn-sm  btn_advanced_search">顯示條件查詢</button>
+                    </div> 
+                </div>
                 <!-- LP Start -->
                 <section class="lp">
                     <!-- advanced_search -->

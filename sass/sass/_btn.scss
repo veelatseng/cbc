@@ -63,6 +63,7 @@ $btn-radius:.3em;
     &:focus {
         color: $btn-font-color;
         @include gradient(#fAfAfA, #ccc, vertical);
+        outline: 3px solid $form-focus;
     }
 }
 //按鈕顏色

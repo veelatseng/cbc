@@ -46,7 +46,12 @@
 @import "page/_cp";						//CP
 @import "page/_fp";						//Forward
 @import "page/_qp";						//QP
+@import "page/_sp";				//Sitemap
 @import "page/_sitemap";				//Sitemap
+@import "page/_suggestions";			//suggestions
+@import "page/_kids";					//kids
+@import "page/_organization";			//organization
+@import "page/_epaper";			//organization
 
 // 外掛
 @import "sass/_slick";					//slick
@@ -55,7 +60,7 @@
 @import "sass/_nojs";					//無障礙關閉js設定
 
 // 列印
-@import "sass/_print";					//列印樣式
+@import "sass/_print";					//列印樣式 
 
 
 
