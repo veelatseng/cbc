@@ -39,6 +39,7 @@ select::-ms-expand {
         @include make-md-column(9);
         @include make-lg-column(9);
         @include gutter();
+        line-height: 180%;
         @include screen('mobile') {
             @include gutter(0);
         }

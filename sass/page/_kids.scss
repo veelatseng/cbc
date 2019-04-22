@@ -6,6 +6,9 @@
 		display: block;
 		background:url(../images/kids_header.png) left top no-repeat;
 		background-size:contain;
+		@include screen('mobile') {
+			display: none;
+		}
 	}
 	.kids_title{
 		color: #fff;
@@ -17,6 +20,9 @@
 		background: #DA3945 ;
 		position: relative;
 		letter-spacing: 1px;
+		@include screen('mobile') {
+			margin: 3em 0 1em 0;
+		}
 		&:before{
 			content: "";
 			background: url(../images/kid.png) left bottom no-repeat;
@@ -86,6 +92,9 @@
 		}
 		a{
 			color: #f85006;
+			@include screen('mobile') {
+				display: block;
+			}
 			&:hover{
 				text-decoration: underline;
 			}
@@ -105,6 +114,10 @@
 			font-weight: bold;
 			border: 0;
 			margin: 0 .1em;
+			white-space: nowrap;
+			@include screen('mobile') {
+				padding: 1em;
+			}
 			&:hover{
 				text-decoration: none;
 				background: lighten(#DA3945,10)
@@ -122,6 +135,10 @@
 			color: #fff;
 			margin: 0 .1em;
 			vertical-align: middle;
+			white-space: nowrap;
+			@include screen('mobile') {
+				padding: 1em;
+			}
 		}
 	}
 	ul.kids_test{

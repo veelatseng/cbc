@@ -828,71 +828,56 @@ div.more {
   .more{
     position: absolute;
     right: 0;
-    top: 16px;
+    top: 6px;
     a{
       color: #333;
       position: relative;
-      padding-right: 55px;
+      // padding-right: 55px;
       @include screen('mobile') {
         padding-right: 0;
         text-indent: -9999px;
       }
-      &:before{
+      &:before,&:after{
         content: "";
         position: absolute;
+        width: 15px;
+        height: 15px;
+        display: block;
         right: 28px;
-        top: 12px;
-        width: 10px;
-        height: 10px;
-        border-right: 1px solid #fff;
-        border-bottom: 1px solid #fff;
+        border-right: 2px solid $primaryColor;
+        border-bottom: 2px solid $primaryColor;
         border-top:0px; 
         border-left:0px; 
-        transform: rotate(45deg);
         z-index: 13;
         border-radius: 0;
+        transform: rotate(45deg);
+      }
+      &:before{
+        top: 0;
       }
       &:after{
-        content: "";
-        position: absolute;
-        right: 20px;
-        top: 6px;
-        width: 28px;
-        height: 28px;
-        display: block;
-        border-radius: 50%;
-        background: $primaryColor;
-        z-index: 12;
-        border: 0;
+        top: 9px;
       }
       &:hover,&.active{
-        &:before{
+        &:before,&:after{
           content: "";
           position: absolute;
+          width: 15px;
+          height: 15px;
+          display: block;
           right: 28px;
-          top: 12px;
-          width: 10px;
-          height: 10px;
-          border-right: 1px solid #fff;
-          border-bottom: 1px solid #fff;
+          border-right: 2px solid $primaryColor;
+          border-bottom: 2px solid $primaryColor;
           border-top:0px; 
           border-left:0px; 
-          transform: rotate(45deg);
           z-index: 13;
           border-radius: 0;
+          transform: rotate(45deg);
+        }
+        &:before{
+          top: 9px;
         }
         &:after{
-          content: "";
-          position: absolute;
-          right: 20px;
-          top: 6px;
-          width: 28px;
-          height: 28px;
-          display: block;
-          border-radius: 50%;
-          background: #333;
-          z-index: 12;
-          border: 0;
           animation: servicemore .5s linear 0s infinite alternate;
         }
       }
@@ -1157,6 +1142,126 @@ div.more {
         bottom: 0;
         right: 0;
         box-shadow: 0 0px 0px 3px $primaryColor inset;
+      }
+    }
+  }
+}
+.fixed_right_block{
+  width: 44px;
+  text-align: center;
+  position: fixed;
+  top: 130px;
+  right: 10px;
+  z-index: 99999999;
+  @include screen('mobile') {
+    top: 70px;
+  }
+  a{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: block;
+    text-indent: -9999px;
+  }
+  a.right_menu{
+    background: #222;
+    display: block;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: ease-in .3s all;
+    &:before{
+      content: '';
+      margin: -1px 0 0 -7px;
+      background: #FFF;
+      display: block;
+      width: 14px;
+      height: 2px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 0;
+    }
+    &:after{
+      content: '';
+      margin: -1px 0 0 -7px;
+      background: #FFF;
+      display: block;
+      width: 14px;
+      height: 2px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 0;
+      transform: rotate(90deg);
+    }
+    &.open{
+      transform: rotate(45deg);
+    }
+  }
+  ul{
+    list-style: none;
+    padding: 30px 0 0 0;
+    opacity: 1;
+    li{
+      float: none;
+      margin: 5px 0;
+      a{
+        &.facebook{
+          background: #999 url(../images/icon_facebook.png) no-repeat center center;
+          background-size: contain;
+        }
+        &.youtube{
+          background: #999 url(../images/icon_youtube.png) no-repeat center center;
+          background-size: contain;
+        }
+        &.flickr{
+          background: #999 url(../images/icon_flickr.png) no-repeat center center;
+          background-size: contain;
+        }
+        &.app{
+          height: 55px;
+          background: url(../images/icon_app.png) no-repeat center top;
+          background-size: contain;
+          border-radius: 0px;
+        }
+        &.epaper{
+          background: #999 url(../images/icon_epaper.png) no-repeat center center;
+          background-size: contain;
+
+        }
+        &.mailbox{
+          background: #999 url(../images/icon_mail.png) no-repeat center center;
+          background-size: contain;
+        }
+        &:hover,&:focus{
+          &.facebook{
+            background: #4067b4 url(../images/icon_facebook.png) no-repeat center center;
+            background-size: contain;
+          }
+          &.youtube{
+            background: #e22b26 url(../images/icon_youtube.png) no-repeat center center;
+            background-size: contain;
+          }
+          &.flickr{
+            background: url(../images/icon_flickr_.png) no-repeat center center;
+            background-size: contain;
+          }
+          &.app{
+            background: url(../images/icon_app_.png) no-repeat center top;
+            background-size: contain;
+          }
+          &.epaper{
+            background: #c60 url(../images/icon_epaper.png) no-repeat center center;
+            background-size: contain;
+          }
+          &.mailbox{
+            background: #bae040 url(../images/icon_mail.png) no-repeat center center;
+            background-size: contain;
+          }
+        }
       }
     }
   }

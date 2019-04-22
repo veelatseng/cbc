@@ -67,26 +67,13 @@
                 </div>
                 <!-- Epaper Start -->
                 <section class="epaper">
-                    <h2>請填入您的訂閱資料</h2>
-                    <p>註:<abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>為必填(選)欄位, 不能為空白。</p>
+                    <h2>您的訂閱資料</h2>
+                    <!-- <p>註:<abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>為必填(選)欄位, 不能為空白。</p> -->
                     <form action="" class="form_grid">
                         <div class="form_grp">
-                            <label for="" class="form_title"><abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>訂戶電子郵件帳號：</label>
+                            <label for="" class="form_title">訂戶電子郵件帳號：</label>
                             <div class="form_content">
-                                <input type="mail" id="" value="">
-                                <div class="notice_warning">這似乎不是一個正常的格式 <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form_grp">
-                            <label class="form_title"><abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>驗證碼：</label>
-                            <div class="form_content">
-                                <img src="images/basic/captcha.gif" alt="" class="captcha">
-                                <input type="text" id="" value="">
-                                <button type="button" class="btn btn-sm btn_sound">語音播放</button>
-                                <button type="button" class="btn btn-sm btn_reload">語音播放</button>
-                                <div class="notice_error">您輸入的驗證碼錯誤 <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
-                                </div>
+                                <span class="mail">veela.tseng@hyweb.com.tw</span>
                             </div>
                         </div>
                         <table summary="" class="table_list">

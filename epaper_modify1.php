@@ -68,10 +68,10 @@
                 <!-- Epaper Start -->
                 <section class="epaper">
                     <h2>請填入您的訂閱資料</h2>
-                    <p>註:<abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>為必填(選)欄位, 不能為空白。</p>
+                    <!-- <p>註:<abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>為必填(選)欄位, 不能為空白。</p> -->
                     <form action="" class="form_grid">
                         <div class="form_grp">
-                            <label for="" class="form_title"><abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>訂戶電子郵件帳號：</label>
+                            <label for="" class="form_title"><abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>(必填)</abbr>訂戶電子郵件帳號：</label>
                             <div class="form_content">
                                 <input type="mail" id="" value="">
                                 <div class="notice_warning">這似乎不是一個正常的格式 <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
@@ -79,7 +79,7 @@
                             </div>
                         </div>
                         <div class="form_grp">
-                            <label class="form_title"><abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>驗證碼：</label>
+                            <label class="form_title"><abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>(必填)</abbr>驗證碼：</label>
                             <div class="form_content">
                                 <img src="images/basic/captcha.gif" alt="" class="captcha">
                                 <input type="text" id="" value="">

@@ -225,6 +225,10 @@
       box-shadow: 0 0 5px rgba(0,0,0,0.1);
       float: none;
       letter-spacing: .02em;
+      @include screen('mobile') {
+        padding: 10px 10px 10px 15px;
+        letter-spacing: 0;
+      }
       &:before{
         content: "";
         width: 10px;
@@ -243,6 +247,9 @@
         color: #333;
         padding: 3px 0;
         position: relative;
+        @include screen('mobile') {
+          padding: 3px 30px 3px 0px;
+        }
         &:before {
           content: "";
           position: absolute;
@@ -292,6 +299,10 @@
           float: left;
           font-size: 1.125em;
           color: $primaryColor;
+          @include screen('mobile') {
+            float: none;
+            display: block;
+          }
           &:after{
             content: "/";
             margin-right: 10px;

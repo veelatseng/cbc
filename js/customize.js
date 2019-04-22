@@ -1,5 +1,6 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    // mp 影音專區
     $('.video_slider').slick({
         dots: false,
         arrow: true,
@@ -8,6 +9,29 @@ $(function() {
         autoplay: false,
         cssEase: 'ease'
     });
+    // mp 服務專區
+    $('.service_block tr td').each(function() {
+        $(this).find('ul.hot~ul').hide();
+        var _accordionItem = $(this).children('.more');
+        _accordionItem.each(function() {
+            function accordion(e){
+                // $(this).parent().parent().siblings().find('.more').removeClass('active').children('a').text("更多");
+                $(this).parent().parent().siblings().find('.more').removeClass('active');
+                $(this).toggleClass('active');
+                $(this).parent('td').parent('tr').siblings("tr").children('td').children('ul.hot~ul').slideUp();
+                $(this).next('ul').slideToggle();
+                // if ($(this).hasClass('active')) {
+                //     $(".service_block .active").find('a').text("更少");
+                // } else {
+                //     $(this).find('a').text("更多");
+                // }
+                e.preventDefault();
+            }
+            $(this).click(accordion);
+            $(this).keyup(accordion);
+        });
+    });
+    // mp 重大政策
     $('.policy_block ul').slick({
         dots: false,
         infinite: true,
@@ -41,6 +65,7 @@ $(function() {
             }
         }]
     });
+    // mp 焦點議題
     $('.issue_block .inner').slick({
         dots: false,
         arrow: true,
@@ -49,6 +74,7 @@ $(function() {
         autoplay: false,
         cssEase: 'ease'
     });
+    // mp 小banner輪播
     $('.adSlider').slick({
         dots: false,
         infinite: true,
@@ -82,123 +108,8 @@ $(function() {
             }
         }]
     });
-	//燈箱slick+lightBox組合
-    $('.cp_slider').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 1500,
-        pauseOnHover: true,
-        pauseOnFocus: true,
-        focusOnSelect: true,
-        accessibility: true,
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                infinite: true,
-                dots: true
-            }
-        }, {
-            breakpoint: 545,
-            settings: {
-                arrows: true,
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        }, {
-            breakpoint: 480,
-            settings: {
-                arrows: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows:false
-            }
-        }]
-    });
-    $('.cp_slider').slickLightbox({
-        caption: 'caption',
-        useHistoryApi: 'true',
-        lazy: true
-    });
-    $('.advanced_search').hide();
-    $('.btn_advanced_search').off().click(function(event) {
-        $('.advanced_search').stop().slideToggle();
-    });
-    // category
-    $('.category').find('a').off().click(function(event) {
-        $(this).parent('li').siblings().find('a').removeClass('active');
-        $(this).addClass('active');
-    }); 
-
-    // $('.service_block td .more').click(function(event) {
-    //     $(this).toggleClass('active').next("ul").slideToggle();
-    // });
-    $('.governors_list').each(function() {
-        $(this).find('.governors_content').hide();
-        var _accordionItem = $(this).children('ul').children('li').children('a');
-        _accordionItem.each(function() {
-            function accordion(e){
-                $(this).parent('li').siblings().children('a').removeClass('active');
-                $(this).toggleClass('active');
-                $(this).parent('li').siblings().children('.governors_content').slideUp();
-                $(this).next('.governors_content').slideToggle();
-                e.preventDefault();
-            }
-            $(this).click(accordion);
-            $(this).keyup(accordion);
-        });
-    });
-    $('.service_block tr td').each(function() {
-        $(this).find('ul.hot~ul').hide();
-        var _accordionItem = $(this).children('.more');
-        _accordionItem.each(function() {
-            function accordion(e){
-                $(this).parent().parent().siblings().find('.more').removeClass('active').children('a').text("更多");
-                $(this).toggleClass('active');
-                $(this).parent('td').parent('tr').siblings("tr").children('td').children('ul.hot~ul').slideUp();
-                $(this).next('ul').slideToggle();
-                if ($(this).hasClass('active')) {
-                    $(".service_block .active").find('a').text("更少");
-                } else {
-                    $(this).find('a').text("更多");
-                }
-                e.preventDefault();
-            }
-            $(this).click(accordion);
-            $(this).keyup(accordion);
-        });
-    });
-    
 });
-// table_list th 寬度
-$(function(){
-    function plth(){
-        var thWidth = 0;
-        $('.table_list th').each(function(){
-            if($(this).width()>thWidth){
-                thWidth = $(this).width(); 
-            }
-        });
-        if ($(window).outerWidth() <= 768) { 
-            var allWidth=$('.table_list table').width(),
-            thRealWidth=Math.floor((thWidth/allWidth)*100);
-            $(".table_list td").css({"padding-left":(thRealWidth+5)+"%"});
-        } else{
-            $(".table_list td").css({"padding-left":""});
-        };
-    }
-    $(window).bind('resize load', function(e) {
-        plth();
-    });
-    plth();
-});
-
-
+//mp slider
 $(function() {
     var duration_speed = 400, //設定每張圖轉場動畫速度
         vertical_slider_speed = 4000, //設定每張圖停留時間
@@ -218,7 +129,7 @@ $(function() {
     var menuLength = $('.vertical_slider ul li').length;
     $(window).bind("load resize", function(e) {
         var vsliderH = $('.vertical_slider').height();
-        console.log(vsliderH);
+        // console.log(vsliderH);
         menuLiHeight = Math.floor(vsliderH / menuLength);
         $('.vslider_menu ul li').each(function(index, el) {
             $(this).css('height', menuLiHeight - 1);
@@ -361,4 +272,149 @@ $(function() {
             }
         }
     });
-})
+});
+//內頁
+$(function(){
+    // cp 燈箱slick+lightBox組合
+    $('.cp_slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 1500,
+        pauseOnHover: true,
+        pauseOnFocus: true,
+        focusOnSelect: true,
+        accessibility: true,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+                dots: true
+            }
+        }, {
+            breakpoint: 545,
+            settings: {
+                arrows: true,
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                arrows: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows:false
+            }
+        }]
+    });
+    $('.cp_slider').slickLightbox({
+        caption: 'caption',
+        useHistoryApi: 'true',
+        lazy: true
+    });
+    // category
+    $('.category').find('a').off().click(function(event) {
+        $(this).parent('li').siblings().find('a').removeClass('active');
+        $(this).addClass('active');
+    }); 
+});
+// lp table_list th 寬度
+$(function(){
+    function plth(){
+        var thWidth = 0;
+        $('.table_list th').each(function(){
+            if($(this).width()>thWidth){
+                thWidth = $(this).width(); 
+            }
+        });
+        if ($(window).outerWidth() <= 768) { 
+            var allWidth=$('.table_list table').width(),
+            thRealWidth=Math.floor((thWidth/allWidth)*100);
+            $(".table_list td").css({"padding-left":(thRealWidth+5)+"%"});
+        } else{
+            $(".table_list td").css({"padding-left":""});
+        };
+    }
+    $(window).bind('resize load', function(e) {
+        plth();
+    });
+    plth();
+});
+// lp 進階查詢
+$(function(){
+    $('.advanced_search').hide();
+    $('.btn_advanced_search').off().click(function(event) {
+        $('.advanced_search').stop().slideToggle();
+    });
+});
+// 歷屆首長
+$(function(){
+    $('.governors_list').each(function() {
+        $(this).find('.governors_content').hide();
+        var _accordionItem = $(this).children('ul').children('li').children('a');
+        _accordionItem.each(function() {
+            function accordion(e){
+                $(this).parent('li').siblings().children('a').removeClass('active');
+                $(this).toggleClass('active');
+                $(this).parent('li').siblings().children('.governors_content').slideUp();
+                $(this).next('.governors_content').slideToggle();
+                e.preventDefault();
+            }
+            $(this).click(accordion);
+            $(this).keyup(accordion);
+        });
+    });
+});
+// fixed menu
+$(function(){
+
+    $(window).bind("load scroll resize", function(e) { 
+        if ($(window).outerWidth() >= 1100) {
+            var ww = $(window).outerWidth(),
+            pageWidth=$(".container").width(),
+            rightWidth= (ww-pageWidth)/2;
+            $('.fixed_right_block,.scrollToTop').css('right', (rightWidth-55));
+        } else {
+            $('.fixed_right_block,.scrollToTop').css('right', 10);
+        }
+    });
+
+    $('.fixed_right_block').children('ul').hide();
+    var _fixedRight = $('.right_menu');
+    _fixedRight.off().click(function(e) {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('open').siblings('ul').stop(true, true).slideUp();
+        } else {
+            $(this).toggleClass('open').siblings('ul').stop(true, true).slideToggle();
+        }
+        e.preventDefault();
+    });
+    _fixedRight.keyup(function(event) {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('open').siblings('ul').stop(true, true).slideUp();
+        } else {
+            $(this).toggleClass('open').siblings('ul').stop(true, true).slideToggle();
+        }
+    });
+    $('.fixed_right_block').find('li:last>a').focusout(function(event) {
+        $('.fixed_right_block .right_menu').removeClass('open')
+        $(this).parent().parent('ul').hide();
+    });
+    // 點外面關閉share
+    $(document).on('touchend click', function(e) {
+        var container = $(".fixed_right_block");
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            $('.fixed_right_block .right_menu').removeClass('open')
+            $('.fixed_right_block ul').hide();
+        }
+    });
+    
+});
+
+

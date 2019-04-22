@@ -88,13 +88,13 @@ a.more {
 
 // scrollTop
 .scrollToTop {
-    width: 50px;
-    height: 50px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.4);
+    background: url(../images/basic/top.png) no-repeat center center rgba(0, 0, 0, 0.4);
     text-align: center;
     color: #FFF;
-    line-height: 50px;
+    line-height: 44px;
     text-decoration: none;
     position: fixed;
     bottom: 10px;
@@ -104,7 +104,7 @@ a.more {
     z-index: 99999999;
     text-indent: -999999px;
     &:hover,&:focus{
-        background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.8);
+        background: url(../images/basic/top.png) no-repeat center center rgba(0, 0, 0, 0.8);
         box-shadow:none;
     }
 }
