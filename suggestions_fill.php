@@ -100,7 +100,9 @@
                             <li>依據「行政院及所屬各機關處理人民陳情案件要點」第十四點規定，人民陳情案件如無具體內容或未具真實姓名或聯絡方式者，受理機關得不予處理。</li>
                             <li>如連續收到同一案情之人民陳情案件將予併案辦理。</li>
                         </ul>
+
                         <form action="" class="form_grid">
+                            <p>註:<abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>為必填(選)欄位, 不能為空白。</p>
                             <div class="form_grp">
                                 <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>姓名：</label>
                                 <div class="form_content">

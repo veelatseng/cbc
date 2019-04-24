@@ -31,17 +31,6 @@
     <div id="center" class="main">
       <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
       <div class="container">
-        <div class="fixed_right_block">
-          <a href="" class="right_menu"></a>
-          <ul>
-            <li><a href="https://www.facebook.com/cbc.gov.tw/" class="facebook" title="Facebook">Facebook</a></li>
-            <li><a href="https://www.youtube.com/user/TheCBCTube" class="youtube" title="Youtube">Youtube</a></li>
-            <li><a href="http://www.flickr.com/photos/cbcbank" class="flickr" title="Flickr">Flickr</a></li>
-            <li><a href="https://www.cbc.gov.tw/content.asp?mp=1&CuItem=46009" class="app" title="中央銀行APP">中央銀行APP</a></li>
-            <li><a href="" class="mailbox" title="意見信箱">意見信箱</a></li>
-            <li><a href="" class="epaper" title="訂閱電子報">訂閱電子報</a></li>
-          </ul>
-        </div>
         <section class="v_slider">
           <div class="container">
             <!-- slider -->
@@ -180,7 +169,7 @@
                   <a href="#">
                     <h3>新臺幣/美元 銀行間收盤匯率</h3>
                     <span class="date">2019-03-28</span>
-                    <span class="info">30.894</span>
+                    <span class="info"><em>30.894</em></span>
                   </a>
                 </div>
                 <!-- tab1 content -->
@@ -196,7 +185,7 @@
                   <a href="#">
                     <h3>外匯存底</h3>
                     <span class="date">2019.02(十億美元)</span>
-                    <span class="info">463.94</span>
+                    <span class="info"><em>463.94</em></span>
                   </a>
                 </div>
                 <!-- tab2 content -->
@@ -212,7 +201,7 @@
                   <a href="#">
                     <h3>貨幣總計數M2年增率</h3>
                     <span class="date">108年02月</span>
-                    <span class="info">463.94</span>
+                    <span class="info"><em>463.94</em></span>
                   </a>
                 </div>
                 <!-- tab3 content -->
@@ -228,7 +217,7 @@
                   <a href="#">
                     <h3>金融業隔夜拆款利率</h3>
                     <span class="date">2019-03-28</span>
-                    <span class="info">0.182%</span>
+                    <span class="info"><em>0.182</em>%</span>
                   </a>
                 </div>
                 <!-- tab4 content -->
@@ -244,7 +233,7 @@
                   <a href="#">
                     <h3>重貼現率</h3>
                     <span class="date">自2016-07-01起</span>
-                    <span class="info">1.375%</span>
+                    <span class="info"><em>1.375</em>%</span>
                   </a>
                 </div>
                 <!-- tab5 content -->
@@ -260,7 +249,7 @@
                   <a href="#">
                     <h3>存款準備率</h3>
                     <span class="date">自2011-01-01起</span>
-                    <span class="info">(請點選)</span>
+                    <span class="info"><em>(請點選)</em></span>
                   </a>
                 </div>
                 <!-- tab6 content -->
@@ -287,7 +276,7 @@
                     <li><a href="#">委託研究報告</a></li>
                     <li><a href="#">外幣結算平台</a></li>
                   </ul>
-                  <div class="more"><a href="javascript:;"></a></div>
+                  <div class="more"><a href="javascript:;" title=""></a></div>
                   <ul>
                     <li><a href="#">楊金龍總裁高峰論壇演講</a></li>
                     <li><a href="#">委託研究報告</a></li>
@@ -306,7 +295,7 @@
                     <li><a href="#">個別金融機構牌告存放款利率查詢</a></li>
                     <li><a href="#">全國金融機構一覽</a></li>
                   </ul>
-                  <div class="more"><a href="javascript:;"></a></div>
+                  <div class="more"><a href="javascript:;" title=""></a></div>
                   <ul>
                     <li><a href="#">楊金龍總裁高峰論壇演講</a></li>
                     <li><a href="#">委託研究報告</a></li>
@@ -524,6 +513,17 @@
     <!-- footer Start-->
     <?php require_once('include/footer.html'); ?>
     <!-- footer End -->
+    <div class="fixed_right_block">
+      <ul>
+        <li><a href="https://www.facebook.com/cbc.gov.tw/" class="facebook" title="Facebook">Facebook</a></li>
+        <li><a href="https://www.youtube.com/user/TheCBCTube" class="youtube" title="Youtube">Youtube</a></li>
+        <li><a href="http://www.flickr.com/photos/cbcbank" class="flickr" title="Flickr">Flickr</a></li>
+        <li><a href="https://www.cbc.gov.tw/content.asp?mp=1&CuItem=46009" class="app" title="中央銀行APP">中央銀行APP</a></li>
+        <li><a href="" class="mailbox" title="意見信箱">意見信箱</a></li>
+        <li><a href="" class="epaper" title="訂閱電子報">訂閱電子報</a></li>
+      </ul>
+      <a href="" class="right_menu open"></a>
+    </div>
   </div>
   <a href="javascript:;" class="scrollToTop">TOP<br>回頁首</a>
   <!-- <a href="javascript:;">回頁首</a> -->

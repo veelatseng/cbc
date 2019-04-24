@@ -9,6 +9,9 @@ footer {
     @include screen('tablet') {
         background: #4a7aad;
     }
+    @include screen('mobile') {
+        padding-bottom: 0;
+    }
     &:before{
         content: "";
         position: absolute;

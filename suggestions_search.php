@@ -70,6 +70,7 @@
                 <section class="suggestions">
                     <div class="text_block">
                         <form action="" class="form_grid">
+                            <p>註:<abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>為必填(選)欄位, 不能為空白。</p>
                             <div class="form_grp">
                                 <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>姓名：</label>
                                 <div class="form_content">

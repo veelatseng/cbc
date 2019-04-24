@@ -375,20 +375,22 @@ $(function(){
 $(function(){
 
     $(window).bind("load scroll resize", function(e) { 
-        if ($(window).outerWidth() >= 1100) {
+        if ($(window).outerWidth() >= 1100 ) {
             var ww = $(window).outerWidth(),
             pageWidth=$(".container").width(),
             rightWidth= (ww-pageWidth)/2;
             $('.fixed_right_block,.scrollToTop').css('right', (rightWidth-55));
+        } else if($(window).outerWidth() <= 768) {
+            $('.fixed_right_block').css('right', "auto");
         } else {
             $('.fixed_right_block,.scrollToTop').css('right', 10);
         }
     });
 
-    $('.fixed_right_block').children('ul').hide();
+    // $('.fixed_right_block').children('ul').hide();
     var _fixedRight = $('.right_menu');
     _fixedRight.off().click(function(e) {
-        if ($(this).hasClass('active')) {
+        if ($(this).hasClass('open')) {
             $(this).removeClass('open').siblings('ul').stop(true, true).slideUp();
         } else {
             $(this).toggleClass('open').siblings('ul').stop(true, true).slideToggle();
@@ -396,7 +398,7 @@ $(function(){
         e.preventDefault();
     });
     _fixedRight.keyup(function(event) {
-        if ($(this).hasClass('active')) {
+        if ($(this).hasClass('open')) {
             $(this).removeClass('open').siblings('ul').stop(true, true).slideUp();
         } else {
             $(this).toggleClass('open').siblings('ul').stop(true, true).slideToggle();
@@ -407,13 +409,13 @@ $(function(){
         $(this).parent().parent('ul').hide();
     });
     // 點外面關閉share
-    $(document).on('touchend click', function(e) {
-        var container = $(".fixed_right_block");
-        if (!container.is(e.target) && container.has(e.target).length === 0) {
-            $('.fixed_right_block .right_menu').removeClass('open')
-            $('.fixed_right_block ul').hide();
-        }
-    });
+    // $(document).on('touchend click', function(e) {
+    //     var container = $(".fixed_right_block");
+    //     if (!container.is(e.target) && container.has(e.target).length === 0) {
+    //         $('.fixed_right_block .right_menu').removeClass('open')
+    //         $('.fixed_right_block ul').hide();
+    //     }
+    // });
     
 });
 

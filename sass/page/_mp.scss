@@ -381,6 +381,7 @@ div.more {
   overflow: hidden;
   padding-top: 15px;
   background:url(../images/bg1.jpg) left top no-repeat,url(../images/bg2.jpg) left bottom no-repeat;
+  background-size: contain;
 }
 .news_block {
   @include make-xs-column(12);
@@ -400,7 +401,7 @@ div.more {
     height: 100%;
     display: block;
     position: absolute;
-    left: 25px;
+    left: 30px;
     top: -12px;
     background: #f2f2f2;
     box-shadow: 0 0 5px rgba(0, 0, 0, .3);
@@ -661,6 +662,9 @@ div.more {
         width: 65%;
         white-space: normal;
         text-align: left;
+        @include screen('mobile') {
+          width: 100%;
+        }
       }
       span.date{
         display: inline-block;
@@ -679,6 +683,10 @@ div.more {
         position: relative;
         z-index: 11;
         transition: all .3s linear;
+        @include screen('mobile') {
+          clear: left;
+          display: block;
+        }
         em{
           font-size: 2.25em;
           font-style: normal;
@@ -732,6 +740,8 @@ div.more {
         background: #fff;
         @include screen('mobile') {
           height: auto;
+          overflow: hidden;
+          overflow-x: auto;
         }
       }
       h3{
@@ -745,10 +755,10 @@ div.more {
       p{
         margin-top: 0;
         line-height: 1.8em;
-        height: 5.4em;
+        height: 3.6em;
         overflow: hidden;
         display: -webkit-box;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
         color: #333;
@@ -792,7 +802,7 @@ div.more {
     display: block;
     overflow: hidden;
     padding-left: 0;
-    width: 90%;
+    width: 95%;
     margin: 0;
     @include screen('mobile') {
       width: 85%;
@@ -1150,11 +1160,18 @@ div.more {
   width: 44px;
   text-align: center;
   position: fixed;
-  top: 130px;
+  bottom: 110px;
   right: 10px;
   z-index: 99999999;
   @include screen('mobile') {
-    top: 70px;
+    position: relative;
+    width: 100%;
+    bottom: auto;
+    right: auto;
+    background: $primaryColor;
+    text-align: left;
+    padding-left: 20px;
+    box-sizing: border-box;
   }
   a{
     width: 44px;
@@ -1170,8 +1187,11 @@ div.more {
     height: 44px;
     position: absolute;
     right: 0;
-    top: 0;
+    bottom: -44px;
     transition: ease-in .3s all;
+    @include screen('mobile') {
+      display: none;
+    }
     &:before{
       content: '';
       margin: -1px 0 0 -7px;
@@ -1199,16 +1219,24 @@ div.more {
     }
     &.open{
       transform: rotate(45deg);
+      background: #cba60f;
     }
   }
   ul{
     list-style: none;
-    padding: 30px 0 0 0;
+    padding: 0;
+    margin: 0;
     opacity: 1;
     li{
       float: none;
       margin: 5px 0;
+      @include screen('mobile') {
+        display: inline-block;
+      }
       a{
+        &:hover,&:focus{
+          box-shadow: 0 0 0 0;
+        }
         &.facebook{
           background: #999 url(../images/icon_facebook.png) no-repeat center center;
           background-size: contain;
