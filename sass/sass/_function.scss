@@ -32,6 +32,7 @@ div.function {
                 &:focus {
                     background: darken($aHover, 0);
                     border-color: darken($aHover, 0);
+                    box-shadow: 0 0 0 0;
                 }
             }
             // 回上一頁
@@ -129,6 +130,13 @@ div.function {
         float: right;
         .btn{
             margin-top: 0;
+            &:hover,&:focus{
+                color: #fff;
+                background: $primaryColor;
+                border: 1px solid $primaryColor; 
+                box-shadow: 0 0 0 0;
+                outline: 0;
+            }
         }
         @include screen('mobile') {
             float: none;
@@ -153,6 +161,10 @@ div.function {
         margin-right: 8px;
         opacity: .7;
     }
+    &:hover, &:focus {
+        box-shadow: 0 0 0 0;
+        outline: 0;
+    }
 }
 %fun_btn2{
     vertical-align: top;
@@ -165,6 +177,10 @@ div.function {
         vertical-align: middle;
         margin-right: 8px;
         opacity: .7;
+    }
+    &:hover, &:focus {
+        box-shadow: 0 0 0 0;
+        outline: 0;
     }
 }
 .btn_download{
@@ -179,6 +195,11 @@ div.function {
     &:before{
         background:  url(../images/icon_opml.png) no-repeat 0 0;
         background-size: cover;
+    }
+    &:hover,&:focus{
+        color: #fff;
+        background: $primaryColor;
+        border: 1px solid $primaryColor; 
     }
 }
 .btn_casesearch{
@@ -243,11 +264,12 @@ div.function {
         margin-right: 8px;
     }
     &:hover,&:focus{
-        background: $primaryColor;
-        color: #fff;
+        background: -webkit-linear-gradient(top, #FFF, #DDD);
+        background: linear-gradient(to bottom, #ffffff,#dddddd);
+        color: $primaryColor;
         border: 1px solid darken($primaryColor, 20);
         &:before{
-            filter: invert(100%);
+            // filter: invert(100%);
         }
     }
 }

@@ -7,7 +7,7 @@ a.goCenter {
 	padding: 0 .5em;
 	height: 2em;
 	line-height: 2em;
-	background: $secondaryColor;
+	background: $primaryColor;
 	color: #fff;
 	text-decoration: none;
 	z-index: 999999999999;
@@ -15,6 +15,7 @@ a.goCenter {
 	transition: .5s;
 	border-radius:0px 0px 4px 4px;
 	color: #FFF;
+	box-shadow: 0 0 0 0;
 	@include screen("mobile") {
 		display: none;
 	}
@@ -41,7 +42,7 @@ a.goCenter {
 		a{
 			color:$primaryColor;
 			&:hover,&:focus {
-			color:$aHover;	
+				color:$aHover;	
 			}
 		}
 	}

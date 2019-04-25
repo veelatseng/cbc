@@ -31,12 +31,14 @@
                 &:hover, &:focus {
                     background: $primaryColor;
                     color: #fff;
+                    box-shadow: 0 0 0 0;
                 }
                 &.active {
-                    background:  darken($primaryColor, 20);
+                    background:  $aHover;
                     &:hover, &:focus {
                         background: $primaryColor;
                         color: #FFF;
+                        box-shadow: 0 0 0 0;
                     }
                 }
                 &.small {

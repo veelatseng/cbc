@@ -6,9 +6,10 @@
             a {
                 color: $aColor;
                 text-decoration: underline;
-                &:hover{
+                &:hover,&:focus{
                     color: $aHover;
                     text-decoration: none;
+                    // box-shadow: 0 0 0 0;
                 }
             }
             &.center{
@@ -84,7 +85,7 @@
                 }
                 time {
                     display: inline-block;
-                    color: #AAA;
+                    color: #999;
                     padding-left: 2em;
                     margin-right: 10px;
                     @include screen('mobile') {
@@ -95,6 +96,12 @@
                         padding-left: 0;
                         @include screen('mobile') {
                             padding-left: 2em;
+                        }
+                        &:hover, &:focus {
+                            // box-shadow: 0 0 0 0;
+                            outline: 0;
+                            text-decoration: underline;
+                            color: $aHover;
                         }
                     }
                 }

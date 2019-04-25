@@ -44,7 +44,8 @@
                 }
                 &:focus{
                     color: #fff;
-                    outline:#fff solid thin;
+                    // outline:#fff solid thin;
+                    box-shadow: 0 0 0 0;
                     &:after {
                         border: 2px solid #fff;
                         border-bottom: none;
@@ -129,6 +130,7 @@
                 font-weight: bold;
                 &:hover, &:focus {
                     background: rgba($primaryColor,.8);
+                    box-shadow: 0 0 0 0;
                 }
             }
         }

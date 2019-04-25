@@ -56,7 +56,7 @@
           <section class="news_block">
             <div class="tabSet">
               <section class="tabs">
-                <h2 class="tabItem active"><a href="#">最新消息</a></h2>
+                <h2 class="tabItem active"><a href="javascript:;">最新消息</a></h2>
                 <!--選到的頁籤項目-->
                 <div class="tabContent">
                   <ul>
@@ -68,7 +68,7 @@
                   </ul>
                   <div class="more"><a href="#">更多最新消息</a></div>
                 </div>
-                <h2 class="tabItem"><a href="#">新聞稿</a></h2>
+                <h2 class="tabItem"><a href="javascript:;">新聞稿</a></h2>
                 <div class="tabContent">
                   <ul>
                     <li><time>2019-01-01</time><a href="#">2第一則消息</a></li>
@@ -79,7 +79,7 @@
                   </ul>
                   <div class="more"><a href="#">更多最新消息</a></div>
                 </div>
-                <h2 class="tabItem"><a href="#">即時新聞澄清</a></h2>
+                <h2 class="tabItem"><a href="javascript:;">即時新聞澄清</a></h2>
                 <div class="tabContent">
                   <ul>
                     <li><time>2019-01-01</time><a href="#">3第一則消息</a></li>
@@ -90,7 +90,7 @@
                   </ul>
                   <div class="more"><a href="#">更多即時新聞澄清</a></div>
                 </div>
-                <h2 class="tabItem"><a href="#">本行發行存單</a></h2>
+                <h2 class="tabItem"><a href="javascript:;">本行發行存單</a></h2>
                 <div class="tabContent">
                   <ul>
                     <li><time>2019-01-01</time><a href="#">4第一則消息</a></li>
@@ -101,7 +101,7 @@
                   </ul>
                   <div class="more"><a href="#">更多本行發行存單</a></div>
                 </div>
-                <h2 class="tabItem"><a href="#">電子布告欄</a></h2>
+                <h2 class="tabItem"><a href="javascript:;">電子布告欄</a></h2>
                 <div class="tabContent">
                   <ul>
                     <li><time>2019-01-01</time><a href="#">4第一則消息</a></li>
@@ -112,7 +112,7 @@
                   </ul>
                   <div class="more"><a href="#">更多電子布告欄</a></div>
                 </div>  
-                <h2 class="tabItem"><a href="#">徵才公告</a></h2>
+                <h2 class="tabItem"><a href="javascript:;">徵才公告</a></h2>
                 <div class="tabContent">
                   <ul>
                     <li><time>2019-01-01</time><a href="#">4第一則消息</a></li>
@@ -166,7 +166,7 @@
               <div class="tabs">
                 <!-- tab1 -->
                 <div class="tabItem active">
-                  <a href="#">
+                  <a href="javascript:;">
                     <h3>新臺幣/美元 銀行間收盤匯率</h3>
                     <span class="date">2019-03-28</span>
                     <span class="info"><em>30.894</em></span>
@@ -182,7 +182,7 @@
                 </div>
                 <!-- tab2 -->
                 <div class="tabItem">
-                  <a href="#">
+                  <a href="javascript:;">
                     <h3>外匯存底</h3>
                     <span class="date">2019.02(十億美元)</span>
                     <span class="info"><em>463.94</em></span>
@@ -198,7 +198,7 @@
                 </div>
                 <!-- tab3  -->
                 <div class="tabItem">
-                  <a href="#">
+                  <a href="javascript:;">
                     <h3>貨幣總計數M2年增率</h3>
                     <span class="date">108年02月</span>
                     <span class="info"><em>463.94</em></span>
@@ -214,7 +214,7 @@
                 </div>
                 <!-- tab4 -->
                 <div class="tabItem">
-                  <a href="#">
+                  <a href="javascript:;">
                     <h3>金融業隔夜拆款利率</h3>
                     <span class="date">2019-03-28</span>
                     <span class="info"><em>0.182</em>%</span>
@@ -230,7 +230,7 @@
                 </div>
                 <!-- tab5 -->
                 <div class="tabItem">
-                  <a href="#">
+                  <a href="javascript:;">
                     <h3>重貼現率</h3>
                     <span class="date">自2016-07-01起</span>
                     <span class="info"><em>1.375</em>%</span>
@@ -246,7 +246,7 @@
                 </div>
                 <!-- tab6 -->
                 <div class="tabItem">
-                  <a href="#">
+                  <a href="javascript:;">
                     <h3>存款準備率</h3>
                     <span class="date">自2011-01-01起</span>
                     <span class="info"><em>(請點選)</em></span>
@@ -399,17 +399,17 @@
             <div class="inner">
               <div class="issue">
                 <h2>焦點金融議題</h2>
-                <div class="issue_pic"><img src="images/issue.jpg" alt=""></div>
+                <div class="issue_pic"><a href=""><img src="images/issue.jpg" alt=""></a></div>
                 <div class="more"><a href="#">更多焦點金融議題</a></div>
               </div>
               <div class="issue">
                 <h2>焦點金融議題</h2>
-                <div class="issue_pic"><img src="https://via.placeholder.com/1000x150" alt=""></div>
+                <div class="issue_pic"><a href=""><img src="https://via.placeholder.com/1000x150" alt=""></a></div>
                 <div class="more"><a href="#">更多焦點金融議題</a></div>
               </div>
               <div class="issue">
                 <h2>焦點金融議題</h2>
-                <div class="issue_pic"><img src="https://via.placeholder.com/150x1000" alt=""></div>
+                <div class="issue_pic"><a href=""><img src="https://via.placeholder.com/150x1000" alt=""></a></div>
                 <div class="more"><a href="#">更多焦點金融議題</a></div>
               </div>
             </div>

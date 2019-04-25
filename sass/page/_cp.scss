@@ -76,8 +76,9 @@ h3.block_title {
     a {
         @include aSetting;
         text-decoration: underline;
-        &:hover{
+        &:hover,&:focus{
             text-decoration: none;
+            // box-shadow: 0 0 0 0;
         }
     }
     .info {
@@ -290,6 +291,10 @@ h3.block_title {
         height: 24px;
         width: 21px;
         display: inline-block;
+        border: 2px solid #fff;
+        &:focus {
+            border: 2px solid #cba60f;
+        }
         &:after {
             content: "";
             background: url(../images/basic/icon_other.jpg);

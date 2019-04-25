@@ -50,6 +50,7 @@
             &:focus {
                 color: $primaryColor;
                 border: 2px solid $primaryColor;
+                box-shadow: 0 0 0 0;
             }
         }
     }

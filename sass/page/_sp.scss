@@ -22,9 +22,10 @@
       a{
         text-decoration: none;
         color: #444;
-        &:hover{
+        &:hover,&:focus{
           text-decoration: underline;
-          color: #ff8e06;
+          color: $primaryColor;
+          // box-shadow: 0 0 0 0;
         }
       }
     }
@@ -141,9 +142,12 @@
       }
     }
     a{
-      text-decoration: underline;
-      &:hover{
-        text-decoration: none;
+      color: #444;
+      text-decoration: none;
+      &:hover,&:focus{
+        color: $aHover;
+        text-decoration: underline;
+        box-shadow: 0 0 0 0;
       }
     }
   }
@@ -250,6 +254,10 @@
         @include screen('mobile') {
           padding: 3px 30px 3px 0px;
         }
+        &:hover,&:focus{
+          text-decoration: underline;
+          // box-shadow: 0 0 0 0;
+        }
         &:before {
           content: "";
           position: absolute;
@@ -293,6 +301,9 @@
             transform: rotate(-135deg);
             z-index: 13;
             border-radius: 0;
+          }
+          &:after{
+            background: $aHover;
           }
         }
         span{

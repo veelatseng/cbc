@@ -58,12 +58,13 @@
                     height: 30px;
                     &:hover, &:focus {
                         background: transparent;
+                        box-shadow: 0 0 0 0;
                         img {
-                            filter: invert(0%);
+                            filter: grayscale(100%);
                         }
                     }
                     &:focus {
-                        outline: 1px solid $primaryColor;
+
                     }
                 }
             }
@@ -76,7 +77,8 @@
             height: 30px;
             text-align: center;
             &:hover, &:focus {
-                background: $aHover;
+                background: darken($primaryColor, 10);
+                box-shadow: 0 0 0 0;
             }
             img {
                 width: 60%;

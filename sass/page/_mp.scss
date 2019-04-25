@@ -19,7 +19,6 @@ div.more {
     letter-spacing: 1px;
     transition: all .3s linear;
     font-weight: bold;
-
     &:before {
       content: "";
       width: 38px;
@@ -36,7 +35,6 @@ div.more {
       top: -3px;
       transition: all .3s linear;
     }
-
     &:after {
       content: "";
       width: 8px;
@@ -51,10 +49,8 @@ div.more {
       transform: rotate(45deg);
       transition: all .3s linear;
     }
-
     &:hover {
       color: $primaryColor;
-
       &:before {
         width: 100%;
         border-radius: 0;
@@ -63,10 +59,12 @@ div.more {
         border-top: 3px solid $primaryColor;
         border-bottom: 3px solid $primaryColor;
       }
-
       &:after {
         animation: more .5s linear 0s infinite alternate;
       }
+    }
+    &:hover,&:focus{
+      box-shadow: 0 0 0 0;
     }
   }
 }
@@ -240,7 +238,12 @@ div.more {
     }
     &:hover,
     &:focus {
-      background: $primaryColor;
+      background: #fff;
+      box-shadow: 0 0 0 0;
+      &:before{
+        border-top: 2px solid $primaryColor;
+        border-left: 2px solid $primaryColor;
+      }
     }
   }
   .next {
@@ -282,7 +285,12 @@ div.more {
     }
     &:hover,
     &:focus {
-      background: $primaryColor;
+      background: #fff;
+      box-shadow: 0 0 0 0;
+      &:before{
+        border-top: 2px solid $primaryColor;
+        border-right: 2px solid $primaryColor;
+      }
     }
   }
 }
@@ -341,6 +349,7 @@ div.more {
         overflow: hidden;
         &:hover,
         &:focus {
+          box-shadow: 0 0 0 0;
           &:before{
             content: "";
             width: 9px;
@@ -440,8 +449,12 @@ div.more {
           }
           a{     
             background: $primaryColor;
+            cursor: pointer;
             @include screen('mobile') {
               border-top: 1px solid #f2f2f2;
+            }
+            &:hover,&:focus{
+              box-shadow: 0 0 0 0;
             }
           }
         }
@@ -531,9 +544,15 @@ div.more {
     }
     .slick-prev {
       left: 0;
+      &:hover,&:focus{
+        box-shadow: 0 0 0 0;
+      }
     }
     .slick-next {
       right: 0;
+      &:hover,&:focus{
+        box-shadow: 0 0 0 0;
+      }
     }
     .video {
       .pic {
@@ -649,6 +668,9 @@ div.more {
         cursor: pointer;
         &:before,&:after{
           display: none;
+        }
+        &:hover, &:focus {
+          box-shadow: 0 0 0 0;
         }
       }
       h3{
@@ -819,6 +841,10 @@ div.more {
       }
       a{
         color: #111;
+        &:hover, &:focus {
+          // box-shadow: 0 0 0 0;
+          text-decoration: underline;
+        }
       }
       &:before{
         content: "";
@@ -1007,16 +1033,24 @@ div.more {
         content:"";
         display: block;
       }
+      a{
+        display: block;
+        border: 2px solid #fff;
+        &:hover,&:focus {
+          border: 2px solid #cba60f;
+        }
+      }
       img{
-        position:absolute;
-        top:0;
-        bottom:0;
-        right:0;
-        left:0;
-        margin:auto;
         max-width: 100%;
-        max-height: 385px;
-        height: auto;
+        // position:absolute;
+        // top:0;
+        // bottom:0;
+        // right:0;
+        // left:0;
+        // margin:auto;
+        // max-width: 100%;
+        // max-height: 385px;
+        // height: auto;
         // object-fit: contain;
       }
     }
