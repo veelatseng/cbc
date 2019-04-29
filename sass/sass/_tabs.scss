@@ -72,6 +72,9 @@
             &:hover {
                 color: $primaryColor;
             }
+            &:focus {
+                box-shadow: 0 0 0 0;
+            }
         }
         &.active{
             border-top: 10px solid $primaryColor;

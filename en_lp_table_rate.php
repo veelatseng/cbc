@@ -32,80 +32,81 @@
                 <!-- breadcrumb路徑 -->
                 <?php require_once('include/breadcrumb_en.html'); ?>
                 <!-- h2節點 -->
-                <h2 class="title">Press Releases</h2>
+                <h2 class="title">NT$/US$ Closing Rate</h2>
                 <!-- function功能區塊 -->
-                <?php require_once('include/function_panel.html'); ?>
+                <?php require_once('include/function_panel_en.html'); ?>
                 <!-- LP Start -->
                 <section class="lp">
-                    <div class="datelist">
+                    <h3 class="table_title">Exchange Rates of the N.T. Dollar Against the U.S. Dollar</h3>
+                    <div>
                         <table summary="">
-                            <caption></caption>
+                            <caption> (Interbank Spot Market Closing Rates)</caption>
                             <thead>
                                 <tr>
                                     <th>Date</th>
-                                    <th>US$ Billion</th>
+                                    <th>NTD/USD</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td data-title="Date" class="num">2018-10</td>
-                                    <td data-title="US$ Billion" class="rate">447.79</td>
+                                    <td data-title="Date" class="num">2018-11-13</td>
+                                    <td data-title="NTD/USD" class="rate">30.902</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="Date" class="num">2018-09</td>
-                                    <td data-title="US$ Billion" class="rate">447.79</td>
+                                    <td data-title="Date" class="num">2018-11-12</td>
+                                    <td data-title="NTD/USD" class="rate">30.902</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="Date" class="num">2018-08</td>
-                                    <td data-title="US$ Billion" class="rate">447.79</td>
+                                    <td data-title="Date" class="num">2018-11-11</td>
+                                    <td data-title="NTD/USD" class="rate">30.902</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="Date" class="num">2018-07</td>
-                                    <td data-title="US$ Billion" class="rate">447.79</td>
+                                    <td data-title="Date" class="num">2018-11-10</td>
+                                    <td data-title="NTD/USD" class="rate">30.902</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="Date" class="num">2018-06</td>
-                                    <td data-title="US$ Billion" class="rate">447.79</td>
+                                    <td data-title="Date" class="num">2018-11-09</td>
+                                    <td data-title="NTD/USD" class="rate">30.902</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="Date" class="num">2018-05</td>
-                                    <td data-title="US$ Billion" class="rate">447.79</td>
+                                    <td data-title="Date" class="num">2018-11-08</td>
+                                    <td data-title="NTD/USD" class="rate">30.902</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="Date" class="num">2018-04</td>
-                                    <td data-title="US$ Billion" class="rate">447.79</td>
+                                    <td data-title="Date" class="num">2018-11-07</td>
+                                    <td data-title="NTD/USD" class="rate">30.902</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="Date" class="num">2018-03</td>
-                                    <td data-title="US$ Billion" class="rate">447.79</td>
+                                    <td data-title="Date" class="num">2018-11-06</td>
+                                    <td data-title="NTD/USD" class="rate">30.902</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="Date" class="num">2018-02</td>
-                                    <td data-title="US$ Billion" class="rate">447.79</td>
+                                    <td data-title="Date" class="num">2018-11-05</td>
+                                    <td data-title="NTD/USD" class="rate">30.902</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="Date" class="num">2018-01</td>
-                                    <td data-title="US$ Billion" class="rate">447.79</td>
+                                    <td data-title="Date" class="num">2018-11-04</td>
+                                    <td data-title="NTD/USD" class="rate">30.902</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="Date" class="num">2017-12</td>
-                                    <td data-title="US$ Billion" class="rate">447.79</td>
+                                    <td data-title="Date" class="num">2018-11-03</td>
+                                    <td data-title="NTD/USD" class="rate">30.902</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="Date" class="num">2017-11</td>
-                                    <td data-title="US$ Billion" class="rate">447.79</td>
+                                    <td data-title="Date" class="num">2018-11-02</td>
+                                    <td data-title="NTD/USD" class="rate">30.902</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="Date" class="num">2017-10</td>
-                                    <td data-title="US$ Billion" class="rate">447.79</td>
+                                    <td data-title="Date" class="num">2018-11-01</td>
+                                    <td data-title="NTD/USD" class="rate">30.902</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="Date" class="num">2017-09</td>
-                                    <td data-title="US$ Billion" class="rate">447.79</td>
+                                    <td data-title="Date" class="num">2018-10-31</td>
+                                    <td data-title="NTD/USD" class="rate">30.902</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="Date" class="num">2017-08</td>
-                                    <td data-title="US$ Billion" class="rate">447.79</td>
+                                    <td data-title="Date" class="num">2018-10-30</td>
+                                    <td data-title="NTD/USD" class="rate">30.902</td>
                                 </tr>
                             </tbody>
                         </table>

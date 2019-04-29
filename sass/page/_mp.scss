@@ -49,7 +49,7 @@ div.more {
       transform: rotate(45deg);
       transition: all .3s linear;
     }
-    &:hover {
+    &:hover,&:focus {
       color: $primaryColor;
       &:before {
         width: 100%;
@@ -124,7 +124,7 @@ div.more {
       top: 310px;
       width: 100%;
       height: 100%;
-      box-sizing: border-box;
+      @include box-sizing(border-box);
       @include screen('tablet') {
         min-height: 170px;
       }
@@ -136,7 +136,7 @@ div.more {
         display: block;
         width: 100%;
         height: 100%;
-        box-sizing: border-box;
+        @include box-sizing(border-box);
         @include screen('tablet') {
           min-height: 170px;
         }
@@ -154,7 +154,7 @@ div.more {
           bottom: 0;
           z-index: 1;
           margin: 0;
-          box-sizing: border-box;
+          @include box-sizing(border-box);
           padding: 0 10em 0 1em;
           display: none;
           overflow: hidden;
@@ -305,8 +305,7 @@ div.more {
     display: none;
   }
   ul {
-    margin: 0;
-    padding: 0;
+    @include li-reset();
     li {
       display: block;
       width: 100%;
@@ -343,7 +342,7 @@ div.more {
         font-size: 1.125em;
         color: #333;
         text-align: left;
-        box-sizing: border-box;
+        @include box-sizing(border-box);
         white-space: nowrap;
         text-overflow:ellipsis;
         overflow: hidden;
@@ -463,34 +462,28 @@ div.more {
   }
   .tabContent {
     padding: 30px 0 0 0;
-
     @include screen('mobile') {
       padding: 20px 0 0 0;
     }
-
     li {
       font-weight: 600;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      margin: 0 0 .7em 0;
-      padding: 0 0 .7em 0;
+      margin: 0;
+      padding: .7em 0;
       border-bottom: 1px #dee0e0 solid;
-
       &:last-child {
         border-bottom: 0;
         margin-bottom: 0;
-
         @include screen('mobile') {
           border-bottom: 1px #dee0e0 solid;
           margin-bottom: .7em;
         }
       }
-
       a {
         color: #333;
       }
-
       time {
         display: inline-block;
         margin: 0 1em 0 0;
@@ -748,7 +741,7 @@ div.more {
       width: 49%;
       text-align: left;
       z-index: 11;
-      box-sizing: border-box;
+      @include box-sizing(border-box);
       @include screen('mobile') {
         width: 100%;
         position: relative;
@@ -802,7 +795,7 @@ div.more {
     padding: .5em;
     width: 140px;
     white-space: nowrap;
-    box-sizing: border-box;
+    @include box-sizing(border-box);
     border: 1px solid #e2e1e1;
     @include screen('mobile') {
       width: 70px;
@@ -820,12 +813,10 @@ div.more {
     }
   }
   ul{
-    list-style: none;
+    @include li-reset();
     display: block;
     overflow: hidden;
-    padding-left: 0;
     width: 95%;
-    margin: 0;
     @include screen('mobile') {
       width: 85%;
     }
@@ -834,7 +825,7 @@ div.more {
       padding-left: 12px;
       float: left;
       width: 33%;
-      box-sizing: border-box;
+      @include box-sizing(border-box);
       margin-bottom: 15px;
       @include screen('mobile') {
         width: 100%;
@@ -894,7 +885,7 @@ div.more {
       &:after{
         top: 9px;
       }
-      &:hover,&.active{
+      &:hover,&.active,&:focus{
         &:before,&:after{
           content: "";
           position: absolute;
@@ -986,7 +977,7 @@ div.more {
         position: relative;
         margin: 0 auto 20px auto;
       }
-      &:hover{
+      &:hover,&:focus{
         text-decoration: underline;
         &:before{
           animation: flip-vertical-right 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
@@ -1020,41 +1011,42 @@ div.more {
   .issue{
     .issue_pic{
       width: 100%;
-      height: 385px;
+      max-height: 385px;
       text-align: center;
       position:relative;
       overflow:hidden;
       @include screen('mobile') {
         height: auto;
       }
-      &:after{
-        content: "";
-        padding-top: 41%;/*設定寬比高的比例，X=(H/W)*100*/
-        content:"";
-        display: block;
-      }
       a{
         display: block;
-        border: 2px solid #fff;
-        &:hover,&:focus {
-          border: 2px solid #cba60f;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 385px;
+        z-index: 98;
+        @include aspect-ratio(896, 369);
+        img{
+          max-width: 100%;
+        }
+        &:focus{
+          &:after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 99;
+            box-shadow: 0 0 0 2px #cba60f inset;
+          }
         }
       }
-      img{
-        max-width: 100%;
-        // position:absolute;
-        // top:0;
-        // bottom:0;
-        // right:0;
-        // left:0;
-        // margin:auto;
-        // max-width: 100%;
-        // max-height: 385px;
-        // height: auto;
-        // object-fit: contain;
-      }
     }
-
+    .more{
+      margin-top: 6px;
+    }
   }
   .slick-prev {
     left: 0; 
@@ -1170,6 +1162,23 @@ div.more {
       text-align: center;
       border: 1px solid #fff;
       box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 98;
+      &:focus{
+        &:after{
+          content: "";
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 99;
+          box-shadow: 0 0 0 2px #cba60f inset;
+        }
+      }
       img {
         margin: 0 auto;
       }
@@ -1196,7 +1205,7 @@ div.more {
   position: fixed;
   bottom: 110px;
   right: 10px;
-  z-index: 99999999;
+  z-index: 800;
   @include screen('mobile') {
     position: relative;
     width: 100%;
@@ -1205,7 +1214,7 @@ div.more {
     background: $primaryColor;
     text-align: left;
     padding-left: 20px;
-    box-sizing: border-box;
+    @include box-sizing(border-box);
   }
   a{
     width: 44px;
@@ -1257,9 +1266,7 @@ div.more {
     }
   }
   ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    @include li-reset();
     opacity: 1;
     li{
       float: none;

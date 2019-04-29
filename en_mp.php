@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-Hant" class="no-js">
+<html lang="en" class="no-js">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
 <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
 <!-- hyUI css -->
-<link rel="stylesheet" href="css/cbc.css">
+<link rel="stylesheet" href="css/cbc_en.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/PgwSlider/2.3.1/pgwslider.css">
 
 </head>
@@ -61,30 +61,30 @@
                         <h2>TOP View</h2>
                         <ul>
                             <li>
-                                <span class="ranking">2019-01-01</span>
+                                <span class="ranking">1st</span>
                                 <a href="#">SDDS</a>
                             </li>
                             <li>
-                                <span class="ranking">2019-01-01</span>
+                                <span class="ranking">2nd</span>
                                 <a href="#">Government Securities Statistics</a>
                             </li>
                             <li>
-                                <span class="ranking">2019-01-01</span>
+                                <span class="ranking">3rd</span>
                                 <a href="#">Financial Statistics Monthly, Republic 
                                 of China (Taiwan)</a>
                             </li>
                             <li>
-                                <span class="ranking">2019-01-01</span>
+                                <span class="ranking">4th</span>
                                 <a href="#">New Taiwan Dollar Notes and Coins</a>
                             </li>
                             <li>
-                                <span class="ranking">2019-01-01</span>
+                                <span class="ranking">5th</span>
                                 <a href="#">NT Dollar Exchange Rates (Daily)</a>
                             </li>
                         </ul>
                         <div class="more"><a href="#">More T View</a></div>
                     </section>
-                    <section class="topview_block">
+                    <section class="bulletin_block">
                         <h2>Bulletin Board</h2>
                         <ul>
                             <li>
