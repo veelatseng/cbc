@@ -366,11 +366,19 @@
       label{
         margin-right: -4px;
       }
+      select~input{
+        width: 3em;
+        margin-right: 3px;
+        margin-left: 3px;
+      }
     }
     .check_grp{
       label{
         display: block;
       }
     }
+  }
+  .adv_inlist{
+    display: none;
   }
 }

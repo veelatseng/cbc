@@ -130,6 +130,9 @@ div.function {
         float: right;
         .btn{
             margin-top: 0;
+            @include screen('mobile') {
+                margin-bottom: 8px;
+            }
             &:hover,&:focus{
                 color: #fff;
                 background: $primaryColor;

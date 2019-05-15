@@ -390,22 +390,22 @@ $(function(){
     // $('.fixed_right_block').children('ul').hide();
     var _fixedRight = $('.right_menu');
     _fixedRight.off().click(function(e) {
-        if ($(this).hasClass('open')) {
-            $(this).removeClass('open').siblings('ul').stop(true, true).slideUp();
+        if ($(this).hasClass('close')) {
+            $(this).removeClass('close').text("展開/OPEN").siblings('ul').stop(true, true).slideUp();
         } else {
-            $(this).toggleClass('open').siblings('ul').stop(true, true).slideToggle();
-        }
+            $(this).toggleClass('close').html($('.right_menu').text() == '展開/OPEN' ? '收合/CLOSE' : '展開/OPEN').siblings('ul').stop(true, true).slideToggle();
+        } 
         e.preventDefault();
     });
     _fixedRight.keyup(function(event) {
-        if ($(this).hasClass('open')) {
-            $(this).removeClass('open').siblings('ul').stop(true, true).slideUp();
+        if ($(this).hasClass('close')) {
+            $(this).removeClass('close').siblings('ul').stop(true, true).slideUp();
         } else {
-            $(this).toggleClass('open').siblings('ul').stop(true, true).slideToggle();
+            $(this).toggleClass('close').siblings('ul').stop(true, true).slideToggle();
         }
     });
     $('.fixed_right_block').find('li:last>a').focusout(function(event) {
-        $('.fixed_right_block .right_menu').removeClass('open')
+        $('.fixed_right_block .right_menu').removeClass('close')
         $(this).parent().parent('ul').hide();
     });
     // 點外面關閉share
@@ -419,4 +419,9 @@ $(function(){
     
 });
 
-
+$(function(){
+    $('.adv_inlist').hide();
+    $('.btn_show_table').off().click(function(event) {
+        $('.adv_inlist').stop().slideToggle();
+    });
+});

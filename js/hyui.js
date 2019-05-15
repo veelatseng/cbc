@@ -215,22 +215,22 @@ $(function() {
         search_mode = false;
     });
     // 固定版頭
-    var hh = $('.header').outerHeight(true),
-    menuH = _menu.outerHeight(true);
-    $(window).bind("load scroll resize", function(e) {
-        ww = _window.outerWidth();
-        if (ww >= wwSmall && $(this).scrollTop() > hh - menuH) {
-            hh = Math.floor($('.header').outerHeight(true));
-            menuH = Math.floor(_menu.outerHeight(true));
-            $('.header').addClass('fixed');
-            $('.header').css('margin-top', menuH - hh);
-            $('.main').css('margin-top', hh);
-        } else {
-            $('.header').removeClass('fixed');
-            $('.header').css('margin-top', 0);
-            $('.main').css('margin-top', 0);
-        }
-    });
+    // var hh = $('.header').outerHeight(true),
+    // menuH = _menu.outerHeight(true);
+    // $(window).bind("load scroll resize", function(e) {
+    //     ww = _window.outerWidth();
+    //     if (ww >= wwSmall && $(this).scrollTop() > hh - menuH) {
+    //         hh = Math.floor($('.header').outerHeight(true));
+    //         menuH = Math.floor(_menu.outerHeight(true));
+    //         $('.header').addClass('fixed');
+    //         $('.header').css('margin-top', menuH - hh);
+    //         $('.main').css('margin-top', hh);
+    //     } else {
+    //         $('.header').removeClass('fixed');
+    //         $('.header').css('margin-top', 0);
+    //         $('.main').css('margin-top', 0);
+    //     }
+    // });
     /*-----------------------------------*/
     //////////// notice訊息區塊 ////////////
     /*-----------------------------------*/
@@ -492,30 +492,82 @@ $(function() {
     $('.link_block .tabs>.tabItem:first-child>a').trigger('click');
     tabSet();
 
+    // function newsTabSet() {
+    //     $('.news_block .tabs').each(function() {
+    //         var _tab = $(this),
+    //         _tabItem = _tab.find('.tabItem'),
+    //         _tabItem_W= _tabItem.width(),
+    //         _tabItemA = _tabItem.children('a'),
+    //         _tabContent = _tab.find('.tabContent'),
+    //         tabwidth = _tab.width(),
+    //         tabItemHeight = _tabItem.outerHeight(),
+    //         tabContentHeight = _tab.find('.active').next().innerHeight(),
+    //         tiGap = 0,
+    //         tabItemLength = _tabItem.length,
+    //         tabItemWidth;
+    //         _tab.find('.active').next('.tabContent').show();
+    //         console.log('news'+_tabItem_W);
+    //         if (ww >= wwSmall) {
+    //             _tabContent.css('top', tabItemHeight);
+    //             _tab.height(tabContentHeight + tabItemHeight);
+    //             tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
+    //             // console.log(tabItemWidth);
+    //             _tabItem.width(tabItemWidth).css('margin-left', tiGap);
+    //             $( ".tabItem a:contains('新聞稿')" ).parent('.tabItem').css( "width", tabItemWidth*0.8 );
+    //             $( ".tabItem a:contains('即時新聞澄清')" ).parent('.tabItem').css( "width", tabItemWidth*1.1 );
+    //             $( ".tabItem a:contains('本行發行存單')" ).parent('.tabItem').css( "width", tabItemWidth*1.1 );
+    //             _tabItem.first().css('margin-left', 0);
+    //             _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 0 }).width(tabItemWidth);
+    //         } else {
+    //             _tab.css('height', 'auto');
+    //             _tabItem.width(tabwidth);
+    //             _tabItem.css('margin-left', 0).last().css('position', 'relative');
+    //         }
+    //         _tabItemA.focus(tabs);
+    //         _tabItemA.click(tabs);
+
+    //         function tabs(e) {
+    //             var _tabItemNow = $(this).parent(),
+    //             tvp = _tab.offset().top,
+    //             tabIndex = _tabItemNow.index() / 2,
+    //             scollDistance = tvp + tabItemHeight * tabIndex - hh;
+    //             _tabItem.removeClass('active');
+    //             _tabItemNow.addClass('active');
+    //             if (ww <= wwSmall) {
+    //                 _tabItem.not('.active').next().slideUp();
+    //                 _tabItemNow.next().slideDown();
+    //                 $("html,body").stop(true, false).animate({ scrollTop: scollDistance });
+    //             } else {
+    //                 _tabItem.not('.active').next().hide();
+    //                 _tabItemNow.next().show();
+    //                 tabContentHeight = _tabItemNow.next().innerHeight();
+    //                 _tab.height(tabContentHeight + tabItemHeight);
+    //             }
+    //             e.preventDefault();
+    //         }
+    //     });
+    // }
     function newsTabSet() {
         $('.news_block .tabs').each(function() {
             var _tab = $(this),
             _tabItem = _tab.find('.tabItem'),
-            _tabItem_W= _tabItem.width(),
             _tabItemA = _tabItem.children('a'),
             _tabContent = _tab.find('.tabContent'),
             tabwidth = _tab.width(),
+            _tabItem_W= _tabItem.width(),
             tabItemHeight = _tabItem.outerHeight(),
             tabContentHeight = _tab.find('.active').next().innerHeight(),
             tiGap = 0,
             tabItemLength = _tabItem.length,
             tabItemWidth;
             _tab.find('.active').next('.tabContent').show();
-            console.log('news'+_tabItem_W);
+            console.log('original'+_tabItem_W);
             if (ww >= wwSmall) {
                 _tabContent.css('top', tabItemHeight);
                 _tab.height(tabContentHeight + tabItemHeight);
                 tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
                 // console.log(tabItemWidth);
                 _tabItem.width(tabItemWidth).css('margin-left', tiGap);
-                $( ".tabItem a:contains('新聞稿')" ).parent('.tabItem').css( "width", tabItemWidth*0.8 );
-                $( ".tabItem a:contains('即時新聞澄清')" ).parent('.tabItem').css( "width", tabItemWidth*1.1 );
-                $( ".tabItem a:contains('本行發行存單')" ).parent('.tabItem').css( "width", tabItemWidth*1.1 );
                 _tabItem.first().css('margin-left', 0);
                 _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 0 }).width(tabItemWidth);
             } else {
@@ -706,19 +758,19 @@ $(function() {
     $('.font_size').find('.medium').addClass('active');
     $('.font_size').find('.small').click(function(e) {
         $(this).parent('li').siblings('li').find('a').removeClass('active');
-        $('.cp').removeClass('large_size').addClass('small_size');
+        $('.innerpage').removeClass('large_size').addClass('small_size');
         $(this).addClass('active');
         e.preventDefault();
     });
     $('.font_size').find('.medium').click(function(e) {
         $(this).parent('li').siblings('li').find('a').removeClass('active');
-        $('.cp').removeClass('large_size small_size');
+        $('.innerpage').removeClass('large_size small_size');
         $(this).addClass('active');
         e.preventDefault();
     });
     $('.font_size').find('.large').click(function(e) {
         $(this).parent('li').siblings('li').find('a').removeClass('active');
-        $('.cp').removeClass('small_size').addClass('large_size');
+        $('.innerpage').removeClass('small_size').addClass('large_size');
         $(this).addClass('active');
         e.preventDefault();
     });

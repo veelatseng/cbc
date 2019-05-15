@@ -92,38 +92,40 @@
             max-height: 53px;
         }
         @include screen('mobile') {
-            padding: 5px 60px 2px 60px;
-            width: 100%;
+            padding: 5px 0;
+            width: calc(100% - 120px);
             text-align: center;
             height: 60px;
-            margin: 0 0 0 0;
+            margin: 0 60px;
+            background: url(../images/logo.png) no-repeat center center;
+            background-size: contain;
             img {
-                width: auto;
-                height: auto;
-                max-width: 300px;
-                max-height: 54px;
-                margin: 0px auto;
-                transform: scale(.9);
-
+                display: none;
+                // width: auto;
+                // height: auto;
+                // max-width: 300px;
+                // max-height: 54px;
+                // margin: 0px auto;
+                // transform: scale(.9);
             }
         }
-        @media screen and (max-width: 414px) {
-            img{
-                margin-top: 5px;
-            }
-        }
-        @media screen and (max-width: 375px) {
-            img{
-                max-width: 250px;
-                margin-top: 5px;
-            }
-        }
-        @media screen and (max-width: 340px) {
-            img{
-                max-width: 200px;
-                margin-top: 10px;
-            }
-        }
+        // @media screen and (max-width: 414px) {
+        //     img{
+        //         margin-top: 5px;
+        //     }
+        // }
+        // @media screen and (max-width: 375px) {
+        //     img{
+        //         max-width: 250px;
+        //         margin-top: 5px;
+        //     }
+        // }
+        // @media screen and (max-width: 340px) {
+        //     img{
+        //         max-width: 200px;
+        //         margin-top: 10px;
+        //     }
+        // }
     }
     // 導覽列
     .navigation {
@@ -296,16 +298,20 @@
             width: 65%;
             height: auto;
             padding: 0 0 0 5% !important;
-            margin-top: 0;
+            margin-top: 20px;
             text-align: right;
             float: left;
-            height: 50px;
+            height: auto;
             position: relative;
             @include box-sizing();
             input {
                 width: 100%;
-                margin: -0.2em 0 0;
+                margin: 0;
                 padding: .5em 45px .4em .5em;
+                
+                &[type="text"]{
+                    min-width: auto;
+                }
                 &[type="submit"] {
                     font-size: 0em;
                     width: 36px !important;
@@ -320,7 +326,7 @@
                     // margin-left: -50px !important;
                     position: absolute;
                     right: 5px;
-                    top: 22px;
+                    top: 3px;
                     opacity: .8;
                     // outline:1px solid red;
                     &:hover, &:focus {
@@ -349,11 +355,13 @@
             }
         }
         .keywordHot {
-            padding-left: 5%;
             margin-top: 10px;
             @extend %clearfix;
             color: #333;
             font-size: 1em;
+            ul{
+                margin-left: 0;
+            }
             a {
                 color: $primaryColor;;
                 &:hover,

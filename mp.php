@@ -534,7 +534,7 @@
         <li><a href="" class="mailbox" title="意見信箱">意見信箱</a></li>
         <li><a href="" class="epaper" title="訂閱電子報">訂閱電子報</a></li>
       </ul>
-      <a href="" class="right_menu open"></a>
+      <a href="" class="right_menu close">收合/CLOSE</a>
     </div>
   </div>
   <a href="javascript:;" class="scrollToTop">TOP<br>回頁首</a>

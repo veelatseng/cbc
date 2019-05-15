@@ -117,9 +117,22 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="form_grp">
                                 <label for="password" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>聯絡地址：</label>
-                                <div class="form_content">
+                                <div class="form_content form_inline">
+                                    <select name="" id="">
+                                        <option value="">縣市</option>
+                                        <option value="">選項二</option>
+                                        <option value="">選項三</option>
+                                        <option value="">選項四</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">地區</option>
+                                        <option value="">選項二</option>
+                                        <option value="">選項三</option>
+                                        <option value="">選項四</option>
+                                    </select>
                                     <input name="" id="" type="text" placeholder="請輸入您的聯絡地址">
                                 </div>
                             </div>

@@ -24,7 +24,7 @@
     .container {
         @include box-sizing;
         @include gutter;
-        background: $fatfooterBgColor url("../images/fatfooterbg.jpg") no-repeat;
+        background: $fatfooterBgColor;
         position: relative;
         background-size: cover;
         &:before{
@@ -127,6 +127,7 @@
                 }
                 ul {
                     margin-top: 5px;
+                    display: none;
                     @include screen('mobile') {
                         width: auto;
                         padding-left: 2em;

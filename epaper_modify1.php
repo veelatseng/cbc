@@ -84,7 +84,7 @@
                                 <img src="images/basic/captcha.gif" alt="" class="captcha">
                                 <input type="text" id="" value="">
                                 <button type="button" class="btn btn-sm btn_sound">語音播放</button>
-                                <button type="button" class="btn btn-sm btn_reload">語音播放</button>
+                                <button type="button" class="btn btn-sm btn_reload">重新產生</button>
                                 <div class="notice_error">您輸入的驗證碼錯誤 <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
                                 </div>
                             </div>

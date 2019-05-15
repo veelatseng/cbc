@@ -1205,7 +1205,7 @@ div.more {
   position: fixed;
   bottom: 110px;
   right: 10px;
-  z-index: 800;
+  z-index: 98;
   @include screen('mobile') {
     position: relative;
     width: 100%;
@@ -1260,7 +1260,7 @@ div.more {
       z-index: 0;
       transform: rotate(90deg);
     }
-    &.open{
+    &.close{
       transform: rotate(45deg);
       background: #cba60f;
     }

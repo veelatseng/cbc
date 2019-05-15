@@ -6,27 +6,25 @@ footer {
     padding-top: 2em;
     padding-bottom: 1em;
     position: relative;
-    @include screen('tablet') {
-        background: #4a7aad;
-    }
+    background: #4a7aad;
     @include screen('mobile') {
         padding-bottom: 0;
     }
-    &:before{
-        content: "";
-        position: absolute;
-        left: 200px;
-        display: block;
-        width: 1200px;
-        height: 100%;
-        -webkit-transform: skewX(114deg);
-        transform: skewX(114deg);
-        background: #4a7aad;
-        top: 0;
-        @include screen('tablet') {
-            display: none;
-        }
-    }
+    // &:before{
+    //     content: "";
+    //     position: absolute;
+    //     left: 200px;
+    //     display: block;
+    //     width: 1200px;
+    //     height: 100%;
+    //     -webkit-transform: skewX(114deg);
+    //     transform: skewX(114deg);
+    //     background: #4a7aad;
+    //     top: 0;
+    //     @include screen('tablet') {
+    //         display: none;
+    //     }
+    // }
     .container {
         @include gutter;    
         >div {

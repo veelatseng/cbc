@@ -43,6 +43,16 @@ select::-ms-expand {
         @include screen('mobile') {
             @include gutter(0);
         }
+        &.form_inline{
+            select{
+                width: 49.5%;
+                margin-right: 0;
+                margin-left: 0;
+                &:first-of-type{
+                    margin-right: .3%;
+                }
+            }
+        }
     }
 }
 //---------------------------------------------form setting--------//
