@@ -215,7 +215,7 @@ $(function() {
         search_mode = false;
     });
     // 固定版頭
-    // var hh = $('.header').outerHeight(true),
+    var hh = $('.header').outerHeight(true);
     // menuH = _menu.outerHeight(true);
     // $(window).bind("load scroll resize", function(e) {
     //     ww = _window.outerWidth();
