@@ -10,27 +10,27 @@ $(function() {
         cssEase: 'ease'
     });
     // mp 服務專區
-    $('.service_block tr td').each(function() {
-        $(this).find('ul.hot~ul').hide();
-        var _accordionItem = $(this).children('.more');
-        _accordionItem.each(function() {
-            function accordion(e){
-                // $(this).parent().parent().siblings().find('.more').removeClass('active').children('a').text("更多");
-                $(this).parent().parent().siblings().find('.more').removeClass('active');
-                $(this).toggleClass('active');
-                $(this).parent('td').parent('tr').siblings("tr").children('td').children('ul.hot~ul').slideUp();
-                $(this).next('ul').slideToggle();
-                // if ($(this).hasClass('active')) {
-                //     $(".service_block .active").find('a').text("更少");
-                // } else {
-                //     $(this).find('a').text("更多");
-                // }
-                e.preventDefault();
-            }
-            $(this).click(accordion);
-            $(this).keyup(accordion);
-        });
-    });
+    // $('.service_block tr td').each(function() {
+    //     $(this).find('ul.hot~ul').hide();
+    //     var _accordionItem = $(this).children('.more');
+    //     _accordionItem.each(function() {
+    //         function accordion(e){
+    //             // $(this).parent().parent().siblings().find('.more').removeClass('active').children('a').text("更多");
+    //             $(this).parent().parent().siblings().find('.more').removeClass('active');
+    //             $(this).toggleClass('active');
+    //             $(this).parent('td').parent('tr').siblings("tr").children('td').children('ul.hot~ul').slideUp();
+    //             $(this).next('ul').slideToggle();
+    //             // if ($(this).hasClass('active')) {
+    //             //     $(".service_block .active").find('a').text("更少");
+    //             // } else {
+    //             //     $(this).find('a').text("更多");
+    //             // }
+    //             e.preventDefault();
+    //         }
+    //         $(this).click(accordion);
+    //         $(this).keyup(accordion);
+    //     });
+    // });
     // mp 重大政策
     $('.policy_block ul').slick({
         dots: false,

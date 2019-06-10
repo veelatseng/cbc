@@ -703,7 +703,7 @@ div.more {
           display: block;
         }
         em{
-          font-size: 2.25em;
+          font-size: 2em;
           font-style: normal;
         }
       }
@@ -783,140 +783,263 @@ div.more {
   }
 }
 // 服務專區
+// .service_block{
+//   margin-bottom: 40px;
+//   table{
+//     background: #fdfbfb;
+//     box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+//     overflow: hidden;
+//   }
+//   th{
+//     font-size: 1.5em;
+//     padding: .5em;
+//     width: 140px;
+//     white-space: nowrap;
+//     @include box-sizing(border-box);
+//     border: 1px solid #e2e1e1;
+//     @include screen('mobile') {
+//       width: 70px;
+//       line-height: 120%;
+//       white-space: normal;
+//     }
+//   }
+//   td{
+//     border: 1px solid #e2e1e1;
+//     position: relative;
+//     padding: 25px 20px 10px 20px;
+//     box-shadow: 0 -2px 2px rgba(0,0,0,.05);
+//     @include screen('mobile') {
+//       padding: 25px 15px 10px 15px;
+//     }
+//   }
+//   ul{
+//     @include li-reset();
+//     display: block;
+//     overflow: hidden;
+//     width: 95%;
+//     @include screen('mobile') {
+//       width: 85%;
+//     }
+//     li{
+//       position: relative;
+//       padding-left: 12px;
+//       float: left;
+//       width: 33%;
+//       @include box-sizing(border-box);
+//       margin-bottom: 15px;
+//       @include screen('mobile') {
+//         width: 100%;
+//       }
+//       a{
+//         color: #111;
+//         &:hover, &:focus {
+//           // box-shadow: 0 0 0 0;
+//           text-decoration: underline;
+//         }
+//       }
+//       &:before{
+//         content: "";
+//         width: 4px;
+//         height: 4px;
+//         display: block;
+//         position: absolute;
+//         left: 0;
+//         top: 10px;
+//         background: #111;
+//       }
+//     }
+//   }
+//   ul~ul{
+//     display: none;
+//   }
+//   .more{
+//     position: absolute;
+//     right: 0;
+//     top: 6px;
+//     a{
+//       color: #333;
+//       position: relative;
+//       // padding-right: 55px;
+//       @include screen('mobile') {
+//         padding-right: 0;
+//         text-indent: -9999px;
+//       }
+//       &:before,&:after{
+//         content: "";
+//         position: absolute;
+//         width: 15px;
+//         height: 15px;
+//         display: block;
+//         right: 28px;
+//         border-right: 2px solid $primaryColor;
+//         border-bottom: 2px solid $primaryColor;
+//         border-top:0px; 
+//         border-left:0px; 
+//         z-index: 13;
+//         border-radius: 0;
+//         transform: rotate(45deg);
+//       }
+//       &:before{
+//         top: 0;
+//       }
+//       &:after{
+//         top: 9px;
+//       }
+//       &:hover,&.active,&:focus{
+//         &:before,&:after{
+//           content: "";
+//           position: absolute;
+//           width: 15px;
+//           height: 15px;
+//           display: block;
+//           right: 28px;
+//           border-right: 2px solid $primaryColor;
+//           border-bottom: 2px solid $primaryColor;
+//           border-top:0px; 
+//           border-left:0px; 
+//           z-index: 13;
+//           border-radius: 0;
+//           transform: rotate(45deg);
+//         }
+//         &:before{
+//           top: 9px;
+//         }
+//         &:after{
+//           animation: servicemore .5s linear 0s infinite alternate;
+//         }
+//       }
+//     }
+//   }
+// }
+// @keyframes servicemore {
+//   0% {
+//   }
+//   100% {
+//   }
+// }
 .service_block{
-  margin-bottom: 40px;
-  table{
-    background: #fdfbfb;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
-    overflow: hidden;
-  }
-  th{
-    font-size: 1.5em;
-    padding: .5em;
-    width: 140px;
-    white-space: nowrap;
-    @include box-sizing(border-box);
-    border: 1px solid #e2e1e1;
-    @include screen('mobile') {
-      width: 70px;
-      line-height: 120%;
-      white-space: normal;
-    }
-  }
-  td{
-    border: 1px solid #e2e1e1;
-    position: relative;
-    padding: 25px 20px 10px 20px;
-    box-shadow: 0 -2px 2px rgba(0,0,0,.05);
-    @include screen('mobile') {
-      padding: 25px 15px 10px 15px;
-    }
+  margin-bottom: 66px;
+  @include screen('mobile') {
+    margin-bottom: 30px;
   }
   ul{
     @include li-reset();
-    display: block;
-    overflow: hidden;
-    width: 95%;
+    display:flex;
     @include screen('mobile') {
-      width: 85%;
+      display: block;
     }
-    li{
-      position: relative;
-      padding-left: 12px;
-      float: left;
-      width: 33%;
-      @include box-sizing(border-box);
+  }
+  li{
+    border-top: 10px solid $primaryColor;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+    background: #fefcfc;
+    padding: 22px 12px 50px 12px;
+    width: 24%;
+    margin-right: 0;
+    margin-left: 1.33%;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    position: relative;
+    @include screen('mobile') {
+      width: 100%;
+      margin-left: 0;
       margin-bottom: 15px;
-      @include screen('mobile') {
-        width: 100%;
-      }
-      a{
-        color: #111;
-        &:hover, &:focus {
-          // box-shadow: 0 0 0 0;
-          text-decoration: underline;
-        }
-      }
-      &:before{
-        content: "";
-        width: 4px;
-        height: 4px;
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 10px;
-        background: #111;
-      }
+      display: block;
     }
-  }
-  ul~ul{
-    display: none;
-  }
-  .more{
-    position: absolute;
-    right: 0;
-    top: 6px;
-    a{
-      color: #333;
-      position: relative;
-      // padding-right: 55px;
-      @include screen('mobile') {
+    &:first-child{
+      margin-left: 0;
+    }
+    .more{
+      text-align: center;
+      margin-bottom: 0;
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      letter-spacing: 2px;
+      a{
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
         padding-right: 0;
-        text-indent: -9999px;
-      }
-      &:before,&:after{
-        content: "";
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        display: block;
-        right: 28px;
-        border-right: 2px solid $primaryColor;
-        border-bottom: 2px solid $primaryColor;
-        border-top:0px; 
-        border-left:0px; 
-        z-index: 13;
-        border-radius: 0;
-        transform: rotate(45deg);
-      }
-      &:before{
-        top: 0;
-      }
-      &:after{
-        top: 9px;
-      }
-      &:hover,&.active,&:focus{
-        &:before,&:after{
-          content: "";
-          position: absolute;
-          width: 15px;
-          height: 15px;
-          display: block;
-          right: 28px;
-          border-right: 2px solid $primaryColor;
-          border-bottom: 2px solid $primaryColor;
-          border-top:0px; 
-          border-left:0px; 
-          z-index: 13;
-          border-radius: 0;
-          transform: rotate(45deg);
-        }
+        padding-left: 0;
+        line-height: auto;
+        vertical-align: middle;
+        color: #333;
+        letter-spacing: 1px;
+        transition: background .3s linear;
+        font-weight: bold;
         &:before{
-          top: 9px;
+          display: none;
         }
         &:after{
-          animation: servicemore .5s linear 0s infinite alternate;
+          content: "";
+          width: 18px;
+          height: 18px;
+          border-left: 0;
+          border-right: 0;
+          border-top: 0;
+          border-bottom: 0;
+          position: relative;
+          right: auto;
+          top: auto;
+          transform: rotate(0deg);
+          transition: all .3s linear;
+          background:url(../images/arrow2.png) left top no-repeat;
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 10px;
+        }
+        &:hover,&:focus {
+          color: $primaryColor;
+          &:before {
+            display: none;
+          }
+          &:after {
+            animation: all 0s linear 0s infinite alternate;
+          }
         }
       }
     }
   }
-}
-@keyframes servicemore {
-  0% {
+  dl{
+    margin: 0;
   }
-  100% {
+  dt{
+    font-size: 1.25em;
+    color: #333;
+    padding-bottom: 18px;
+    border-bottom: 2px solid #0d0c0c;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  dd{
+    position: relative;
+    padding-left: 12px;
+    @include box-sizing(border-box);
+    margin:0 0 15px 0;
+    &:before{
+      content: "";
+      width: 4px;
+      height: 4px;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 10px;
+      background: #111;
+    }
+    a{
+      color: #333;
+      &:hover{
+        text-decoration: underline;
+        color: $primaryColor;
+      }
+    }
   }
 }
+
 // 重大政策
 .policy_block{
   .slick-list{
@@ -949,14 +1072,15 @@ div.more {
     }
     a{
       color: #333;
-      padding: 60px 50px;
+      padding: 34px 12px 32px 92px;
       @include box-sizing();
       display: block;
       background: #fff;
       box-shadow: 0 0 5px rgba(0, 0, 0, .1);
-      @include screen('tablet') {
-        padding: 30px 20px;
-      }
+      position: relative;
+      // @include screen('tablet') {
+      //   padding: 30px 20px;
+      // }
       span{
         height: 2.9em;
         overflow: hidden;
@@ -964,18 +1088,20 @@ div.more {
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
+        display: inline-block;
         @include screen('mobile') {
           text-align: center;
         }
       }
       &:before{
         content: "";
-        width: 111px;
-        height: 111px;
-        display: block;
+        width: 70px;
+        height: 70px;
+        display: inline-block;
         border-radius: 50%;
-        position: relative;
-        margin: 0 auto 20px auto;
+        position: absolute;
+        left: 12px;
+        top: 22px;
       }
       &:hover,&:focus{
         text-decoration: underline;
@@ -986,12 +1112,15 @@ div.more {
     }
     &.press a:before{
       background: url(../images/icon_policy1.png) ;
+      background-size: cover;
     }
     &.reference a:before{
       background: url(../images/icon_policy2.png) ;
+      background-size: cover;
     }
     &.slides a:before{
       background: url(../images/icon_policy3.png) ;
+      background-size: cover;
     }
   }
 }

@@ -264,8 +264,18 @@
               </div>
             </div>
           </section>
-          <!-- 服務專區 -->
-          <section class="service_block">
+          <!-- 重大政策 -->
+          <section class="policy_block">
+            <h2>重大政策</h2>
+            <ul>
+              <li class="press"><a href=""><span>108年3月21日中央銀行理監事聯席會議決議新聞稿</span></a></li>
+              <li class="reference"><a href=""><span>108年3月21日央行理監事會後記者會參考資料</span></a></li>
+              <li class="slides"><a href=""><span>108年3月21日央行理監事會後記者會簡報</span></a></li>
+            </ul>
+            <div class="more"><a href="">更多重大政策</a></div>
+          </section>
+          <!-- 服務專區 old-->
+          <!-- <section class="service_block">
             <h2>服務專區</h2>
             <table>
               <tr>
@@ -383,16 +393,58 @@
                 </td>
               </tr>
             </table>
-          </section>
-          <!-- 重大政策 -->
-          <section class="policy_block">
-            <h2>重大政策</h2>
+          </section> -->
+          <!-- 服務專區 new-->
+          <section class="service_block">
+            <h2>服務專區</h2>
             <ul>
-              <li class="press"><a href=""><span>108年3月21日中央銀行理監事聯席會議決議新聞稿</span></a></li>
-              <li class="reference"><a href=""><span>108年3月21日央行理監事會後記者會參考資料</span></a></li>
-              <li class="slides"><a href=""><span>108年3月21日央行理監事會後記者會簡報</span></a></li>
+              <li>
+                <dl>
+                  <dt>推薦服務</dt>
+                  <dd><a href="">楊金龍總裁高峰論壇演講</a></dd>
+                  <dd><a href="">新臺幣短片及防偽</a></dd>
+                  <dd><a href="">委託研究報告</a></dd>
+                  <dd><a href="">洗錢防制</a></dd>
+                  <dd><a href="">外幣結算平台</a></dd>
+                  <dd><a href="">洗錢防制</a></dd>
+                </dl>
+                <div class="more"><a href="">更多</a></div>
+              </li>
+              <li>
+                <dl>
+                  <dt>便民服務</dt>
+                  <dd><a href="">中央銀行提供政府資訊申請書</a></dd>
+                  <dd><a href="">中央銀行檔案應用申請</a></dd>
+                  <dd><a href="">中央銀行人民申請案件處理時限表</a></dd>
+                  <dd><a href="">中央銀行人民陳情案件處理時限表</a></dd>
+                  <dd><a href="">外幣收兌處相關資訊</a></dd>
+                </dl>
+                <div class="more"><a href="">更多</a></div>
+              </li>
+              <li>
+                <dl>
+                  <dt>熱門服務</dt>
+                  <dd><a href="">重要金融指標</a></dd>
+                  <dd><a href="">「五大銀行平均存款利率」與「五大銀行平均基準利率」</a></dd>
+                  <dd><a href="">中央銀行對金融機構辦理購置高價住宅貸款業務規定(105.3.25生效)</a></dd>
+                  <dd><a href="">央行主管法令規章</a></dd>
+                  <dd><a href="">本國銀行營運績效季報最新資料</a></dd>
+                </dl>
+                <div class="more"><a href="">更多</a></div>
+              </li>
+              <li>
+                <dl>
+                  <dt>出版報告</dt>
+                  <dd><a href="">中央銀行年報 (107-5-31)</a></dd>
+                  <dd><a href="">中華民國公民營企業資金狀況調查結果報告(107-1-10)</a></dd>
+                  <dd><a href="">中華民國資金流量統計(107-1-19)</a></dd>
+                  <dd><a href="">金融機構重要業務統計表(107-8-3)</a></dd>
+                  <dd><a href="">金融機構業務概況年報(107-8-7)</a></dd>
+                  <dd><a href="">金融穩定報告 (107-5-31)</a></dd>
+                </dl>
+                <div class="more"><a href="">更多</a></div>
+              </li>
             </ul>
-            <div class="more"><a href="">更多重大政策</a></div>
           </section>
           <!-- 焦點金融議題 -->
           <section class="issue_block">
