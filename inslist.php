@@ -32,7 +32,7 @@
         <!-- breadcrumb路徑 -->
         <?php require_once('include/breadcrumb.html'); ?>
         <!-- 這裡需要套h1文章標題 -->
-        <h1 class="title">全國金融機構查詢系統</h1>
+        <h2 class="title">全國金融機構查詢系統</h2>
         <!-- function功能區塊 -->
         <div class="function_panel">
           <!-- 文字大小 -->
@@ -54,12 +54,11 @@
           <!-- 社群分享 -->
           <div class="share">
             <ul>
-              <li><a href="#"><img src="images/basic/icon_facebook.png" alt="facebook"></a></li>
-              <li><a href="#"><img src="images/basic/icon_googleplus.png" alt="google plus"></a></li>
-              <li><a href="#"><img src="images/basic/icon_line.png" alt="line"></a></li>
-              <li><a href="#"><img src="images/basic/icon_twitter.png" alt="twitter"></a></li>
+              <li><a href="#" class="facebook"></a></li>
+              <li><a href="#" class="google"></a></li>
+              <li><a href="#" class="line"></a></li>
+              <li><a href="#" class="twitter"></a></li>
             </ul>
-
           </div>
           <div class="function_btn">
             <button type="button" class="btn btn-sm">English</button>

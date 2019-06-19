@@ -1078,9 +1078,9 @@ div.more {
       background: #fff;
       box-shadow: 0 0 5px rgba(0, 0, 0, .1);
       position: relative;
-      // @include screen('tablet') {
-      //   padding: 30px 20px;
-      // }
+      @include screen('mobile') {
+        padding: 25px 60px;
+      }
       span{
         height: 2.9em;
         overflow: hidden;
@@ -1102,6 +1102,9 @@ div.more {
         position: absolute;
         left: 12px;
         top: 22px;
+        @include screen('mobile') {
+          display: none;
+        }
       }
       &:hover,&:focus{
         text-decoration: underline;

@@ -733,7 +733,7 @@ $(function() {
     //////////分享按鈕 share dropdwon////////
     /*------------------------------------*/
     $('.function_panel .share').children('ul').hide();
-    $('.function_panel .share').prepend('<a href="#" class="shareButton"><img src="images/basic/icon_share.png" alt="share分享按鈕"></a>');
+    $('.function_panel .share').prepend('<a href="#" class="shareButton" title="share分享按鈕"></a>');
     var _shareButton = $('.shareButton');
     _shareButton.off().click(function(e) {
         $(this).siblings('ul').stop(true, true).slideToggle();

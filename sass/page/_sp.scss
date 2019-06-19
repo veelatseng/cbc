@@ -347,11 +347,21 @@
     background: #eaeaea;
     border:1px solid #ddd;
     color: #333;
+    width: 30%;
+    @include screen('mobile') {
+      width: auto;
+    }
     input{
       margin-right: .5em;
     }
+    label{
+      margin-bottom: 0;
+    }
   }
   td{
+    input,select{
+      margin-bottom: 0;
+    }
     .form_inline{
       input,select{
         width: auto;
@@ -380,5 +390,44 @@
   }
   .adv_inlist{
     display: none;
+  }
+}
+.survey{
+  table{
+    margin-bottom: 20px;
+  }
+  th,td{
+    padding: .8em;
+  }
+  th{
+    text-align: right;
+    background: #eaeaea;
+    border:1px solid #ddd;
+    color: #333;
+    width: 20%;
+    @include screen('mobile') {
+      width: auto;
+      text-align: left;
+    }
+    input{
+      margin-right: .5em;
+    }
+    label{
+      margin-bottom: 0;
+    }
+  }
+  td{
+    label{
+      width: 19%;
+      margin-bottom: 0;
+      @include screen('mobile') {
+        width: auto;
+      }
+    }
+    .check_grp{
+      label{
+        display: block;
+      }
+    }
   }
 }
