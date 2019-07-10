@@ -237,119 +237,27 @@
         </div>
         <!-- file download 檔案下載 -->
         <div class="file_download">
-          <h3 class="block_title">檔案下載</h3>
-          <div class="file_download">
-            <table summary="">
-              <caption></caption>
-              <tbody>
-                <tr>
-                  <td class="num">01</td>
-                  <td>20180807楊總裁講辭_虛擬貨幣與數位經濟：央行在數位時代的角色</td>
-                  <td class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="num">02</td>
-                  <td>20180807楊總裁講辭_虛擬貨幣與數位經濟：央行在數位時代的角色</td>
-                  <td class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="num">03</td>
-                  <td>20180807楊總裁講辭_虛擬貨幣與數位經濟：央行在數位時代的角色</td>
-                  <td class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="num">04</td>
-                  <td>20180807楊總裁講辭_虛擬貨幣與數位經濟：央行在數位時代的角色</td>
-                  <td class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="num">05</td>
-                  <td>20180807楊總裁講辭_虛擬貨幣與數位經濟：央行在數位時代的角色</td>
-                  <td class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <h3>檔案下載</h3>
           <ul>
-            <li>
-              <a href="xxxx.doc">word檔名<span class="kb">(100.kb)</span></a>
-              <span class="update">更新日期：2014/5/30</span>
-              <span class="file_view">下載次數：5</span>
+            <li> <span>惡意主機IP檢測惡意主機IP檢測惡意主機IP檢測惡意主機IP檢測惡意主機IP檢測</span><a href="xxxx.doc" class="doc">doc</a>
+              <a href="xxxx.odf" class="odf">odf</a>
+              <a href="http://www.google.com.tw" class="other">檔案下載(非副檔名做結尾)</a>
+              <span class="update">15kb</span>
+              <span class="file_view">下載次數：255次</span>
             </li>
-            <li>
-              <a href="xxxx.odf">odf檔名<span class="kb">(100.kb)</span></a>
-              <span class="update">更新日期：2014/5/30</span>
-              <span class="file_view">下載次數：5</span>
+            <li> <span>臺美「全球入境計畫」的正式啟用，符合資格</span><a href="xxxx.xls" class="xls">xls</a>
+              <span class="update">15kb</span>
+              <span class="file_view">下載次數：255次</span>
             </li>
-            <li>
-              <a href="xxxx.pdf">pdf檔名<span class="kb">(100.kb)</span></a>
-              <span class="update">更新日期：2014/5/30</span>
-              <span class="file_view">下載次數：5</span>
+            <li> <span>臺美「全球入境計畫」的正式啟用，符合資格</span>
+              <a href="xxxx.pptx" class="ppt">ppt</a>
+              <a href="xxxx.jpg" class="jpg">jpg</a>
+              <span class="update">15kb</span>
+              <span class="file_view">下載次數：255次</span>
             </li>
-            <li>
-              <a href="xxxx.xls">xls檔名<span class="kb">(100.kb)</span></a>
-              <span class="update">更新日期：2014/5/30</span>
-              <span class="file_view">下載次數：5</span>
-            </li>
-            <li>
-              <a href="xxxx.ppt">ppt檔名<span class="kb">(100.kb)</span></a>
-              <span class="update">更新日期：2014/5/30</span>
-              <span class="file_view">下載次數：5</span>
-            </li>
-            <li>
-              <a href="xxxx.jpg">jpg檔名<span class="kb">(100.kb)</span></a>
-              <span class="update">更新日期：2014/5/30</span>
-              <span class="file_view">下載次數：5</span>
-            </li>
-            <li>
-              <a href="xxxx.mp3">mp3檔名<span class="kb">(100.kb)</span></a>
-              <span class="update">更新日期：2014/5/30</span>
-              <span class="file_view">下載次數：5</span>
-            </li>
-            <li>
-              <a href="xxxx.mov">mov檔名<span class="kb">(100.kb)</span></a>
-              <span class="update">更新日期：2014/5/30</span>
-              <span class="file_view">下載次數：5</span>
-            </li>
-            <li>
-              <a href="xxxx.txt">txt檔名<span class="kb">(100.kb)</span></a>
-              <span class="update">更新日期：2014/5/30</span>
-              <span class="file_view">下載次數：5</span>
-            </li>
-            <li>
-              <a href="xxxx.odf">odf檔名<span class="kb">(100.kb)</span></a>
-              <span class="update">更新日期：2014/5/30</span>
-              <span class="file_view">下載次數：5</span>
-            </li>
-            <li>
-              <a href="xxxx.xxx">其他格式檔名<span class="kb">(100.kb)</span></a>
-              <span class="update">更新日期：2014/5/30</span>
-              <span class="file_view">下載次數：5</span>
-            </li>
-            <li>
-              <a href="xxxx.zip">全部資料壓縮檔<span class="kb">(100.kb)</span></a>
-              <span class="update">更新日期：2014/5/30</span>
-              <span class="file_view">下載次數：5</span>
+            <li> <span>臺美「全球入境計畫」的正式啟用，符合資格</span><a href="xxxx.pdf" class="pdf">pdf</a>
+              <span class="update">15kb</span>
+              <span class="file_view">下載次數：255次</span>
             </li>
           </ul>
         </div>

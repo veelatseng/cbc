@@ -85,135 +85,135 @@
                   <td data-title="序號" class="num">01</td>
                   <td data-title="標題">106年1月份</td>
                   <td data-title="檔案下載" class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
+                    <a href="xxxx.doc" class="doc">word檔名</a>
+                    <a href="xxxx.pdf" class="pdf">pdf檔名</a>
+                    <a href="xxxx.odf" class="odf">odf檔名</a>
                   </td>
                 </tr>
                 <tr>
                   <td data-title="序號" class="num">02</td>
                   <td data-title="標題">106年2月份</td>
                   <td data-title="檔案下載" class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
+                    <a href="xxxx.doc" class="doc">word檔名</a>
+                    <a href="xxxx.pdf" class="pdf">pdf檔名</a>
+                    <a href="xxxx.odf" class="odf">odf檔名</a>
                   </td>
                 </tr>
                 <tr>
                   <td data-title="序號" class="num">03</td>
                   <td data-title="標題">106年3月份</td>
                   <td data-title="檔案下載" class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
+                    <a href="xxxx.doc" class="doc">word檔名</a>
+                    <a href="xxxx.pdf" class="pdf">pdf檔名</a>
+                    <a href="xxxx.odf" class="odf">odf檔名</a>
                   </td>
                 </tr>
                 <tr>
                   <td data-title="序號" class="num">04</td>
                   <td data-title="標題">106年4月份</td>
                   <td data-title="檔案下載" class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
+                    <a href="xxxx.doc" class="doc">word檔名</a>
+                    <a href="xxxx.pdf" class="pdf">pdf檔名</a>
+                    <a href="xxxx.odf" class="odf">odf檔名</a>
                   </td>
                 </tr>
                 <tr>
                   <td data-title="序號" class="num">05</td>
                   <td data-title="標題">106年5月份</td>
                   <td data-title="檔案下載" class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
+                    <a href="xxxx.doc" class="doc">word檔名</a>
+                    <a href="xxxx.pdf" class="pdf">pdf檔名</a>
+                    <a href="xxxx.odf" class="odf">odf檔名</a>
                   </td>
                 </tr>
                 <tr>
                   <td data-title="序號" class="num">06</td>
                   <td data-title="標題">106年6月份</td>
                   <td data-title="檔案下載" class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
+                    <a href="xxxx.doc" class="doc">word檔名</a>
+                    <a href="xxxx.pdf" class="pdf">pdf檔名</a>
+                    <a href="xxxx.odf" class="odf">odf檔名</a>
                   </td>
                 </tr>
                 <tr>
                   <td data-title="序號" class="num">07</td>
                   <td data-title="標題">106年7月份</td>
                   <td data-title="檔案下載" class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
+                    <a href="xxxx.doc" class="doc">word檔名</a>
+                    <a href="xxxx.pdf" class="pdf">pdf檔名</a>
+                    <a href="xxxx.odf" class="odf">odf檔名</a>
                   </td>
                 </tr>
                 <tr>
                   <td data-title="序號" class="num">08</td>
                   <td data-title="標題">106年8月份</td>
                   <td data-title="檔案下載" class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
+                    <a href="xxxx.doc" class="doc">word檔名</a>
+                    <a href="xxxx.pdf" class="pdf">pdf檔名</a>
+                    <a href="xxxx.odf" class="odf">odf檔名</a>
                   </td>
                 </tr>
                 <tr>
                   <td data-title="序號" class="num">09</td>
                   <td data-title="標題">106年9月份</td>
                   <td data-title="檔案下載" class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
+                    <a href="xxxx.doc" class="doc">word檔名</a>
+                    <a href="xxxx.pdf" class="pdf">pdf檔名</a>
+                    <a href="xxxx.odf" class="odf">odf檔名</a>
                   </td>
                 </tr>
                 <tr>
                   <td data-title="序號" class="num">10</td>
                   <td data-title="標題">106年10月份</td>
                   <td data-title="檔案下載" class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
+                    <a href="xxxx.doc" class="doc">word檔名</a>
+                    <a href="xxxx.pdf" class="pdf">pdf檔名</a>
+                    <a href="xxxx.odf" class="odf">odf檔名</a>
                   </td>
                 </tr>
                 <tr>
                   <td data-title="序號" class="num">11</td>
                   <td data-title="標題">106年11月份</td>
                   <td data-title="檔案下載" class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
+                    <a href="xxxx.doc" class="doc">word檔名</a>
+                    <a href="xxxx.pdf" class="pdf">pdf檔名</a>
+                    <a href="xxxx.odf" class="odf">odf檔名</a>
                   </td>
                 </tr>
                 <tr>
                   <td data-title="序號" class="num">12</td>
                   <td data-title="標題">106年12月份</td>
                   <td data-title="檔案下載" class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
+                    <a href="xxxx.doc" class="doc">word檔名</a>
+                    <a href="xxxx.pdf" class="pdf">pdf檔名</a>
+                    <a href="xxxx.odf" class="odf">odf檔名</a>
                   </td>
                 </tr>
                 <tr>
                   <td data-title="序號" class="num">13</td>
                   <td data-title="標題">105年1月份</td>
                   <td data-title="檔案下載" class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
+                    <a href="xxxx.doc" class="doc">word檔名</a>
+                    <a href="xxxx.pdf" class="pdf">pdf檔名</a>
+                    <a href="xxxx.odf" class="odf">odf檔名</a>
                   </td>
                 </tr>
                 <tr>
                   <td data-title="序號" class="num">14</td>
                   <td data-title="標題">105年2月份</td>
                   <td data-title="檔案下載" class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
+                    <a href="xxxx.doc" class="doc">word檔名</a>
+                    <a href="xxxx.pdf" class="pdf">pdf檔名</a>
+                    <a href="xxxx.odf" class="odf">odf檔名</a>
                   </td>
                 </tr>
                 <tr>
                   <td data-title="序號" class="num">15</td>
                   <td data-title="標題">105年3月份</td>
                   <td data-title="檔案下載" class="file">
-                    <a href="xxxx.doc">word檔名</a>
-                    <a href="xxxx.pdf">pdf檔名</a>
-                    <a href="xxxx.odf">odf檔名</a>
+                    <a href="xxxx.doc" class="doc">word檔名</a>
+                    <a href="xxxx.pdf" class="pdf">pdf檔名</a>
+                    <a href="xxxx.odf" class="odf">odf檔名</a>
                   </td>
                 </tr>
               </tbody>

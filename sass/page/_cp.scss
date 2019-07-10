@@ -9,14 +9,14 @@ h1.title{
     border-bottom: 4px solid #4a7aad;
     display: inline-block;
     padding-bottom: 5px;
-}
-h3.block_title {
+  }
+  h3.block_title {
     font-size: 1.5em;
     padding: 12px 0px;
     margin: 0.5em 0px;
     border-bottom: 3px solid $primaryColor;
-}
-.cp {
+  }
+  .cp {
     // &.small_size {
     //     font-size: .938em;
     // }
@@ -24,150 +24,150 @@ h3.block_title {
     //     font-size: 1.125em;
     // }
     ol.cjk>li{
-        list-style-type: cjk-ideographic;
+      list-style-type: cjk-ideographic;
     }
     ol ol,ol ul,ul ul,ul ol{
-        margin-bottom: .5em;
+      margin-bottom: .5em;
     }
     table {
-        background: #FFF;
-        margin-bottom: 20px;
-        ol,ul{
-            margin-bottom: .5em;
-        }
+      background: #FFF;
+      margin-bottom: 20px;
+      ol,ul{
+        margin-bottom: .5em;
+      }
     }
     th{
-        line-height: 1.45em;
+      line-height: 1.45em;
     }
     .cp_pic{
-        .caption{
-            font-size:0.938em;
-            background: #F2F2F1;
-            padding: .2em .8em;
-            text-align: center;
-            letter-spacing: .05em;
-        }
-        img {
+      .caption{
+        font-size:0.938em;
+        background: #F2F2F1;
+        padding: .2em .8em;
+        text-align: center;
+        letter-spacing: .05em;
+      }
+      img {
 
+      }
+      &.float_left {
+        float: left;
+        margin: 8px 1em 1em 0;
+        width: auto;
+        max-width: 55%;
+        @include screen('mobile') {
+          float: none;
+          max-width: 100%;
+          margin: 0px auto;
         }
-        &.float_left {
-            float: left;
-            margin: 8px 1em 1em 0;
-            width: auto;
-            max-width: 55%;
-            @include screen('mobile') {
-                float: none;
-                max-width: 100%;
-                margin: 0px auto;
-            }
+      }
+      &.float_right {
+        float: right;
+        margin: 8px 0 1em 1em;
+        width: auto;
+        max-width: 55%;
+        @include screen('mobile') {
+          float: none;
+          max-width: 100%;
+          margin: 0px auto;
         }
-        &.float_right {
-            float: right;
-            margin: 8px 0 1em 1em;
-            width: auto;
-            max-width: 55%;
-            @include screen('mobile') {
-                float: none;
-                max-width: 100%;
-                margin: 0px auto;
-            }
-        }
+      }
     }  
     a {
-        @include aSetting;
-        text-decoration: underline;
-        &:hover,&:focus{
-            text-decoration: none;
+      @include aSetting;
+      text-decoration: underline;
+      &:hover,&:focus{
+        text-decoration: none;
             // box-shadow: 0 0 0 0;
+          }
         }
-    }
-    .info {
-        font-size: 0.938em;
-        line-height: 1.5em;
-        list-style: none;
-        margin: 0 0 1.5em 0;
-        border-left: solid 5px $primaryColor;
-        @include box-sizing;
-        padding: 0.8em 1.5em 0.8em;
-        background: #F2F2F2;
-        @extend %clearfix;
-        li {
+        .info {
+          font-size: 0.938em;
+          line-height: 1.5em;
+          list-style: none;
+          margin: 0 0 1.5em 0;
+          border-left: solid 5px $primaryColor;
+          @include box-sizing;
+          padding: 0.8em 1.5em 0.8em;
+          background: #F2F2F2;
+          @extend %clearfix;
+          li {
             width: 32%;
             display: inline-block;
             vertical-align: top;
             @include screen('tablet') {
-                width: 48%;
-                margin-bottom: .2em;
-                font-size: 0.875em;
+              width: 48%;
+              margin-bottom: .2em;
+              font-size: 0.875em;
             }
             @include screen('mobile') {
-                width: 100%;
-                display: block;
+              width: 100%;
+              display: block;
             }
+          }
+        } 
+      }
+      .cp_slider{
+        .slick-dots li button:before {
+          width: 12px;
+          height: 12px;
+          background: #666;
+          content: '';
         }
-    } 
-}
-.cp_slider{
-    .slick-dots li button:before {
-        width: 12px;
-        height: 12px;
-        background: #666;
-        content: '';
-    }
-    .slick-dots li.slick-active button:before {
-        background: $primaryColor;
-    }
-}
+        .slick-dots li.slick-active button:before {
+          background: $primaryColor;
+        }
+      }
 // cp function panel setting
 .function_panel {
-    text-align: left;
-    margin: .2em 0;
+  text-align: left;
+  margin: .2em 0;
     // padding: .5em 0 .2em;
     min-height: 35px;
     // border-top: 1px solid #DDD;
     // border-bottom: 1px solid #DDD;
     @include screen('mobile') {
-        margin:0;
-        padding: 0 0 .5em;
+      margin:0;
+      padding: 0 0 .5em;
     }
     .share {
-        display: inline-block;
-        vertical-align: top;
+      display: inline-block;
+      vertical-align: top;
     }
     .function {
-        display: inline-block;
-        vertical-align: top;
+      display: inline-block;
+      vertical-align: top;
     }
     .publish_time {
-        float: right;
-        min-width: 100px;
-        display: block;
-        margin-top: .6em;
-        color:#666;
-        span{
-            font-size:.938em;
-            @include screen('mobile') {
-                display:none;
-            }
+      float: right;
+      min-width: 100px;
+      display: block;
+      margin-top: .6em;
+      color:#666;
+      span{
+        font-size:.938em;
+        @include screen('mobile') {
+          display:none;
         }
-        time{
-            font-family:georgia;
-            font-size:1.125em;
-            @include screen('mobile') {
-                font-size:.938em;
-            }
+      }
+      time{
+        font-family:georgia;
+        font-size:1.125em;
+        @include screen('mobile') {
+          font-size:.938em;
         }
-        &:before {
-            content: "";
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            top:.3em;
-            background: url(../images/basic/icon_time.png) no-repeat center center;
-            background-size: 12px;
-        }
+      }
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        top:.3em;
+        background: url(../images/basic/icon_time.png) no-repeat center center;
+        background-size: 12px;
+      }
     }
-}
+  }
 // 文章標籤
 // div.tag{
 //     @extend %clearfix;
@@ -200,174 +200,150 @@ h3.block_title {
 //         }
 //     }
 // }
+
 // 檔案下載
 .file_download {
-    width: 100%;
-    margin: 0 auto;
-    @extend %clearfix;
-    ul {
-        counter-reset: counter;
-        list-style-type: none;
-        padding: 0;
-        // margin-left: 1em;
-        // @media screen and (max-width: 767px) {
-        //     margin-left: 0;
-        // }
+  width: 100%;
+  margin: 0 auto;
+  @include clearfix();
+  ul {
+    counter-reset: counter;
+    padding: 0;
+    margin-left: 0;
+  }
+  li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 35px;
+    border-bottom: 1px solid #EEE;
+    clear: both;
+    overflow: hidden;
+    padding-bottom: .7em;
+    &:before{
+      position: absolute;
+      left: 0px;
+      top: 3px;
+      text-align: right;
+      width: 30px;
+      counter-increment: counter;
+      content: counters(counter,".") " . ";
     }
-    li {
-        position: relative;
-        margin-bottom: 10px;
-        border-bottom: 1px solid #EEE;
-        .update,
-        .file_view {
-            font-size: .813em;
-            color: #AAA;
-            width: 100px;
-            float: right;
-            margin-top: 5px;
-            @media screen and (max-width: 767px) {
-                display: inline-block;
-                float: none;
-                width: auto;
-                margin-top: 0;
-            }
-            @include screen('xs_mobile') {
-                display: none;
-            }
-        }
-        .update {
-            width: 150px;
-            @media screen and (max-width: 767px) {
-                margin-left: 5px;
-            }
-        }
-        a {
-            padding: .2em 0px .2em 65px;
-            height: auto;
-            line-height: 1.45em;
-            width: 45%;
-            color: $color-word;
-            &:hover {
-                color: $aHover;
-            }
-            @include text-overflow;
-            &:before {
-                position: absolute; // outline: 1px solid red;
-                top: 5px;
-                left: 0px;
-                text-align: right;
-                width: 30px;
-                counter-increment: counter;
-                content: counters(counter, ".") " . ";
-            }
-            @include screen('mobile') {
-                margin-right: 0px; // display: block;
-                width: 85%;
-            }
-            .kb {
-                font-size: .75em;
-                color: #666;
-                display: inline-block;
-                margin: 0px .5em;
-            }
-            &:after {
-                // content: "";
-                // background: url(../images/basic/icon_other.jpg);
-                // width: 21px;
-                // height: 24px;
-                top: 2px;
-                left: 35px;
-            }
-        }
-    }
-    .file{
-        white-space: nowrap;
-        a{
-            margin: 0 .1em;
-        }
-    }
-    a {
-        position: relative;
-        height: 24px;
-        width: 21px;
+    .update,
+    .file_view {
+      font-size: .813em;
+      color: #AAA;
+      padding-left: 10px;
+      float: none;
+      margin-top: 5px;
+      @media screen and (max-width: 767px) {
         display: inline-block;
-        border: 2px solid #fff;
-        &:focus {
-            border: 2px solid #cba60f;
-        }
-        &:after {
-            content: "";
-            background: url(../images/basic/icon_other.jpg);
-            width: 21px;
-            height: 24px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            text-align: right;
-            display: inline-block;
-        }
-        &[href$="doc"]:after {
-            background: url(../images/basic/icon_doc.jpg);
-        }
-        &[href$="odf"]:after {
-            background: url(../images/basic/icon_odf.jpg);
-        }
-        &[href$="pdf"]:after {
-            background: url(../images/basic/icon_pdf.jpg);
-        }
-        &[href$="xls"]:after {
-            background: url(../images/basic/icon_xls.jpg);
-        }
-        &[href$="ppt"]:after {
-            background: url(../images/basic/icon_ppt.jpg);
-        }
-        &[href$="jpg"]:after {
-            background: url(../images/basic/icon_jpg.jpg);
-        }
-        &[href$="mp3"]:after {
-            background: url(../images/basic/icon_mp3.jpg);
-        }
-        &[href$="mov"]:after {
-            background: url(../images/basic/icon_mov.jpg);
-        }
-        &[href$="txt"]:after {
-            background: url(../images/basic/icon_txt.jpg);
-        }
-        &[href$="dot"]:after {
-            background: url(../images/basic/icon_doc.jpg);
-        }
-        &[href$="zip"]:after {
-            background: url(../images/basic/icon_zip.jpg);
-        }
+        float: none;
+        width: auto;
+        margin-top: 0;
+      }
+      @include screen('xs_mobile') {
+        display: none;
+      }
     }
+    .update {
+      @media screen and (max-width: 767px) {
+        margin-left: 5px;
+      }
+    }
+    span{
+      display: inline-block;
+      margin-right: 1em;
+      @include screen('mobile') {
+        display: block;
+        margin-bottom: .3em;
+      }
+    }
+  }
+  a {
+    &:hover,
+    &:focus {
+    }
+    .kb {
+      font-size: .75em;
+      color: #666;
+      display: inline-block;
+      margin: 0px .5em;
+    }
+    &.doc,&.odf,&.pdf,&.xls,&.ppt,&.ppt,&.jpg,&.mp3,&.mov,&.txt,&.dot,&.zip,&.other{
+      width: 21px;
+      height: 24px;
+      display: inline-block;
+      margin-right: 4px;
+      text-indent: -9999px;
+      vertical-align: text-bottom;
+    }
+    &.doc{
+      background: url(../images/basic/icon_doc.jpg);
+    }
+    &.odf{
+      background: url(../images/basic/icon_odf.jpg);
+    }
+    &.pdf{
+      background: url(../images/basic/icon_pdf.jpg);
+    }
+    &.xls{
+      background: url(../images/basic/icon_xls.jpg);
+    }
+    &.ppt{
+      background: url(../images/basic/icon_ppt.jpg);
+    }
+    &.jpg{
+      background: url(../images/basic/icon_jpg.jpg);
+    }
+    &.mp3{
+      background: url(../images/basic/icon_mp3.jpg);
+    }
+    &.mov{
+      background: url(../images/basic/icon_mov.jpg);
+    }
+    &.txt{
+      background: url(../images/basic/icon_txt.jpg);
+    }
+    &.dot{
+      background: url(../images/basic/icon_doc.jpg);
+    }
+    &.zip{
+      background: url(../images/basic/icon_zip.jpg);
+    }
+    &.other{
+      background: url(../images/basic/icon_other.jpg);
+    }
+
+  }
 }
 // 外部連結
 .web_link {
-    width: 100%;
-    margin: 0 auto;
-    @extend %clearfix;
-    ol,
-    ul {
-        counter-reset: counter;
-        list-style-type: none;
-        padding: 0;
+  width: 100%;
+  margin: 0 auto;
+  @extend %clearfix;
+  ol,
+  ul {
+    counter-reset: counter;
+    list-style-type: none;
+    padding: 0;
         // margin-left: 1em;
         // @media screen and (max-width: 767px) {
         //     margin-left: 0;
         // }
-    }
-    li {
+      }
+      li {
         position: relative;
         margin-bottom: 10px;
+        padding-bottom: 10px;
         border-bottom: 1px solid #EEE;
         a {
-            padding: .2em 0px .2em 35px;
-            position: relative;
-            height: auto;
-            line-height: 1.45em;
-            display: block;
-            @include aSetting_nocolor;
-            &:before {
+          padding: .2em 0px .2em 35px;
+          position: relative;
+          height: auto;
+          line-height: 1.45em;
+          display: block;
+          @include aSetting_nocolor;
+          &:before {
                 position: absolute; // outline: 1px solid red;
                 top: 5px;
                 left: 0px;
@@ -375,7 +351,7 @@ h3.block_title {
                 width: 30px;
                 counter-increment: counter;
                 content: counters(counter, ".") " . ";
+              }
             }
+          }
         }
-    }
-}
