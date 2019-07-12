@@ -1232,8 +1232,9 @@ div.more {
       font-weight: bold;
       @include make-xs-column(12);
       @include make-sm-column(6);
-      @include make-md-column(4);
-      @include make-lg-column(4);
+      @include make-md-column(3);
+      @include make-lg-column(3);
+      @include gutter(40px);
       @include box-sizing();
       &:before{
         content: "";
@@ -1241,7 +1242,7 @@ div.more {
         height: 4px;
         display: block;
         position: absolute;
-        left: 30px;
+        left: 20px;
         top: 12px;
         background: #111;
       }
