@@ -115,7 +115,7 @@ $(function() {
         vertical_slider_speed = 4000, //設定每張圖停留時間
         autoplay_restart = 50000; //設定多久開始啟用autoplay
     // 新增左右箭頭
-    $('.vertical_slider').append('<a href="javascript:;" class="prev">上一則</a><a href="javascript:;" class="next">下一則</a>')
+    $('.vertical_slider').append('<a href="javascript:;" class="slider_prev">上一則</a><a href="javascript:;" class="slider_next">下一則</a>')
     // 設定右邊選單
     $('.v_slider .container').append('<div class="vslider_menu"><ul></ul></div>'); // 先為menu設定一個家 
     $('.vertical_slider ul li').each(function() {
@@ -257,8 +257,8 @@ $(function() {
             e.preventDefault();
         }
     });
-    $('.prev').click(prev);
-    $('.next').click(next);
+    $('.slider_prev').click(prev);
+    $('.slider_next').click(next);
     // 進入slider後使用鍵盤
     $('body').keydown(function(e) {
         if (enterSliderMode) {
