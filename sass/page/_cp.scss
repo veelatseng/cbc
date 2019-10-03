@@ -32,13 +32,27 @@ h1.title{
     table {
       background: #FFF;
       margin-bottom: 20px;
+      caption{
+        text-align: center;
+      }
       ol,ul{
         margin-bottom: .5em;
       }
+      th{
+        line-height: 1.45em;
+        background: #ececec;
+        color: #444;
+        border: #ccc 1px solid;
+      }
+      td{
+        border: #ccc 1px solid;
+      }
+      p{
+        margin-bottom: 0;
+      }
     }
-    th{
-      line-height: 1.45em;
-    }
+
+
     .cp_pic{
       .caption{
         font-size:0.938em;

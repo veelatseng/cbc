@@ -180,6 +180,147 @@
               </tr>
             </tbody>
           </table>
+          <table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="width:90%;">
+            <thead>
+              <tr>
+                <th colspan="3" scope="row">
+                  <p align="center" class="a">新台幣對外幣交易</p>
+                </th>
+                <th colspan="3" scope="col">
+                  <p align="center" class="a">第三貨幣交易</p>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <p align="center" class="a"><o:p>&nbsp;</o:p></p>
+                </th>
+                <th>
+                  <p align="center" class="a">金額</p>
+                </th>
+                <th>
+                  <p align="center" class="a">百分比</p>
+                </th>
+                <th>
+                  <p align="center" class="a"><o:p>&nbsp;</o:p></p>
+                </th>
+                <th>
+                  <p align="center" class="a">金額</p>
+                </th>
+                <th>
+                  <p align="center" class="a">百分比</p>
+                </th>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <p align="center" class="a">新台幣對美元</p>
+                </th>
+                <td>
+                  <p align="center" class="a">2,883.3</p>
+                </td>
+                <td>
+                  <p align="center" class="a">45.0</p>
+                </td>
+                <th valign="top">
+                  <p class="a">歐元對美元</p>
+                </th>
+                <td>
+                  <p align="center" class="a">&nbsp; 842.5</p>
+                </td>
+                <td>
+                  <p align="center" class="a">13.2</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <p align="center" class="a">新台幣對其他外幣</p>
+                </th>
+                <td>
+                  <p align="center" class="a">&nbsp;&nbsp;120.7</p>
+                </td>
+                <td>
+                  <p align="center" class="a">&nbsp;1.9</p>
+                </td>
+                <th valign="top">
+                  <p class="a">美元對人民幣</p>
+                </th>
+                <td>
+                  <p align="center" class="a">&nbsp; 700.2</p>
+                </td>
+                <td>
+                  <p align="center" class="a">10.9</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <p align="center" class="a">合計</p>
+                </th>
+                <td>
+                  <p align="center" class="a">&nbsp; 3,004.0</p>
+                </td>
+                <td>
+                  <p align="center" class="a">&nbsp;&nbsp;46.9</p>
+                </td>
+                <th valign="top">
+                  <p class="a">美元對日圓</p>
+                </th>
+                <td>
+                  <p align="center" class="a">&nbsp; 605.4</p>
+                </td>
+                <td>
+                  <p align="center" class="a">&nbsp;9.5</p>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" rowspan="4" scope="row">
+                  <p align="center" class="a"><o:p>&nbsp;</o:p></p>
+                </td>
+                <th>
+                  <p class="a">澳幣對美元</p>
+                </th>
+                <td>
+                  <p align="center" class="a">&nbsp; 379.5</p>
+                </td>
+                <td>
+                  <p align="center" class="a">&nbsp;&nbsp; 5.9</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <p class="a">英鎊對美元</p>
+                </th>
+                <td>
+                  <p align="center" class="a">&nbsp; 192.3</p>
+                </td>
+                <td>
+                  <p align="center" class="a">&nbsp;&nbsp; 3.0</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" valign="top">
+                  <p class="a">其他外幣</p>
+                </th>
+                <td>
+                  <p align="center" class="a">&nbsp; 680.6</p>
+                </td>
+                <td>
+                  <p align="center" class="a">&nbsp;&nbsp;10.6</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <p align="center" class="a">合 計</p>
+                </th>
+                <td>
+                  <p align="center" class="a">3,400.5</p>
+                </td>
+                <td>
+                  <p align="center" class="a">&nbsp; 53.1</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </section>
         <!-- CP End -->
         <!-- cp_slider+slick_lightbox -->
