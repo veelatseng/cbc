@@ -82,6 +82,83 @@
           <h3>標題三</h3>
           <p>大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。</p>
           <blockquote>大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。</blockquote>
+          <div class="cp_table">
+            <table border="1" cellpadding="2" cellspacing="0" summary="RESERVE REQUIREMENTS - Required Reserve Ratios of Deposits, Other Debts and Trust Funds" title="RESERVE REQUIREMENTS - Required Reserve Ratios of Deposits, Other Debts and Trust Funds">
+              <tbody>
+                <tr>
+                  <th id="header1">Legal requirements<br>
+                  (valid from Jul. 7, 1999)</th>
+                  <th id="header2">Checking accounts</th>
+                  <th id="header3">Demand deposits</th>
+                  <th id="header4">Savings deposits<br>
+                  (Demand)</th>
+                  <th id="header5">Time deposits</th>
+                  <th id="header6">Savings deposits<br>
+                  (Time)</th>
+                  <th id="header7">Other debts<br>
+                  (F.C.deposits)</th>
+                  <th id="header8">Other debts<br>
+                  (Other items)</th>
+                  <th id="header9">Trust funds</th>
+                </tr>
+                <tr>
+                  <td headers="header1">Minimum</td>
+                  <td headers="header2">--</td>
+                  <td headers="header3">--</td>
+                  <td headers="header4">--</td>
+                  <td headers="header5">--</td>
+                  <td headers="header6">--</td>
+                  <td headers="header7">--</td>
+                  <td headers="header8">--</td>
+                  <td headers="header9">15</td>
+                </tr>
+                <tr>
+                  <td headers="header1">Maximum</td>
+                  <td headers="header2">25</td>
+                  <td headers="header3">25</td>
+                  <td headers="header4">15</td>
+                  <td headers="header5">15</td>
+                  <td headers="header6">15</td>
+                  <td headers="header7">25</td>
+                  <td headers="header8">25</td>
+                  <td headers="header9">20</td>
+                </tr>
+                <tr>
+                  <td headers="header1">&nbsp;</td>
+                  <td headers="header2">&nbsp;</td>
+                  <td headers="header3">&nbsp;</td>
+                  <td headers="header4">&nbsp;</td>
+                  <td headers="header5">&nbsp;</td>
+                  <td headers="header6">&nbsp;</td>
+                  <td headers="header7">&nbsp;</td>
+                  <td headers="header8">&nbsp;</td>
+                  <td headers="header9">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td headers="header1">&nbsp;</td>
+                  <td headers="header2">&nbsp;</td>
+                  <td headers="header3">&nbsp;</td>
+                  <td headers="header4">&nbsp;</td>
+                  <td headers="header5">&nbsp;</td>
+                  <td headers="header6">&nbsp;</td>
+                  <td headers="header7">&nbsp;</td>
+                  <td headers="header8">&nbsp;</td>
+                  <td headers="header9">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td headers="header1">&nbsp;</td>
+                  <td headers="header2">&nbsp;</td>
+                  <td headers="header3">&nbsp;</td>
+                  <td headers="header4">&nbsp;</td>
+                  <td headers="header5">&nbsp;</td>
+                  <td headers="header6">&nbsp;</td>
+                  <td headers="header7">&nbsp;</td>
+                  <td headers="header8">&nbsp;</td>
+                  <td headers="header9">&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>    
           <h4>標題四</h4>
           <p>大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。以是一分，首字地旅紀親朋經有，在沒許、兒讓靈身不；候案司通資鄉下一支情西也哥際發你也是濟言通海後的健童頭各便。大更沒於正時節直只們來壓算有先，求化化看雨的了元得前意要，性說用。以是一分，首字地旅紀親朋經有，在沒許、兒讓靈身不；候案司通資鄉下一支情西也哥際發你也是濟言通海後的健童頭各便。</p>
           <h5>標題五</h5>

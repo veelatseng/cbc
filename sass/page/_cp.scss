@@ -29,6 +29,18 @@ h1.title{
     ol ol,ol ul,ul ul,ul ol{
       margin-bottom: .5em;
     }
+    .cp_table{
+      @include screen('mobile') {
+        position: relative;
+        width: 100%;
+        overflow: hidden !important;
+        table{
+          display: block;
+          width: 100%;
+          overflow-x: scroll;
+        }
+      }
+    }
     table {
       background: #FFF;
       margin-bottom: 20px;
@@ -51,8 +63,6 @@ h1.title{
         margin-bottom: 0;
       }
     }
-
-
     .cp_pic{
       .caption{
         font-size:0.938em;
