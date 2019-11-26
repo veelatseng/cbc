@@ -91,7 +91,7 @@
         overflow: hidden;
         display: block;
         position: relative;
-        padding: 3em 0 3em 2em;
+        padding: 2em 0 1em 2em;
         @include box-sizing;
         @include screen('mobile') {
             padding: 1em 0;
