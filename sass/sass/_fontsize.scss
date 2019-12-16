@@ -34,7 +34,7 @@
                     box-shadow: 0 0 0 0;
                 }
                 &.active {
-                    background:  $aHover;
+                    background:  $aHover!important;
                     &:hover, &:focus {
                         background: $primaryColor;
                         color: #FFF;
