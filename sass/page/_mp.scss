@@ -643,15 +643,16 @@ div.more {
       letter-spacing: .02em;
       &:before{
         content: "";
-        width: 10px;
+        width: 100%;
         height: 100%;
-        display: block;
+        // display: block;
         position: absolute;
         left: 0;
         top: 0;
         background: $primaryColor;
         z-index: 10;
-        transition: all .3s linear;
+        display: none;
+        // transition: all .3s linear;
       }
       a{
         border: 0;
@@ -672,7 +673,7 @@ div.more {
         float: left;
         position: relative;
         z-index: 11;
-        transition: all .3s linear;
+        // transition: all .3s linear;
         width: 65%;
         white-space: normal;
         text-align: left;
@@ -689,14 +690,14 @@ div.more {
         clear: left;
         position: relative;
         z-index: 11;
-        transition: all .3s linear;
+        // transition: all .3s linear;
       }
       span.info{
         font-family: "Century Gothic";
         color: #333;
         position: relative;
         z-index: 11;
-        transition: all .3s linear;
+        // transition: all .3s linear;
         @include screen('mobile') {
           clear: left;
           display: block;
@@ -709,9 +710,10 @@ div.more {
       &:hover{
         border:0;
         &:before{
-          content: "";
-          width: 100%;
-          height: 100%;
+          // content: "";
+          // width: 100%;
+          // height: 100%;
+          display: block;
         }
         a{
           h3,span.date,span.info{
