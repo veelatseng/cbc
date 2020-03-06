@@ -6,7 +6,7 @@ footer {
     padding-top: 2em;
     padding-bottom: 1em;
     position: relative;
-    background: #4a7aad;
+    background: #4575A8;
     @include screen('mobile') {
         padding-bottom: 0;
     }
@@ -125,19 +125,21 @@ footer {
                 }
                 &:hover,
                 &:focus {
-                    color: rgba(255,255,255,.6);
-                    text-decoration: underline;
+                    background: $aHover;
+                    text-decoration: none;
+                    border-radius: 3px;
                 }
             }
         }
+
     }
     .footer_info {
 
     }
     p {
-        line-height: 1.65em;
+        line-height: 1.8em;
         margin: .5em 0;
-        color: #b5cae5;
+        color: #E7FCFF;
         font-size: 0.938em;
         width: 60%;
         float: left;
@@ -150,17 +152,22 @@ footer {
         }
         a{
             color: #fff;
-            text-decoration: underline;
+            padding: 3px 8px;
+            margin-left: 5px;
+            border-radius: 3px;
+            text-decoration: none;
+            background: $aHover;
             &:hover{
                 color: #fff;
                 text-decoration: none;
+                background:#444;
             }
         }
     }
     .update,
     .counter {
         display: block;
-        color: rgba(255,255,255,.6);
+        color: #E7FCFF;
         font-size: 0.938em;
         width: 30%;
         float: right;

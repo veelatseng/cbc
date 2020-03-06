@@ -226,6 +226,7 @@ select:focus {
     border: 1px solid $form-focus;
     @include box-shadow(0px 0px 0px 2px $form-focus);
     outline: none;
+    background: #e7eef5;
 }
 //
 input[type="file"] {}

@@ -238,7 +238,8 @@ div.more {
     &:hover,
     &:focus {
       background: #fff;
-      box-shadow: 0 0 0 0;
+      // box-shadow: 0 0 0 0;
+      box-shadow: 0 0px 0px 1px $primaryColor inset;
       &:before{
         border-top: 2px solid $primaryColor;
         border-left: 2px solid $primaryColor;
@@ -285,7 +286,8 @@ div.more {
     &:hover,
     &:focus {
       background: #fff;
-      box-shadow: 0 0 0 0;
+      // box-shadow: 0 0 0 0;
+      box-shadow: 0 0px 0px 1px $primaryColor inset;
       &:before{
         border-top: 2px solid $primaryColor;
         border-right: 2px solid $primaryColor;
@@ -314,6 +316,56 @@ div.more {
       margin-bottom: 1px;
       position: relative;
       z-index: 90;
+      a {
+        display: block;
+        padding: 10px 20px;
+        width: 100%;
+        height: 100%;
+        line-height: 300%;
+        font-size: 1.125em;
+        color: #333;
+        text-align: left;
+        @include box-sizing(border-box);
+        white-space: nowrap;
+        text-overflow:ellipsis;
+        overflow: hidden;
+        &:hover,&:focus {
+          box-shadow: 0 0 0 0;
+          color: #fff;
+          background: #444;
+          outline-color: #444;
+          &:before{
+            content: "";
+            width: 9px;
+            height: 100%;
+            display: block;
+            position: absolute;
+            left: -7px;
+            top: 0;
+            background: #444;
+            z-index: 91;
+            border-bottom: 1px solid #fff;
+          }
+        }
+        // &:focus {
+        //   box-shadow: 0 0 0 0;
+        //   &:before{
+        //     content: "";
+        //     width: 9px;
+        //     height: 100%;
+        //     display: block;
+        //     position: absolute;
+        //     left: -7px;
+        //     top: 0;
+        //     background: $linkColor;
+        //     z-index: 91;
+        //     border-bottom: 1px solid #fff;
+        //   }
+        //   color: #fff;
+        //   background: $linkColor;
+        //   outline-color: $linkColor;
+        // }
+      }
       &.active {
         &:before{
           content: "";
@@ -331,38 +383,13 @@ div.more {
           color: #fff;
           background: $linkColor;
         }
-      }
-      a {
-        display: block;
-        padding: 10px 20px;
-        width: 100%;
-        height: 100%;
-        line-height: 300%;
-        font-size: 1.125em;
-        color: #333;
-        text-align: left;
-        @include box-sizing(border-box);
-        white-space: nowrap;
-        text-overflow:ellipsis;
-        overflow: hidden;
-        &:hover,
-        &:focus {
-          box-shadow: 0 0 0 0;
-          &:before{
-            content: "";
-            width: 9px;
-            height: 100%;
-            display: block;
-            position: absolute;
-            left: -7px;
-            top: 0;
-            background: $linkColor;
-            z-index: 91;
-            border-bottom: 1px solid #fff;
+        &:hover,&:focus{
+          a{
+            background: darken($primaryColor, 20);
+            &:before{
+              background: darken($primaryColor, 20);
+            }
           }
-          color: #fff;
-          background: $linkColor;
-          outline-color: $linkColor;
         }
       }
     }
@@ -437,22 +464,30 @@ div.more {
             border-top: 0px solid #f2f2f2;
             background: #f2f2f2;
           }
+          &:hover,&:focus{
+            color: $primaryColor;
+          }
         }
         &.active{
-          border-top: 10px solid $primaryColor;
-          border-bottom: 10px solid $primaryColor;
           @include screen('mobile') {
             border-top: 1px solid #000;
             border-bottom: 0px solid #f2f2f2;
           }
           a{     
+            border-top: 2px solid $primaryColor;
+            border-bottom: 2px solid $primaryColor;
             background: $primaryColor;
+            box-shadow: 0 -10px 0 0 $primaryColor,0 10px 0 0 $primaryColor;
             cursor: pointer;
-            @include screen('mobile') {
+            @include screen('mobile') { 
               border-top: 1px solid #f2f2f2;
             }
             &:hover,&:focus{
-              box-shadow: 0 0 0 0;
+              border-top: 2px solid darken($primaryColor, 20);
+              border-bottom: 2px solid darken($primaryColor, 20);
+              color: #fff;
+              background:darken($primaryColor, 20);
+              box-shadow: 0 -10px 0 0 darken($primaryColor, 20),0 10px 0 0 darken($primaryColor, 20);
             }
           }
         }
@@ -482,10 +517,15 @@ div.more {
       }
       a {
         color: #333;
+        box-shadow: 0 0px 0px 2px transparent inset;
+        &:hover,&:focus{
+          color: $primaryColor;
+          box-shadow: 0 0px 0px 2px #cba60f inset;
+        }
       }
       time {
         display: inline-block;
-        margin: 0 1em 0 0;
+        margin: 0 .8em 0 0;
         font-family: "baskerville";
         color: #595959;
         font-size: 1.125em;
@@ -715,7 +755,7 @@ div.more {
         //   height: 100%;
         // }
         a{
-          background: $primaryColor;
+          background: #444;
           h3,span.date,span.info{
             color: #fff;
           }
@@ -727,6 +767,11 @@ div.more {
           h3,span.date,span.info{
             color: #fff;
           }
+        }
+        &:hover a{
+          background: darken($primaryColor, 20);
+          border-top: 0;
+          border-bottom: 0;
         }
       }
     }
@@ -960,14 +1005,15 @@ div.more {
         text-decoration: none;
         display: inline-block;
         position: relative;
-        padding-right: 0;
-        padding-left: 0;
+        padding-right: 5px;
+        padding-left: 5px;
         line-height: auto;
         vertical-align: middle;
         color: #333;
         letter-spacing: 1px;
         transition: background .3s linear;
         font-weight: bold;
+        border:1px solid #fff;
         &:before{
           display: none;
         }
@@ -991,6 +1037,7 @@ div.more {
         }
         &:hover,&:focus {
           color: $primaryColor;
+          border:1px solid $primaryColor;
           &:before {
             display: none;
           }
@@ -1076,6 +1123,7 @@ div.more {
       background: #fff;
       box-shadow: 0 0 5px rgba(0, 0, 0, .1);
       position: relative;
+      border:1px solid #fff;
       @include screen('mobile') {
         padding: 25px 60px;
       }
@@ -1106,6 +1154,7 @@ div.more {
       }
       &:hover,&:focus{
         text-decoration: underline;
+        border:1px solid $primaryColor;
         &:before{
           animation: flip-vertical-right 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
         }
@@ -1203,6 +1252,48 @@ div.more {
   }
   .tabSet{
     margin-bottom: 0;
+    .tabs {
+      &>.tabItem {
+        border-top: 10px solid #fff;
+        border-bottom: 10px solid #ffff;
+        @include screen('mobile') {
+          border-top: 1px solid #000;
+          border-bottom: 0px solid #f2f2f2;
+        }
+        &>a {
+          @include screen('mobile') {
+            border-top: 0px solid #f2f2f2;
+            background: #f2f2f2;
+          }
+          &:hover,&:focus{
+            color: $primaryColor;
+          }
+        }
+        &.active{
+          @include screen('mobile') {
+            border-top: 1px solid #000;
+            border-bottom: 0px solid #f2f2f2;
+          }
+          a{     
+            border-top: 2px solid $primaryColor;
+            border-bottom: 2px solid $primaryColor;
+            background: $primaryColor;
+            box-shadow: 0 -10px 0 0 $primaryColor,0 10px 0 0 $primaryColor;
+            cursor: pointer;
+            @include screen('mobile') { 
+              border-top: 1px solid #f2f2f2;
+            }
+            &:hover,&:focus{
+              border-top: 2px solid darken($primaryColor, 20);
+              border-bottom: 2px solid darken($primaryColor, 20);
+              color: #fff;
+              background:darken($primaryColor, 20);
+              box-shadow: 0 -10px 0 0 darken($primaryColor, 20),0 10px 0 0 darken($primaryColor, 20);
+            }
+          }
+        }
+      }
+    }
   }
   .tabItem{
     letter-spacing: 1px;
