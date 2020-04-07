@@ -25,7 +25,7 @@
     <?php require_once('include/header.html'); ?>
     <!-- header End -->
     <!-- main Start -->
-    <div id="center" class="main innerpage">
+    <div id="center" class="main innerpage npbg">
       <!-- 內頁新增一個classname-->
       <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
       <div class="container">

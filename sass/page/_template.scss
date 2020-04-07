@@ -66,14 +66,17 @@ body {
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
-    padding: 2em;
+    padding:2em;
     background: #fcfcfc;
+    &.npbg{
+        background: #fcfcfc url(../images/bg2.gif)  center bottom repeat-x;
+    }
     @include screen('mobile') {
         padding: 5em 0 0 0;
     }
     >.container {
         @include gutter(); //gutter 代表左右要留白
-        background: #fcfcfc!important;
+        background: transparent!important;
     }
     &.small_size {
         font-size: .938em;
