@@ -141,6 +141,8 @@ $(function() {
             });
             // 第三層選單
             liHasChild_level3.off().on('click', function(e) {
+                $(this).siblings('li').children('ul').stop(true, true).slideUp('600', 'easeOutQuint');
+                $(this).children('ul').stop(true, true).slideDown('600', 'easeOutQuint');
                 e.preventDefault();
             });
             //手機版第第一層點了不會進入內頁，拿掉第一層的連結無作用
