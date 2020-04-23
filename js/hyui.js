@@ -452,7 +452,7 @@ $(function() {
             tabItemLength = _tabItem.length,
             tabItemWidth;
             _tab.find('.active').next('.tabContent').show();
-            console.log('original'+_tabItem_W);
+            //console.log('original'+_tabItem_W);
             if (ww >= wwSmall) {
                 _tabContent.css('top', tabItemHeight);
                 _tab.height(tabContentHeight + tabItemHeight);
@@ -562,7 +562,7 @@ $(function() {
             tabItemLength = _tabItem.length,
             tabItemWidth;
             _tab.find('.active').next('.tabContent').show();
-            console.log('original'+_tabItem_W);
+            //console.log('original'+_tabItem_W);
             if (ww >= wwSmall) {
                 _tabContent.css('top', tabItemHeight);
                 _tab.height(tabContentHeight + tabItemHeight);
@@ -654,12 +654,16 @@ $(function() {
                     tabContentHeight = _tabItemNow.next().innerHeight();
                     // _tab.height(tabContentHeight + tabItemHeight);
                 }
+                var index = ($(this).parent().index() + 1)/2;
+                if(index<=4){
+                    google.setOnLoadCallback(drawVisualization(index));     
+                }
                 e.preventDefault();
             }
         });
     }
-    $('.key_indicators_block .tabs>.tabItem:first-child>a').trigger('click');
     keyTabSet();
+    $('.key_indicators_block .tabSet .tabs .tabItem:eq(0) a').trigger( "click" );
     /*-----------------------------------*/
     ///////////////置頂go to top////////////
     /*-----------------------------------*/
@@ -686,7 +690,6 @@ $(function() {
     ie = ieReg.test(userAgent);
     if (ie) {
         $(".img-container").each(function() {
-            // var imgUrl = $(this).children('img').attr('src');
             var imgUrl = $(this).find('img').attr('src');
             var $container = $(this);
             $container.has('.none').addClass('ie-object-none');
@@ -703,7 +706,7 @@ $(function() {
     /////form表單 placeholder隱藏/////
     /*-----------------------------*/
     $('input,textarea').focus(function() {
-        $(this).removeAttr('placeholder');
+        //$(this).removeAttr('placeholder');
     });
     /*------------------------------------*/
     /////form表單 單個檔案上傳+多個檔案上傳/////
@@ -735,7 +738,8 @@ $(function() {
     //////////分享按鈕 share dropdwon////////
     /*------------------------------------*/
     $('.function_panel .share').children('ul').hide();
-    $('.function_panel .share').prepend('<a href="#" class="shareButton" title="share分享按鈕"></a>');
+    // $('.function_panel .share').prepend('<a href="#" class="shareButton" title="share分享按鈕"></a>');
+    $('.function_panel .share').prepend('<a href="#" class="shareButton" title="share"><span style="display:none">share<span></a>');
     var _shareButton = $('.shareButton');
     _shareButton.off().click(function(e) {
         $(this).siblings('ul').stop(true, true).slideToggle();
@@ -757,24 +761,27 @@ $(function() {
     /*------------------------------------*/
     /////////////字型大小 font-size//////////
     /*------------------------------------*/
-    $('.font_size').find('.medium').addClass('active');
+    //$('.font_size').find('.medium').addClass('active');
     $('.font_size').find('.small').click(function(e) {
         $(this).parent('li').siblings('li').find('a').removeClass('active');
         $('.innerpage').removeClass('large_size').addClass('small_size');
         $(this).addClass('active');
         e.preventDefault();
+        createCookie('FontSize', 'small', 356);
     });
     $('.font_size').find('.medium').click(function(e) {
         $(this).parent('li').siblings('li').find('a').removeClass('active');
         $('.innerpage').removeClass('large_size small_size');
         $(this).addClass('active');
         e.preventDefault();
+        createCookie('FontSize', 'medium', 356);
     });
     $('.font_size').find('.large').click(function(e) {
         $(this).parent('li').siblings('li').find('a').removeClass('active');
         $('.innerpage').removeClass('small_size').addClass('large_size');
         $(this).addClass('active');
         e.preventDefault();
+        createCookie('FontSize', 'large', 356);
     });
     /*-----------------------------------*/
     /////////// category active  //////////
@@ -839,3 +846,52 @@ $(function() {
         }
     });
 });
+
+function createCookie(name, value, days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        var expires = "; expires=" + date.toGMTString();
+    }
+    else expires = "";
+    document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+window.onload = function (e) {
+    var cookie = readCookie("FontSize");
+    //alert('cookie='+cookie);
+    if (cookie == 'small') {
+        //$('.font_size').find('.small').click();
+        $('.font_size').find('.small').parent('li').siblings('li').find('a').removeClass('active');
+        $('.innerpage').removeClass('large_size medium_size').addClass('small_size');
+        $('.font_size').find('.small').addClass('active');
+        e.preventDefault();
+    }
+    else {
+        if (cookie == 'large') {
+            //$('.font_size').find('.large').click();
+            $('.font_size').find('.large').parent('li').siblings('li').find('a').removeClass('active');
+            $('.innerpage').removeClass('small_size medium_size').addClass('large_size');
+            $('.font_size').find('.large').addClass('active');
+            e.preventDefault();
+        }
+        else {
+            //$('.font_size').find('.medium').click();
+            $('.font_size').find('.medium').parent('li').siblings('li').find('a').removeClass('active');
+            $('.innerpage').removeClass('large_size small_size');
+            $('.font_size').find('.medium').addClass('active');
+            e.preventDefault();
+        }
+    }
+} 

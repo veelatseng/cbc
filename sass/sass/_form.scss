@@ -221,6 +221,7 @@ input[type="file"]:focus,
 input[type="password"]:focus,
 input[type="button"]:focus,
 input[type="date"]:focus,
+input[type="tel"]:focus,
 textarea:focus,
 select:focus {
     border: 1px solid $form-focus;
@@ -362,4 +363,19 @@ img.captcha {
 abbr[title] {
     border-bottom: none;
     text-decoration: none;
+}
+:placeholder-shown {
+    color: #999;
+}
+
+::-webkit-input-placeholder {
+    color: #999;
+}
+
+::-moz-placeholder {
+    color: #999;  
+}
+
+:-ms-input-placeholder {
+    color: #999;  
 }
