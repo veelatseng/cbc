@@ -141,7 +141,7 @@ $(function() {
             });
             // 第三層選單
             liHasChild_level3.off().on('click', function(e) {
-                $(this).siblings('li').children('ul').stop(true, true).slideUp('600', 'easeOutQuint');
+               	$(this).siblings('li').children('ul').stop(true, true).slideUp('600', 'easeOutQuint');
                 $(this).children('ul').stop(true, true).slideDown('600', 'easeOutQuint');
             });
             //手機版第第一層點了不會進入內頁，拿掉第一層的連結無作用
@@ -452,7 +452,11 @@ $(function() {
             tabItemLength = _tabItem.length,
             tabItemWidth;
             _tab.find('.active').next('.tabContent').show();
+<<<<<<< HEAD
             //console.log('original'+_tabItem_W);
+=======
+            // console.log('original'+_tabItem_W);
+>>>>>>> 8bf662b7533a2051a97fe3d94f40083d8815c873
             if (ww >= wwSmall) {
                 _tabContent.css('top', tabItemHeight);
                 _tab.height(tabContentHeight + tabItemHeight);
@@ -469,18 +473,18 @@ $(function() {
             _tabItemA.focus(tabs);
             _tabItemA.click(tabs);
 
-            function tabs(e) {
+            function tabs(e) {				
                 var _tabItemNow = $(this).parent(),
                 tvp = _tab.offset().top,
                 tabIndex = _tabItemNow.index() / 2,
                 scollDistance = tvp + tabItemHeight * tabIndex - hh;
                 _tabItem.removeClass('active');
                 _tabItemNow.addClass('active');
-                if (ww <= wwSmall) {
+                if (ww <= wwSmall) {					
                     _tabItem.not('.active').next().slideUp();
                     _tabItemNow.next().slideDown();
                     $("html,body").stop(true, false).animate({ scrollTop: scollDistance });
-                } else {
+                } else {					
                     _tabItem.not('.active').next().hide();
                     _tabItemNow.next().show();
                     tabContentHeight = _tabItemNow.next().innerHeight();
@@ -562,7 +566,11 @@ $(function() {
             tabItemLength = _tabItem.length,
             tabItemWidth;
             _tab.find('.active').next('.tabContent').show();
+<<<<<<< HEAD
             //console.log('original'+_tabItem_W);
+=======
+            // console.log('original'+_tabItem_W);
+>>>>>>> 8bf662b7533a2051a97fe3d94f40083d8815c873
             if (ww >= wwSmall) {
                 _tabContent.css('top', tabItemHeight);
                 _tab.height(tabContentHeight + tabItemHeight);
@@ -654,16 +662,27 @@ $(function() {
                     tabContentHeight = _tabItemNow.next().innerHeight();
                     // _tab.height(tabContentHeight + tabItemHeight);
                 }
+<<<<<<< HEAD
                 var index = ($(this).parent().index() + 1)/2;
                 if(index<=4){
                     google.setOnLoadCallback(drawVisualization(index));     
                 }
+=======
+				var index = ($(this).parent().index() + 1)/2;
+				if(index<=4){
+					google.setOnLoadCallback(drawVisualization(index));		
+				}
+>>>>>>> 8bf662b7533a2051a97fe3d94f40083d8815c873
                 e.preventDefault();
             }
         });
     }
     keyTabSet();
+<<<<<<< HEAD
     $('.key_indicators_block .tabSet .tabs .tabItem:eq(0) a').trigger( "click" );
+=======
+	$('.key_indicators_block .tabSet .tabs .tabItem:eq(0) a').trigger( "click" );
+>>>>>>> 8bf662b7533a2051a97fe3d94f40083d8815c873
     /*-----------------------------------*/
     ///////////////置頂go to top////////////
     /*-----------------------------------*/
@@ -738,7 +757,10 @@ $(function() {
     //////////分享按鈕 share dropdwon////////
     /*------------------------------------*/
     $('.function_panel .share').children('ul').hide();
+<<<<<<< HEAD
     // $('.function_panel .share').prepend('<a href="#" class="shareButton" title="share分享按鈕"></a>');
+=======
+>>>>>>> 8bf662b7533a2051a97fe3d94f40083d8815c873
     $('.function_panel .share').prepend('<a href="#" class="shareButton" title="share"><span style="display:none">share<span></a>');
     var _shareButton = $('.shareButton');
     _shareButton.off().click(function(e) {
@@ -767,21 +789,33 @@ $(function() {
         $('.innerpage').removeClass('large_size').addClass('small_size');
         $(this).addClass('active');
         e.preventDefault();
+<<<<<<< HEAD
         createCookie('FontSize', 'small', 356);
+=======
+		createCookie('FontSize', 'small', 356);
+>>>>>>> 8bf662b7533a2051a97fe3d94f40083d8815c873
     });
     $('.font_size').find('.medium').click(function(e) {
         $(this).parent('li').siblings('li').find('a').removeClass('active');
         $('.innerpage').removeClass('large_size small_size');
         $(this).addClass('active');
         e.preventDefault();
+<<<<<<< HEAD
         createCookie('FontSize', 'medium', 356);
+=======
+		createCookie('FontSize', 'medium', 356);
+>>>>>>> 8bf662b7533a2051a97fe3d94f40083d8815c873
     });
     $('.font_size').find('.large').click(function(e) {
         $(this).parent('li').siblings('li').find('a').removeClass('active');
         $('.innerpage').removeClass('small_size').addClass('large_size');
         $(this).addClass('active');
         e.preventDefault();
+<<<<<<< HEAD
         createCookie('FontSize', 'large', 356);
+=======
+		createCookie('FontSize', 'large', 356);
+>>>>>>> 8bf662b7533a2051a97fe3d94f40083d8815c873
     });
     /*-----------------------------------*/
     /////////// category active  //////////
@@ -847,6 +881,10 @@ $(function() {
     });
 });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8bf662b7533a2051a97fe3d94f40083d8815c873
 function createCookie(name, value, days) {
     if (days) {
         var date = new Date();
@@ -873,7 +911,11 @@ window.onload = function (e) {
     //alert('cookie='+cookie);
     if (cookie == 'small') {
         //$('.font_size').find('.small').click();
+<<<<<<< HEAD
         $('.font_size').find('.small').parent('li').siblings('li').find('a').removeClass('active');
+=======
+		$('.font_size').find('.small').parent('li').siblings('li').find('a').removeClass('active');
+>>>>>>> 8bf662b7533a2051a97fe3d94f40083d8815c873
         $('.innerpage').removeClass('large_size medium_size').addClass('small_size');
         $('.font_size').find('.small').addClass('active');
         e.preventDefault();
@@ -881,6 +923,7 @@ window.onload = function (e) {
     else {
         if (cookie == 'large') {
             //$('.font_size').find('.large').click();
+<<<<<<< HEAD
             $('.font_size').find('.large').parent('li').siblings('li').find('a').removeClass('active');
             $('.innerpage').removeClass('small_size medium_size').addClass('large_size');
             $('.font_size').find('.large').addClass('active');
@@ -895,3 +938,19 @@ window.onload = function (e) {
         }
     }
 } 
+=======
+			$('.font_size').find('.large').parent('li').siblings('li').find('a').removeClass('active');
+			$('.innerpage').removeClass('small_size medium_size').addClass('large_size');
+			$('.font_size').find('.large').addClass('active');
+			e.preventDefault();
+        }
+        else {
+            //$('.font_size').find('.medium').click();
+			$('.font_size').find('.medium').parent('li').siblings('li').find('a').removeClass('active');
+			$('.innerpage').removeClass('large_size small_size');
+			$('.font_size').find('.medium').addClass('active');
+			e.preventDefault();
+        }
+    }
+}
+>>>>>>> 8bf662b7533a2051a97fe3d94f40083d8815c873
