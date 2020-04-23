@@ -222,6 +222,7 @@ input[type="password"]:focus,
 input[type="button"]:focus,
 input[type="date"]:focus,
 input[type="tel"]:focus,
+input[type="email"]:focus,
 textarea:focus,
 select:focus {
     border: 1px solid $form-focus;

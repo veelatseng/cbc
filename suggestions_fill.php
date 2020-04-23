@@ -112,7 +112,7 @@
               <div class="form_grp">
                 <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>E-mail帳號：</label>
                 <div class="form_content">
-                  <input name="" id="" type="text" placeholder="請輸入您的e-mail">
+                  <input name="" id="" type="email" placeholder="請輸入您的e-mail">
                   <div class="notice_warning">這似乎不是一個正常的格式 <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
                   </div>
                 </div>
