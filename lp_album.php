@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
   <!-- cbc css -->
-  <link rel="stylesheet" href="css/cbc.css">
+  <link rel="stylesheet" href="css/cbc.css" id="cssStyle">
 </head>
 
 <body>
@@ -155,15 +155,7 @@
     <!-- footer End -->
   </div>
   <a href="javascript:;" class="scrollToTop">回頁首</a>
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="vendor/jquery.easing.min.js"></script>
-  <!-- slick js -->
-  <script src="vendor/slick/slick.min.js "></script>
-  <script src="vendor/slick/slick-lightbox.js "></script>
-  <!-- hyUI -->
-  <script src="js/hyui.js"></script>
-  <!-- 客製js -->
-  <script src="js/customize.js"></script>
+  <?php require_once('include/js.html'); ?>
 </body>
 
 </html>

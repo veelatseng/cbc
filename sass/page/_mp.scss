@@ -483,11 +483,11 @@ div.more {
               border-top: 1px solid #f2f2f2;
             }
             &:hover,&:focus{
-              border-top: 2px solid darken($primaryColor, 20);
-              border-bottom: 2px solid darken($primaryColor, 20);
+              border-top: 2px solid darken($primaryColor, 10);
+              border-bottom: 2px solid darken($primaryColor, 10);
               color: #fff;
-              background:darken($primaryColor, 20);
-              box-shadow: 0 -10px 0 0 darken($primaryColor, 20),0 10px 0 0 darken($primaryColor, 20);
+              background:darken($primaryColor, 10);
+              box-shadow: 0 -10px 0 0 darken($primaryColor, 10),0 10px 0 0 darken($primaryColor, 10);
             }
           }
         }
@@ -1005,8 +1005,8 @@ div.more {
         text-decoration: none;
         display: inline-block;
         position: relative;
-        padding-right: 5px;
-        padding-left: 5px;
+        padding-right: 30px;
+        padding-left: 10px;
         line-height: auto;
         vertical-align: middle;
         color: #333;
@@ -1015,25 +1015,36 @@ div.more {
         font-weight: bold;
         border:1px solid #fff;
         &:before{
-          display: none;
+          content: "";
+          width: 6px;
+          height: 6px;
+          border-right: 2px solid #fff;
+          border-bottom: 2px solid #fff;
+          border-left: 0;
+          border-top: 0;
+          border-radius: 0;
+          transform: rotate(45deg);
+          position: absolute;
+          bottom: 20px;
+          right: 11px;
+          top: auto;
+          z-index: 10;
         }
         &:after{
           content: "";
           width: 18px;
           height: 18px;
-          border-left: 0;
-          border-right: 0;
-          border-top: 0;
-          border-bottom: 0;
-          position: relative;
-          right: auto;
+          border:0;
+          position: absolute;
+          right: 6px;
           top: auto;
+          bottom: 14px;
           transform: rotate(0deg);
           transition: all .3s linear;
-          background:url(../images/arrow2.png) left top no-repeat;
-          display: inline-block;
+          background:$primaryColor;
+          border-radius: 50%;
           vertical-align: middle;
-          margin-left: 10px;
+          z-index: 9;
         }
         &:hover,&:focus {
           color: $primaryColor;
@@ -1161,15 +1172,15 @@ div.more {
       }
     }
     &.press a:before{
-      background: url(../images/icon_policy1.png) ;
+      background:$primaryColor url(../images/icon_policy1.png) ;
       background-size: cover;
     }
     &.reference a:before{
-      background: url(../images/icon_policy2.png) ;
+      background:$primaryColor url(../images/icon_policy2.png) ;
       background-size: cover;
     }
     &.slides a:before{
-      background: url(../images/icon_policy3.png) ;
+      background:$primaryColor url(../images/icon_policy3.png) ;
       background-size: cover;
     }
   }

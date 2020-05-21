@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
   <!-- cbc css -->
-  <link rel="stylesheet" href="css/cbc.css">
+  <link rel="stylesheet" href="css/cbc.css" id="cssStyle">
 </head>
 
 <body>
@@ -80,7 +80,7 @@
                 <span class="num">2</span><a href="#">107年11月5日申購發行資訊</a>
               </li>
               <li>
-                <span class="num">3</span><a href="#">107年9月底銀行衍生性金融商品名目本金餘額統計</a>
+                <span class="num">3</span><a href="#">107年9月底銀行衍生性金融商品名目本金餘額統計107年9月底銀行衍生性金融商品名目本金餘額統計107年9月底銀行衍生性金融商品名目本金餘額統計</a>
               </li>
               <li>
                 <span class="num">4</span><a href="#">107年11月2日中央銀行公開市場操作資訊</a>

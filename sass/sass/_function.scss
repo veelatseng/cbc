@@ -1,4 +1,4 @@
-$function_color:#6096bc;
+$function_color:$fontsizeBg;
 //可自訂顏色，或是自帶既有變數，但請注意背景色與字的對比度
 //icon基本設定
 %function_before {
@@ -211,6 +211,11 @@ div.function {
         background:  url(../images/icon_casesearch.png) no-repeat 0 0;
         background-size: cover;
     }
+    &:hover,&:focus{
+        &:before{
+            filter: invert(1);
+        }
+    }
 }
 .btn_faq{
     @extend %fun_btn;
@@ -263,25 +268,26 @@ div.function {
     // font-size: 1em;
     @extend %fun_btn;
     color: #fff;
-    background: darken($primaryColor, 20);
-    border: 1px solid darken($primaryColor, 20); 
+    background: darken($primaryColor, 10);
+    border: 1px solid darken($primaryColor, 10); 
     &:before{
         content: "";
         width: 20px;
         height: 20px;
         display: inline-block;
-        background:  url(../images/basic/icon_search.png) no-repeat 0 0;
+        background:  url(../images/basic/icon_search_.png) no-repeat 0 0;
         background-size: cover;
         vertical-align: middle;
         margin-right: 8px;
+        margin-bottom: 2px;
     }
     &:hover,&:focus{
         background: -webkit-linear-gradient(top, #FFF, #DDD);
         background: linear-gradient(to bottom, #ffffff,#dddddd);
         color: $primaryColor;
-        border: 1px solid darken($primaryColor, 20);
+        border: 1px solid darken($primaryColor, 10);
         &:before{
-            // filter: invert(100%);
+
         }
     }
 }
@@ -292,15 +298,15 @@ div.function {
     // font-size: 1em;
     @extend %fun_btn;
     color: #fff;
-    background: darken($primaryColor, 20);
-    border: 1px solid darken($primaryColor, 20); 
+    background: darken($primaryColor, 10);
+    border: 1px solid darken($primaryColor, 10); 
     &:before{
         display: none;
     }
     &:hover,&:focus{
         background: $primaryColor;
         color: #fff;
-        border: 1px solid darken($primaryColor, 20);
+        border: 1px solid darken($primaryColor, 10);
         &:before{
             filter: invert(100%);
         }

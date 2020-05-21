@@ -4,7 +4,7 @@
   padding: 0 1em;
   min-height: 2.5em;
   position: relative;
-  z-index: 99;
+  z-index: 999;
   clear: both;
   background: $primaryColor;
   font-size: 1.125em;
@@ -80,7 +80,7 @@
           bottom:0;
           opacity:0;
           content:'';
-          background-color:#6e96c1;
+          background-color:$menuHover;
           z-index:-2;
           border-top: 3px solid $primaryColor;
         }
@@ -162,7 +162,7 @@
       width: 200px;
       background: rgba(102, 102, 102, .95);
       padding: 0;
-      z-index: 999999;
+      // z-index: 999999;
       position: absolute;
       top: auto;
       left: 0;

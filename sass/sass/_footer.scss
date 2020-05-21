@@ -6,25 +6,10 @@ footer {
     padding-top: 2em;
     padding-bottom: 1em;
     position: relative;
-    background: #4575A8;
+    background: $footerBg;
     @include screen('mobile') {
         padding-bottom: 0;
     }
-    // &:before{
-    //     content: "";
-    //     position: absolute;
-    //     left: 200px;
-    //     display: block;
-    //     width: 1200px;
-    //     height: 100%;
-    //     -webkit-transform: skewX(114deg);
-    //     transform: skewX(114deg);
-    //     background: #4a7aad;
-    //     top: 0;
-    //     @include screen('tablet') {
-    //         display: none;
-    //     }
-    // }
     .container {
         @include gutter;    
         >div {

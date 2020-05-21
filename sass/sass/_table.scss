@@ -31,7 +31,7 @@ table {
     th {
         background-color: $primaryColor;
         color: #fff;
-        border: #6096bc 1px solid;
+        border: $tableBorder 1px solid;
         text-align: center;
         // white-space: nowrap;
         padding: .9em .5em;

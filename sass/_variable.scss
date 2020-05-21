@@ -7,9 +7,28 @@ $primaryColor:				#4979AB;				//主色
 $secondaryColor:			#dce2e9; 				//輔色
 $lightColor:				#ef9b08;				//點綴
 $linkColor:					#2a6096;				//連結
-$importantColor:			#d9594d;				//重要
-// 但注意真實顏色與語意的關聯必須易於辨識
 
+// 連結顏色
+$aColor:					#4a7aad;
+$aHover:					#244e79;
+
+// 表單focus顏色
+$form-focus:				$aColor;				//表單
+$borderColor:				$aColor;
+$flowColor:					$aColor;
+$flowBgColor1:				#d0e2f5;
+$flowBgColor2:				#b3cce6;
+$mobileHeaderBg:			$primaryColor;
+$footerBg:					$aColor;
+$fontsizeBg:				#6096bc;
+$tableBorder:				$fontsizeBg;
+$menuHover:					$fontsizeBg;
+
+$headerBg:					#fcfcfc;
+$wrapBg:					#d8d8d8 url(../images/wrapbg.gif) repeat-x left top;
+
+// 但注意真實顏色與語意的關聯必須易於辨識
+$importantColor:			#d9594d;				//重要
 $color-blue: 				#21BAFF;
 $color-green:				#5CB85C;
 $color-orange: 				#F77810;
@@ -20,12 +39,7 @@ $color-gray: 				#CCC;
 $color-dark: 				#333;
 $color-hr:					#666;		  			 //hr顏色
 $color-word:				#444;                    //一般字的顏色
-// 連結顏色
-$aColor:					#4474A6;
-$aHover:					#244e79;
 
-// 表單focus顏色
-$form-focus:				#4979AB;				//表單
 //-------------------------------------------------------------字型--------//
 
 // 字型設定
@@ -55,6 +69,7 @@ $rounded-angle:             10px;					   //整站導角
 
 $v_slider_hover: #09f;
 $v_slider_focus: #E10000;
+
 
 
 

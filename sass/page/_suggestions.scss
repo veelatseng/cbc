@@ -122,16 +122,16 @@
                 }
             }
             &.active{
-                color: #4a7aad;
+                color: $flowColor;
                 text-indent: 0;
                 .no{
-                    @include gradient(#d0e2f5, #b3cce6, vertical);
+                    @include gradient($flowBgColor1, $flowBgColor2, vertical);
                     @include screen('xs_mobile') {
                         width: 94px;
                         height: 94px;
                         border-radius: 50%;
                         display: block;
-                        @include gradient(#d0e2f5, #b3cce6, vertical);
+                        @include gradient($flowBgColor1, $flowBgColor2, vertical);
                         margin-right: auto;
                         margin-left: auto;
                         margin-bottom: 12px;
@@ -150,7 +150,7 @@
                     }
                 }
                 &:after{
-                    border: 2px solid #d0e2f5;
+                    border: 2px solid $flowBgColor1;
                     border-bottom: none;
                     border-left: none;
 

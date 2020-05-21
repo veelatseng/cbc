@@ -14,7 +14,7 @@
   <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
   <!-- hyUI css -->
-  <link rel="stylesheet" href="css/cbc.css">
+  <link rel="stylesheet" href="css/cbc.css" id="cssStyle">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/PgwSlider/2.3.1/pgwslider.css">
 
 </head>

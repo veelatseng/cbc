@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
   <!-- cbc css -->
-  <link rel="stylesheet" href="css/cbc.css">
+  <link rel="stylesheet" href="css/cbc.css" id="cssStyle">
 </head>
 
 <body>

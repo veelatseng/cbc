@@ -2,7 +2,7 @@
 .header {
   position: relative;
   z-index: 99;
-  background: #fcfcfc;
+  background: $headerBg;
   @extend %clearfix;
   @include screen('mobile') {
     position: fixed;
@@ -353,7 +353,7 @@
                 display: inline-block;
                 padding: .43em;
                 width: 25%;
-                background: #4979AB;
+                background: $primaryColor;
                 margin: 20px 5% 0 3%;
                 font-size: 1em;
                 border-radius: 3px;
@@ -395,7 +395,7 @@
   box-shadow: rgba(0, 0, 0, .5) 0 0 25px;
   background: rgba(0, 0, 0, .75);
   z-index: 999;
-  background: #4a7aad;
+  background: $mobileHeaderBg;
   @include screen('mobile') {
     background: #FFF;
   }
