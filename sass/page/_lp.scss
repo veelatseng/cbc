@@ -51,6 +51,7 @@
                 padding: 1em 0;
                 border-bottom: 1px solid #DDD;
                 position: relative; // outline: 1px solid blue;
+                display: block;
                 .tag{
                     margin-left: 2em;
                 }
@@ -94,15 +95,15 @@
                     padding-left: .5em;
                     padding-right: 10px;
                     white-space: nowrap;
-                    @include screen('mobile') {
-                        display: block;
-                    }
+                    // @include screen('mobile') {
+                    //     display: block;
+                    // }
                     +a{ 
                         display: table-cell;
                         padding-left: 0;
-                        @include screen('mobile') {
-                            padding-left: 2em;
-                        }
+                        // @include screen('mobile') {
+                        //     padding-left: 2em;
+                        // }
                         &:hover, &:focus {
                             // box-shadow: 0 0 0 0;
                             outline: 0;
