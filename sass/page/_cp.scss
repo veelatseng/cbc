@@ -238,7 +238,7 @@ h1.title{
   li {
     position: relative;
     margin-bottom: 10px;
-    padding-left: 35px;
+    padding-left: 50px;
     border-bottom: 1px solid #EEE;
     clear: both;
     overflow: hidden;
@@ -247,10 +247,11 @@ h1.title{
       position: absolute;
       left: 0px;
       top: 3px;
+      width: 45px;
       text-align: right;
-      width: 30px;
       counter-increment: counter;
       content: counters(counter,".") " . ";
+      white-space: nowrap;
     }
     .update,
     .file_view {
