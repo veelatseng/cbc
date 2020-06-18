@@ -3,29 +3,29 @@
 
 //-------------------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
-$primaryColor:				#694795;				//主色 
+$primaryColor:				#475795;				//主色 
 $secondaryColor:			#dce2e9; 				//輔色
 $lightColor:				#ef9b08;				//點綴
-$linkColor:					#58368a;				//連結
+$linkColor:					#293484;				//連結
 
 // 連結顏色
-$aColor:					#613e95;
-$aHover:					#4e3a75;
+$aColor:					#3e4495;
+$aHover:					#3a4175;
 
 // 表單focus顏色
 $form-focus:				$aColor;				//表單
 $borderColor:				$aColor;
 $flowColor:					$aColor;
-$flowBgColor1:				#bd97c7;
-$flowBgColor2:				#af7fbb;
+$flowBgColor1:				#b7b8da;
+$flowBgColor2:				#9193c4;
 $mobileHeaderBg:			$primaryColor;
-$footerBg:					#4f3675;
-$fontsizeBg:				#8f54ae;
+$footerBg:					#364075;
+$fontsizeBg:				#5463ae;
 $tableBorder:				$fontsizeBg;
 $menuHover:					$fontsizeBg;
 
 $headerBg:					url(../images/headerbg3.png) no-repeat 45% top;
-$wrapBg:					linear-gradient(180deg, transparent 0%, rgba(92,51,142,.8) 12%),rgba(170,103,175,1) url(../images/wrapbg3.png) repeat left top;
+$wrapBg:					linear-gradient(180deg, transparent 0%, #3e4796 12%),#7d67af url(../images/wrapbg3.png) repeat left top;
 
 // 但注意真實顏色與語意的關聯必須易於辨識
 $importantColor:			#d9594d;				//重要
