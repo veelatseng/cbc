@@ -1,31 +1,32 @@
 // 此變數為框架之整體變數，控制整體網站之設定，包含 顏色、文字、格線系統
+// 此變數為框架之整體變數，控制整體網站之設定，包含 顏色、文字、格線系統
 // 於mixins 資料夾內，各個模組也有其個別使用的變數，請至個別檔案設定，個別使用變數不含在此設定
 
 //-------------------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
-$primaryColor:				#8E7331;				//主色 
-$secondaryColor:			#e8e1d0; 				//輔色
+$primaryColor:				#388898;				//主色 
+$secondaryColor:			#d0e0e8; 				//輔色
 $lightColor:				#ef9b08;				//點綴
-$linkColor:					#715712;				//連結
+$linkColor:					#126971;				//連結
 
 // 連結顏色
-$aColor:					#957d3e;
-$aHover:					#75653a;
+$aColor:					#3e8e95;
+$aHover:					#3a7375;
 
 // 表單focus顏色
 $form-focus:				$aColor;				//表單
 $borderColor:				$aColor;
 $flowColor:					$aColor;
-$flowBgColor1:				#dad1b7;
-$flowBgColor2:				#c4b691;
+$flowBgColor1:				#b7d8da;
+$flowBgColor2:				#91c1c4;
 $mobileHeaderBg:			$primaryColor;
-$footerBg:					#756436;
-$fontsizeBg:				#ae9854;
+$footerBg:					#367375;
+$fontsizeBg:				#54a9ae;
 $tableBorder:				$fontsizeBg;
 $menuHover:					$fontsizeBg;
 
 $headerBg:					url(../images/headerbg4.png) no-repeat 52% top;
-$wrapBg:					linear-gradient(180deg, transparent 0%, #e8e1d0 12%),#987e38 url(../images/wrapbg3.png) repeat left top;
+$wrapBg:					linear-gradient(180deg, transparent 0%, #d0e0e8 12%),#388898 url(../images/wrapbg3.png) repeat left top;
 
 // 但注意真實顏色與語意的關聯必須易於辨識
 $importantColor:			#d9594d;				//重要
