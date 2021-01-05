@@ -65,6 +65,7 @@
                     <li><time>2019-01-01</time><a href="">某媒體報導「10元鑄幣爆量央行推給夾娃娃」之說明</a></li>
                     <li><time>2019-01-01</time><a href="">當前新臺幣並無改版計畫</a></li>
                     <li><time>2019-01-01</time><a href="">對於媒體將銀行存、放款差額稱為爛頭寸之說明</a></li>
+                    <li><time>2019-01-01</time><a href="">「高雄幣」與「臺東金幣」皆非法償貨幣「高雄幣」與「臺東金幣」皆非法償貨幣</a></li>
                   </ul>
                   <div class="more"><a href="">更多最新消息</a></div>
                 </div>
@@ -126,13 +127,18 @@
               </section>
             </div>
           </section>
+          
           <section class="video_block">
+            <ul class="link_banner">
+              <li><a href=""><img src="images/link1.png" alt=""></a></li>
+              <li><a href=""><img src="images/link2.png" alt=""></a></li>
+            </ul>
             <h2>影音專區</h2>
             <div class="video_slider">
               <div class="video">
                 <div class="pic"><a href=""><img src="images/videopic.jpg" alt="" class="img-container"></a></div>
                 <div class="date">2018-09-27</div>
-                <p><a href="">有地個等，工因萬之離表很女；自自應在角次；說來眼稱變們錯代坐產！天是根就環賽，題去天速活不一女向了組、美飛火了後絕十青心經道引一想性叫，合廣利到。以類在行防清。</a></p>
+                <p><a href="">有地個等，工因萬之離表很女；自自應在角次；說來眼稱變們錯代坐產！</a></p>
               </div>
               <div class="video">
                 <div class="pic"><a href=""><img src="images/videopic.jpg" alt="" class="img-container"></a></div>
@@ -142,17 +148,17 @@
               <div class="video">
                 <div class="pic"><a href=""><img src="images/videopic.jpg" alt="" class="img-container"></a></div>
                 <div class="date">2018-09-27</div>
-                <p><a href="">有地個等，工因萬之離表很女；自自應在角次；說來眼稱變們錯代坐產！天是根就環賽，題去天速活不一女向了組、美飛火了後絕十青心經道引一想性叫，合廣利到。以類在行防清。</a></p>
+                <p><a href="">有地個等，工因萬之離表很女；自自應在角次；說來眼稱變們錯代坐產！</a></p>
               </div>
               <div class="video">
                 <div class="pic"><a href=""><img src="images/videopic.jpg" alt="" class="img-container"></a></div>
                 <div class="date">2018-09-27</div>
-                <p><a href="">有地個等，工因萬之離表很女；自自應在角次；說來眼稱變們錯代坐產！天是根就環賽，題去天速活不一女向了組、美飛火了後絕十青心經道引一想性叫，合廣利到。以類在行防清。</a></p>
+                <p><a href="">有地個等，工因萬之離表很女；自自應在角次；說來眼稱變們錯代坐產！</a></p>
               </div>
               <div class="video">
                 <div class="pic"><a href=""><img src="images/videopic.jpg" alt="" class="img-container"></a></div>
                 <div class="date">2018-09-27</div>
-                <p><a href="">有地個等，工因萬之離表很女；自自應在角次；說來眼稱變們錯代坐產！天是根就環賽，題去天速活不一女向了組、美飛火了後絕十青心經道引一想性叫，合廣利到。以類在行防清。</a></p>
+                <p><a href="">有地個等，工因萬之離表很女；自自應在角次；說來眼稱變們錯代坐產！</a></p>
               </div>
             </div>
             <div class="more"><a href="">更多影音專區</a></div>
