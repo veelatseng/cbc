@@ -25,7 +25,8 @@ $tableBorder:				$fontsizeBg;
 $menuHover:					$fontsizeBg;
 
 $headerBg:					url(../images/headerbg1.png) no-repeat 45% top;
-$wrapBg:					linear-gradient(180deg, transparent 0%, rgba(153,8,3,1) 12%),rgba(182,30,4,1) url(../images/wrapbg1.png) repeat left top;
+//$wrapBg:					linear-gradient(180deg, transparent 0%, rgba(153,8,3,1) 12%),rgba(182,30,4,1) url(../images/wrapbg1.png) repeat left top;
+$wrapBg:					#d8d8d8 url(../images/wrapbg.gif) repeat-x left top;
 
 // 但注意真實顏色與語意的關聯必須易於辨識
 $importantColor:			#d9594d;				//重要
