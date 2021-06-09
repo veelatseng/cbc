@@ -25,8 +25,8 @@ $tableBorder:				$fontsizeBg;
 $menuHover:					$fontsizeBg;
 
 $headerBg:					url(../images/headerbg3.png) no-repeat 45% top;
-$wrapBg:					linear-gradient(180deg, transparent 0%, #3e4796 12%),#7d67af url(../images/wrapbg3.png) repeat left top;
-
+//$wrapBg:					linear-gradient(180deg, transparent 0%, #3e4796 12%),#7d67af url(../images/wrapbg3.png) repeat left top;
+$wrapBg:					#d8d8d8 url(../images/wrapbg.gif) repeat-x left top;
 // 但注意真實顏色與語意的關聯必須易於辨識
 $importantColor:			#d9594d;				//重要
 $color-blue: 				#21BAFF;
